@@ -1,7 +1,11 @@
+import Cabecalho from "./cabecalho"
+import Menu from "./menu"
+
 function Home () {
     return (
-        <div>
-            <h1>Esta é a home!</h1>
+        <div className='home'>
+          <Cabecalho />
+          <Menu />
         </div>
     )
 }
