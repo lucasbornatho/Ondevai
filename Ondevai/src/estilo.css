@@ -9,15 +9,15 @@ body{
 /* home */
 
 .home {
-    background-color: #b480fb;
+    display: flex;
+ flex-wrap: wrap;
 }
 
 .logo-home {
     display: flex;
-    flex-direction: row;
-    justify-self: left;
     height: 150px;
     width: 150px;
+    padding-right: 100px;
 }
 
 /* cabecalho */
@@ -25,10 +25,14 @@ body{
 .cabecalho {
     display: flex;
     flex-direction: row;
-    justify-content: left;
+    align-items: center;
+    flex-wrap: nowrap;
     gap: 10px;
     background-color: #b480fb;
     width: 100vw;
+    position: fixed; 
+    top: 0;
+    left: 0;
 }
 
 /* menu principal */
@@ -37,8 +41,10 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     gap: 10px;
     background-color: #b480fb;
+    width: 100%;
 }
 
 .menu-botao {

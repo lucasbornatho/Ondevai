@@ -5,7 +5,6 @@ function Home () {
     return (
         <div className='home'>
           <Cabecalho />
-          <Menu />
         </div>
     )
 }
