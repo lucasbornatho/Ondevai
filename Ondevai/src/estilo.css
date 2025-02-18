@@ -10,7 +10,7 @@ body{
 
 .home {
     display: flex;
- flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .logo-home {
@@ -29,8 +29,9 @@ body{
     flex-wrap: nowrap;
     gap: 10px;
     background-color: #b480fb;
-    width: 100vw;
-    position: fixed; 
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
     top: 0;
     left: 0;
 }
@@ -62,10 +63,35 @@ body{
 
 .menu-botao:hover {
     background-color: rgb(245, 206, 133);
+    transition: background-color 0.3s ease-in-out;
 }
 
 .link-botao-menu {
     text-decoration: none;
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* rodape */
+
+.container-rodape {
+
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #b480fb;
+
+}
+
+/* notfound */
+
+.not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-family: "Abril Fatface", serif;
     font-weight: 400;
     font-style: normal;
