@@ -1,4 +1,4 @@
-import '../estilo.css'
+import '../../estilo.css'
 import { Link } from "react-router-dom"
 
 function Menu () {

@@ -1,5 +1,5 @@
-import '../estilo.css'
-import Menu from './menu'
+import '../../estilo.css'
+import Menu from '../menu'
 
 type Informacoes = {
     titulo: string;

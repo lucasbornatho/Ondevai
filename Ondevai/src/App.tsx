@@ -1,8 +1,8 @@
 import './estilo.css'
 import { Route, Routes } from 'react-router-dom'
-import Home from './pages/home'
-import Sobre from './pages/sobre'
-import NotFound from './pages/notfound'
+import Home from './components/home'
+import NotFound from './components/notfound'
+import Sobre from './components/sobre'
 
 function App() {
 
