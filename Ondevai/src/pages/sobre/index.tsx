@@ -1,18 +1,13 @@
-import { useNavigate} from "react-router-dom"
+import Cabecalho from "../../components/cabecalho";
+import Rodape from "../../components/rodape";
 
 function Sobre () {
-
-        const navegacao = useNavigate();
-
-        function HandleBack(){
-            navegacao('/');
-        }
-
         return(
             <div>
-                <h1>Esta é a pagina SOBRE!</h1>
-
-                <button onClick={HandleBack}> Home </button>
+                <Cabecalho/>
+                Pagina sobre
+                <Rodape/>
+                
             </div>
         )
 
