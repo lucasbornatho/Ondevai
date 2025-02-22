@@ -1,12 +1,13 @@
 import Rodape from "../../components/rodape"
 import Cabecalho from "../../components/cabecalho"
+import CardEvento from "../../components/cardevento"
 
 function Home () {
     return (
         <div className='home'>
-            <Cabecalho  titulo='home'  
-                      pagina='home' 
-                      parametro='home' />
+            <Cabecalho />
+            <CardEvento />
+            <CardEvento />
             <Rodape />
         </div>
     )

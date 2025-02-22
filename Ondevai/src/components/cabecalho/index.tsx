@@ -1,13 +1,13 @@
-import '../../estilo.css'
+import '../../estilo/estilo.css'
 import Menu from '../menu'
 
-type Informacoes = {
-    titulo?: string;
-    pagina?: string;
-    parametro?: string;
-}
+// type Informacoes = {
+//     titulo?: string;
+//     pagina?: string;
+//     parametro?: string;
+// }
 
-function Cabecalho (props: Informacoes) {
+function Cabecalho () {
 
     return (
         <div>
@@ -16,11 +16,6 @@ function Cabecalho (props: Informacoes) {
                     <img src='./Logo.png' alt='Logo' />
                 </div>
                     <Menu />
-            </div>
-            <div>
-                    <p>Titulo = {props.titulo};</p>
-                    <p>Pagina = {props.titulo};</p>
-                    <p>Parametro = {props.parametro};</p>
             </div>
         </div>
     )

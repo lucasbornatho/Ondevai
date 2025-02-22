@@ -17,6 +17,7 @@
 .home {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .logo-home {
@@ -36,7 +37,6 @@
     gap: 10px;
     background-color: #b480fb;
     width: 100%;
-    position: fixed;
     z-index: 1000;
     top: 0;
     left: 0;
@@ -101,4 +101,19 @@
     font-family: "Abril Fatface", serif;
     font-weight: 400;
     font-style: normal;
+}
+
+/* cardEvento */
+
+.card-evento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 800px;
+    height: 500px;
 }
