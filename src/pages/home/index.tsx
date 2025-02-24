@@ -6,8 +6,15 @@ function Home () {
     return (
         <div className='home'>
             <Cabecalho />
+            <br />
             <CardEvento />
+            <br />
             <CardEvento />
+            <br />
+            <CardEvento />
+            <br />
+            <CardEvento />
+            <br />
             <Rodape />
         </div>
     )

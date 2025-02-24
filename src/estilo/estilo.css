@@ -6,12 +6,6 @@
     box-sizing: border-box; 
 }
 
-/* body{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-} */
-
 /* home */
 
 .home {
@@ -37,9 +31,6 @@
     gap: 10px;
     background-color: #b480fb;
     width: 100%;
-    z-index: 1000;
-    top: 0;
-    left: 0;
 }
 
 /* menu principal */
@@ -50,7 +41,6 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    background-color: #b480fb;
     width: 100%;
 }
 
@@ -84,11 +74,10 @@
 .container-rodape {
 
     width: 100%;
-    height: 40px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    background-color: #5f3a94;
+    height: 100px;
+    position: relative;
+    background-color: #b480fb;
+    margin-top: auto;
 
 }
 
@@ -111,9 +100,9 @@
     align-items: center;
     align-self: center;
     text-align: center;
-    padding: 20px;
+    padding: 50px;
     border: 2px solid black;
     border-radius: 10px;
-    width: 800px;
+    width: 600px;
     height: 500px;
 }
