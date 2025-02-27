@@ -1,7 +1,6 @@
 import Rodape from "../../components/rodape"
 import Cabecalho from "../../components/cabecalho"
-import CardEvento from "../../components/cardevento"
-import Filtro from "../../components/filtro"
+
 
 function Home () {
     return (
