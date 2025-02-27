@@ -13,7 +13,7 @@ function Cabecalho () {
         <div>
             <div className='cabecalho'>
                 <div className='logo-home'>
-                    <img src='./Logo.png' alt='Logo' />
+                    <img src='./Logonovo.png' alt='Logo' />
                 </div>
                     <Menu />
             </div>

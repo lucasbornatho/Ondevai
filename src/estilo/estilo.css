@@ -29,7 +29,7 @@
     align-items: center;
     flex-wrap: nowrap;
     gap: 10px;
-    background-color: #b480fb;
+    background-color: #262A56;
     width: 100%;
 }
 
@@ -48,22 +48,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #eba82f;
-    color: rgb(0, 0, 0);
+    background-color: #D39643;
+    color: rgb(255, 255, 255);
     border: 2px solid rgb(0, 0, 0);
     border-radius: 10px;
     height: 50px;
     width: 200px;
     text-decoration: none;
+
 }
 
 .menu-botao:hover {
     background-color: rgb(245, 206, 133);
     transition: background-color 0.3s ease-in-out;
+    
 }
 
 .link-botao-menu {
     text-decoration: none;
+    color: black;
     font-family: "Abril Fatface", serif;
     font-weight: 400;
     font-style: normal;
@@ -76,7 +79,7 @@
     width: 100%;
     height: 100px;
     position: relative;
-    background-color: #b480fb;
+    background-color: #262A56;
     margin-top: auto;
 
 }
