@@ -3,14 +3,18 @@ import Cabecalho from "../../components/cabecalho"
 import CardEvento from "../../components/cardevento"
 import Filtro from "../../components/filtro"
 
-function Home () {
+function Eventos () {
     return (
         <div className='home'>
             <Cabecalho />
-            <h1>Esta é a home</h1>
+            <Filtro />
+            <CardEvento />
+            <CardEvento />
+            <CardEvento />
+            <CardEvento />
             <Rodape />
         </div>
     )
 }
 
-export default Home
+export default Eventos
