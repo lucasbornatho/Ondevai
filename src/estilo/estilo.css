@@ -21,6 +21,12 @@
     padding-right: 100px;
 }
 
+.home-netflix {
+    width: 100%;
+    height: 600px;
+    background-color: #E3CCAE;
+}
+
 /* cabecalho */
 
 .cabecalho {
@@ -31,6 +37,13 @@
     gap: 10px;
     background-color: #262A56;
     width: 100%;
+}
+
+.cabecalho-login img {
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
 /* menu principal */

@@ -6,7 +6,9 @@ function Home () {
     return (
         <div className='home'>
             <Cabecalho />
-            <h1>Esta é a home</h1>
+            <div className="home-netflix">
+                <div className="home-div1-netflix"></div>
+            </div>
             <Rodape />
         </div>
     )
