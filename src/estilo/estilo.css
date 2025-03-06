@@ -238,50 +238,67 @@
     border-radius: 14px; 
 }
 
+
+/*botao de login do cabeçalho*/
+
 .botaologin-container {
-    width: 80px;
+    position: relative;
   }
   
   .botaologin {
-    border-radius:100%;
+    background-color: transparent;
+    border: none;
     cursor: pointer;
+  }
+  
+  .imagembotaologin {
     width: 50px;
     height: 50px;
-    background-color: #898ca3;
   }
   
   .botaologin-form {
     position: absolute;
+    top: 50px;
     right: 0;
-    padding: 10px;
     background-color: #D39643;
-    border-radius: 10px;
-    width: 300px;
-    height: 300px;
+    border-radius: 15px;
+    width: 250px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .fotologin {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+  }
+  
+  .botaologin-form-div1 {
+    margin-bottom: 15px;
   }
   
   .botaologin-form-input {
     width: 100%;
-    padding: 5px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
   }
   
-  .submit-button {
+  .botaologin-submit {
     width: 100%;
+    height: 50px;
     background-color: #262A56;
     color: white;
     padding: 10px;
-    border-radius: 10px;
+    border: none;
+    border-radius: 15px;
     cursor: pointer;
+    font-size: 16px;
   }
   
-  .submit-button:hover {
-    background-color: #444769;
+  .botaologin-submit:hover {
+    background-color: #4a4c63;
   }
-
-
-
-
-
-/* -- Fim Home -- */
