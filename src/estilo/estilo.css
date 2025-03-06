@@ -57,22 +57,24 @@
     width: 100%;
 }
 
+.menu-botao a{
+    color: #fffffff0;
+    font-size: 1.7rem;
+}
 .menu-botao {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #D39643;
-    color: rgb(255, 255, 255);
     border: 2px solid rgb(0, 0, 0);
     border-radius: 10px;
     height: 50px;
     width: 200px;
     text-decoration: none;
-
 }
 
 .menu-botao:hover {
-    background-color: rgb(245, 206, 133);
+    background-color: rgb(210, 148, 31);
     transition: background-color 0.3s ease-in-out;
     
 }
@@ -165,3 +167,79 @@
     transition: background-color 0.3s ease-in-out;
     
 }
+
+/* -- Inicio Home -- */
+
+
+/* -- Inicio Card home Netflix -- */
+
+.menu-netflix{
+    background-color: #ec964e;
+}
+
+.menu-netflix img{
+    width: 30vw;
+    height: 600px;
+    border-radius: 22px;
+}
+
+.netflix-menu-card{
+    display: flex;
+    justify-content:space-around;
+    padding: 1rem;
+}
+
+/* -- Fim Card home Netflix -- */
+
+.texto-menu{
+    display: flex;
+    justify-content: center;
+}
+
+.texto-menu img{
+    height: 800px;
+    width: 80%
+}
+
+.menu-cadastrar-evento{
+    display: flex;
+    justify-content: center;
+}
+
+.menu-cadastrar-caixa{
+    margin: 2rem;
+    background-color: #262A56;
+    border-radius: 22px;
+    padding: 2rem;
+    text-align: center;
+    width: 80%;
+}
+
+.menu-cadastrar-caixa h2{
+    color: #B8621B;
+    font-size: 96px;
+    text-decoration: underline;
+}
+
+.menu-cadastrar-caixa p{
+    margin-top: 2.5rem;
+    color: white;
+    font-size: 40px;
+    font-style: italic;
+}
+
+.menu-cadastrar-caixa button{
+    margin-top: 2.5rem;
+    text-decoration: none;
+    background-color: #D39643;
+    color: white;
+    font-size: 64px;
+    padding: 1rem;
+    border-radius: 14px; 
+}
+
+
+
+
+
+/* -- Fim Home -- */

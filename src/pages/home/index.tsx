@@ -6,9 +6,10 @@ function Home () {
     return (
         <div className='home'>
             <Cabecalho />
-            <CardHome imgUrl='/Rock.jpg' evento='Rock'/>
+            <CardHome/>
+            {/* <CardHome imgUrl='/Rock.jpg' evento='Rock'/>
             <CardHome imgUrl='/Samba.jpg' evento='Samba'/>
-            <CardHome imgUrl='/Teatro.jpg' evento='Teatro'/>
+            <CardHome imgUrl='/Teatro.jpg' evento='Teatro'/> */}
             <Rodape />
         </div>
     )

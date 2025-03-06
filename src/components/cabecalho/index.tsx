@@ -15,7 +15,7 @@ function Cabecalho () {
                 <div className='logo-home'>
                     <img src='./Logonovo.png' alt='Logo' />
                 </div>
-                    <Menu />
+                <Menu />
                 <div className="cabecalho-login">
                     <img src="login.png" alt="Login" />
                 </div>
