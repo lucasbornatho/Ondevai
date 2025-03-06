@@ -1,14 +1,14 @@
 import Rodape from "../../components/rodape"
 import Cabecalho from "../../components/cabecalho"
-
+import CardHome from "../../components/cardhome"
 
 function Home () {
     return (
         <div className='home'>
             <Cabecalho />
-            <div className="home-netflix">
-                <div className="home-div1-netflix"></div>
-            </div>
+            <CardHome imgUrl='/Rock.jpg' evento='Rock'/>
+            <CardHome imgUrl='/Samba.jpg' evento='Samba'/>
+            <CardHome imgUrl='/Teatro.jpg' evento='Teatro'/>
             <Rodape />
         </div>
     )
