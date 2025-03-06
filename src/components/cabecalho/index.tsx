@@ -1,11 +1,6 @@
 import '../../estilo/estilo.css'
+import BotaoLogin from '../botaologin'
 import Menu from '../menu'
-
-// type Informacoes = {
-//     titulo?: string;
-//     pagina?: string;
-//     parametro?: string;
-// }
 
 function Cabecalho () {
 
@@ -17,7 +12,7 @@ function Cabecalho () {
                 </div>
                 <Menu />
                 <div className="cabecalho-login">
-                    <img src="login.png" alt="Login" />
+                    <BotaoLogin />
                 </div>
             </div>
         </div>

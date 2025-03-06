@@ -24,7 +24,7 @@ function CardHome () {
             </div>
             
             <div className="texto-menu">
-                    <img src="./OndeVai Texto.png" alt="" />
+                    <img src="./OndeVai Texto2.png" alt="" />
             </div>
 
             <div className="menu-cadastrar-evento">

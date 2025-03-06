@@ -238,6 +238,48 @@
     border-radius: 14px; 
 }
 
+.botaologin-container {
+    width: 80px;
+  }
+  
+  .botaologin {
+    border-radius:100%;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-color: #898ca3;
+  }
+  
+  .botaologin-form {
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    background-color: #D39643;
+    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+  }
+  
+  .botaologin-form-input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }
+  
+  .submit-button {
+    width: 100%;
+    background-color: #262A56;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #444769;
+  }
+
 
 
 
