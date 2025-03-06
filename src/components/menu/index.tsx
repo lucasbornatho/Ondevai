@@ -10,9 +10,6 @@ function Menu () {
             <div className="menu-botao">
                 <Link to='/eventos' className='link-botao-menu'> Eventos </Link>
             </div>
-            <div className="menu-botao">
-                <Link to='/sobre' className='link-botao-menu'> Sobre </Link>
-            </div>
         </div>
     )
 }
