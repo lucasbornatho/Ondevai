@@ -16,10 +16,11 @@ function BotaoLogin() {
             
           {LoginVisivel && (
             <div className="botaologin-form">
+              <h1>Bem Vindo ao Onde Vai</h1>
               <img className='fotologin' src="login.png" alt="login" />
               <form>
                 <div className="botaologin-form-div1">
-                  <input className="botaologin-form-input" type="text" placeholder="Digite seu usuário ou email"/>
+                  <input className="botaologin-form-input" type="text" placeholder="Login"/>
                 </div>
 
                 <div className="botaologin-form-div1">
@@ -28,11 +29,11 @@ function BotaoLogin() {
 
                 <button className="botaologin-submit" type="submit" >Logar</button>
               </form>
-              <br />
-              <Link to='/senha'> Esqueceu a Senha? </Link>
-              <br />
-              <Link to='/cadastro'> Faça seu Cadastro</Link>
-              
+
+              <div className = 'recuperacao-cadastro'>
+                <Link to='/senha'> Esqueceu a Senha? </Link>
+                <Link to='/cadastro'> Faça seu Cadastro</Link>
+              </div>
             </div>
           )}
         </div>

@@ -10,9 +10,12 @@ function CardHome () {
             <div className="menu-netflix">
 
                 <div className="netflix-menu-card">
-                    <a href="./"><img src="./Rock.jpg" alt="" /></a>
-                    <a href="./"><img src="./Samba.jpg" alt="" /></a>
-                    <a href="./"><img src="./Teatro.jpg" alt="" /></a>
+                    <a href="./"><img src="./banner/Eletronica.png" alt="" /></a>
+                    <a href="./"><img src="./banner/hip hop.png" alt="" /></a>
+                    <a href="./"><img src="./banner/Rock.png" alt="" /></a>
+                    <a href="./"><img src="./banner/Samba.png" alt="" /></a>
+                    <a href="./"><img src="./banner/Teatro.png" alt="" /></a>
+                    <a href="./"><img src="./banner/Bares.png" alt="" /></a>
                 </div>
 
                 {/* <div className="menu-netflix-cards">
