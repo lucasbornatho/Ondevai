@@ -31,19 +31,24 @@
 
 .cabecalho {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    flex-wrap: nowrap;
-    gap: 10px;
     background-color: #262A56;
+}
+
+.cabecalho-item{
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem;
 }
 
 .cabecalho-login img {
-    width: 40px;
+    height: 60px;
+    width: 60px;
     height: auto;
     border-radius: 50%;
-    margin-right: 10px;
+    /* margin-right: 10px; */
 }
 
 /* menu principal */
@@ -86,6 +91,7 @@
     font-weight: 400;
     font-style: normal;
 }
+
 
 /* rodape */
 
@@ -256,16 +262,16 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
-  }
+}
 
 .botaologin-container {
     position: relative;
     z-index: 10;
-  }
+}
 
 .botaologin-form {
     position: absolute;
-    top: 50px;
+    top: 70px;
     right: 0;
     background-color: #D39643;
     border-radius: 15px;
@@ -275,7 +281,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.7rem;
 }
 
 .botaologin-form h1{
@@ -318,11 +324,12 @@
   }
 
   .recuperacao-cadastro {
+    text-align: center;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     font-size: 1.2rem;
-    margin: 8px;
+    margin: 12px;
 }
 
 /* -- Fim botao de login do cabeçalho --*/

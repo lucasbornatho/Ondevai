@@ -7,13 +7,21 @@ function Cabecalho () {
     return (
         <div>
             <div className='cabecalho'>
-                <div className='logo-home'>
-                    <img src='./Logonovo.png' alt='Logo' />
+
+                <div className='cabecalho-item'>
+                    <div className='logo-home'>
+                        <img src='./Logonovo.png' alt='Logo' />
+                    </div>
+
+                    <div>
+                        <Menu />
+                    </div>
+
+                    <div className="cabecalho-login">
+                        <BotaoLogin />
+                    </div>
                 </div>
-                <Menu />
-                <div className="cabecalho-login">
-                    <BotaoLogin />
-                </div>
+                
             </div>
         </div>
     )

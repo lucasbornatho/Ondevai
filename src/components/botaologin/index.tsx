@@ -11,13 +11,13 @@ function BotaoLogin() {
   return (
         <div className="botaologin-container">
           <button onClick={abrirLogin} className="botaologin" >
-          <img className='imagembotaologin' src="login.png" alt="" />
+          <img className='imagembotaologin' src="Icone Login.png" alt="" />
           </button>
             
           {LoginVisivel && (
             <div className="botaologin-form">
               <h1>Bem Vindo ao Onde Vai</h1>
-              <img className='fotologin' src="login.png" alt="login" />
+              <img className='fotologin' src="Icone Login.png" alt="login" />
               <form>
                 <div className="botaologin-form-div1">
                   <input className="botaologin-form-input" type="text" placeholder="Login"/>
@@ -31,8 +31,8 @@ function BotaoLogin() {
               </form>
 
               <div className = 'recuperacao-cadastro'>
-                <Link to='/senha'> Esqueceu a Senha? </Link>
-                <Link to='/cadastro'> Faça seu Cadastro</Link>
+                <Link to='/senha'>Recuperar Senha</Link>
+                <Link to='/cadastro'>Criar Cadastro</Link>
               </div>
             </div>
           )}
