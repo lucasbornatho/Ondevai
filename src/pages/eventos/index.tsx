@@ -8,6 +8,9 @@ function Eventos () {
         <div className='home'>
             <Cabecalho />
             <Filtro />
+            <div className="nome-pagina-eventos">
+                <h1>Eventos</h1>
+            </div>
             <CardEvento />
             <CardEvento />
             <CardEvento />
