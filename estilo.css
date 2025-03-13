@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+}
+
+/* home */
+
+.home {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.logo-home {
+    display: flex;
+    height: 150px;
+    width: 150px;
+    padding-right: 100px;
+}
+
+.home-netflix {
+    width: 100%;
+    height: 600px;
+    background-color: #E3CCAE;
+}
+
+/* cabecalho */
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    background-color: #262A56;
+}
+
+.cabecalho-item{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem;
+}
+
+.cabecalho-login img {
+    height: 60px;
+    width: 60px;
+    height: auto;
+    border-radius: 50%;
+    /* margin-right: 10px; */
+}
+
+/* menu principal */
+
+.menu-principal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.menu-botao a{
+    color: #fffffff0;
+    font-size: 1.7rem;
+}
+.menu-botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D39643;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    height: 50px;
+    width: 200px;
+    text-decoration: none;
+}
+
+.menu-botao:hover {
+    background-color: rgb(210, 148, 31);
+    transition: background-color 0.3s ease-in-out;
+    
+}
+
+.link-botao-menu {
+    text-decoration: none;
+    color: black;
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* rodape */
+
+.container-rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    background-color: #262A56;
+    margin-top: auto;
+    padding-bottom: 10px;
+    color: white;
+    font-size: 16px;
+}
+
+.logo-rodape {
+    width: 90px;
+}
+
+/* notfound */
+
+.not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* -- Inicio Home -- */
+
+/* -- Inicio Card home Netflix -- */
+
+.menu-netflix{
+    background-color: #ec964e;
+    max-width: 100vw;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.menu-netflix img{
+    width: 20vw;
+    height: 650px;
+    border-radius: 22px;
+}
+
+.netflix-menu-card{
+    max-width: 80vw;
+    margin: 1rem 0;
+    display: flex;
+    justify-content:space-around;
+    gap:1rem;
+    animation: slide 12s linear infinite;
+    animation-direction: alternate;
+}
+
+@keyframes slide {
+    to{
+        translate: calc(-2 * 200px);
+    }    
+}
+/* -- Fim Card home Netflix -- */
+
+.texto-menu{
+    display: flex;
+    justify-content: center;
+}
+
+.texto-menu img{
+    height: 700px;
+    width: 80%
+}
+
+.menu-cadastrar-evento{
+    display: flex;
+    justify-content: center;
+}
+
+.menu-cadastrar-caixa{
+    margin: 3rem;
+    background-color: #262A56;
+    border-radius: 22px;
+    padding: 2rem;
+    text-align: center;
+    width: 80%;
+}
+
+.menu-cadastrar-caixa h2{
+    color: #B8621B;
+    font-size: 96px;
+    text-decoration: underline;
+}
+
+.menu-cadastrar-caixa p{
+    margin-top: 2.5rem;
+    color: white;
+    font-size: 40px;
+    font-style: italic;
+}
+
+.menu-cadastrar-caixa button{
+    margin-top: 2.5rem;
+    text-decoration: none;
+    background-color: #D39643;
+    color: white;
+    font-size: 64px;
+    padding: 1rem;
+    border-radius: 14px; 
+}
+
+
+/* -- Inicio botao de login do cabeçalho --*/
+
+.botaologin {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.botaologin-container {
+    position: relative;
+    z-index: 10;
+}
+
+.botaologin-form {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #D39643;
+    border-radius: 15px;
+    width: 280px;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.botaologin-form h1{
+    margin-top: 4px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: underline;
+}
+  
+.botaologin-form-div1 {
+    margin-bottom: 1.4rem;
+}
+  
+  .botaologin-form-input {
+    text-align: center;
+    font-style: italic;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 18px;
+  }
+  
+  .botaologin-submit {
+    width: 100%;
+    height: 50px;
+    background-color: #262A56;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1.6rem;
+  }
+  
+  .botaologin-submit:hover {
+    background-color: #4a4c63;
+  }
+
+  .recuperacao-cadastro {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.2rem;
+    margin: 12px;
+}
+
+/* -- Fim botao de login do cabeçalho --*/
+
+/* -- Inicio Pagina Eventos -- */
+
+.nome-pagina-eventos{
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 56px;
+    color: #262A56;
+    text-decoration: underline;
+}
+
+/* -- Inicio Componete Filtro Eventos -- */
+
+.container-filtro {
+    top: 180px;
+    width:100%;
+    height: 100px;
+    padding: 20px;
+    background-color: #E3CCAE;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filtro-botao {
+    margin: 1.5rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #B8621B;
+    color: #fff;
+    border-radius: 10px;
+    height: 60px;
+    width: 250px;
+    font-size: 42px ;
+}
+
+.filtro-botao:hover {
+    background-color: #ec964e;
+    transition: background-color 0.3s ease-in-out;
+} 
+
+/* -- Fim Componete Filtro Eventos -- */
+
+/* -- Inicio Card Evento -- */
+
+.card-evento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    padding: 22px;
+    border-radius: 10px;
+    margin: 1.5rem 0.7rem;
+    background-color: black;
+    color: #fff;
+}
+
+.evento-informacoes{
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.evento-informacoes h1{
+    width: 60%;
+    font-size: 64px;
+    display: flex;
+    justify-content: center;
+}
+
+.evento-icones{
+    display: flex;
+    gap: 1rem;
+}
+
+.evento-saiba-mais{
+    width: 100%;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.evento-saiba-mais button{
+    background-color: #B8621B;
+    color: #fff;
+    font-size: 48px;
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+/* -- Fim Card Evento -- */
+
+/* -- Fim Pagina Eventos -- */
+
+
+
+
+/* -- tela Cadastro Eventos --*/
+.Container-CadastroEvento{
+    background: rgba(227, 204, 174, 0.86);
+    width: 100%;
+    height: 100vw;
+
+}
+.texto-cetralizado{
+    text-align: center;
+}
+.PaiNomeEvento-Genero{ 
+    background-color: hsl(27, 74%, 41%);
+    width: 90%;
+    padding: 20px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 22px;
+    display: flex;
+     
+    
+
+}
+.FilhoNomeEvento{
+    background-color: #fff;
+    width: 300px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 22px;
+    text-align: center;
+}
+.FilhoGeneroEvento{
+    background-color: #fff; 
+   width: 300px;
+    height: 30px;
+     margin: 10px;
+    border-radius: 22px;
+    text-align: center;
+   
+}
+
+
+
+
+
+
+
+.PaiLocalizacao{
+    text-align: center;
+    background-color: hsl(27, 74%, 41%);
+    height: 150px;
+    width: 90%;
+    border-radius: 22px;
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+}
+
+.LocalizacaoFilho{
+    background-color: #fff; 
+    width: 300px;
+     height: 30px;
+      margin: 10px;
+     border-radius: 22px;
+     text-align: center;
+
+}
+
+
+
+.DescricaoEvento{
+  
+    background-color: hsl(27, 74%, 41%);
+    height: 400px;
+    width: 90%;
+    border-radius: 22px;
+    padding: 20px;
+    margin: 10px;
+    
+}
+
+.TextoDescrição{
+    background-color: #fff; 
+    width: 100%;
+     height: 340px;
+     border-radius: 22px;
+    
+
+
+}
+.Imagem-Capa-Evento{
+    background-color: hsl(27, 74%, 41%);
+    height:200px;
+    width: 90%;
+    border-radius: 22px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+
+}
+
+.imagemevento{
+    
+    background-color: #fff; 
+    width: 100%;
+     height: 130px;
+     border-radius: 22px;
+}
+
+.botaocadastro{
+    padding: 10px;;
+    text-align: center;
+    color: #fff;
+    align-items: center;
+    background-color:#262A56; 
+    width: 200px;
+     height: 100px;
+     border-radius: 22px;    
+     margin: auto;
+
+}
