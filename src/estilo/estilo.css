@@ -174,33 +174,39 @@
 }
 
 .menu-cadastrar-caixa{
-    margin: 3rem;
+    margin: 2.5rem;
     background-color: #262A56;
     border-radius: 22px;
-    padding: 2rem;
-    text-align: center;
-    width: 80%;
+    width: 70%;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 }
 
 .menu-cadastrar-caixa h2{
     color: #B8621B;
-    font-size: 96px;
+    font-size: 72px;
     text-decoration: underline;
+    text-align: center;
 }
 
 .menu-cadastrar-caixa p{
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     color: white;
     font-size: 40px;
     font-style: italic;
+    margin-bottom: 0;
 }
 
 .menu-cadastrar-caixa button{
-    margin-top: 2.5rem;
+    margin-top: 8px;
     text-decoration: none;
     background-color: #D39643;
     color: white;
-    font-size: 64px;
+    font-size: 52px;
     padding: 1rem;
     border-radius: 14px; 
 }
