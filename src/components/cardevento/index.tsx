@@ -1,10 +1,15 @@
-function CardEvento() {
+type CardEventoProps = {
+    imgUrl: string;
+    titulo: string;
+}
+
+function CardEvento({imgUrl, titulo} : CardEventoProps) {
     
     return(
         <div className='card-evento'>
 
             <div className="capa-evento">
-                <img src="/capa-evento/ImagemCapaEvento.png" alt="Capa Do evento" />
+                <img src={imgUrl} alt="Capa Do evento" />
             </div>
 
             <div className="evento-informacoes">
@@ -15,7 +20,7 @@ function CardEvento() {
                     <img src="/capa-evento-icones/evento curtir.png" alt="Curtir" />
                 </div>
                 
-                <h1>Os Caras Malvados</h1>
+                <h1>{titulo}</h1>
             </div>
 
             <div className="evento-saiba-mais">

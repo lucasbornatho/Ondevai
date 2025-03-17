@@ -8,13 +8,13 @@ function Eventos () {
         <div className='home'>
             <Cabecalho />
             <Filtro />
-            <div className="nome-pagina-eventos">
+            <div className='nome-pagina-eventos'>
                 <h1>Eventos</h1>
             </div>
-            <CardEvento />
-            <CardEvento />
-            <CardEvento />
-            <CardEvento />
+            <CardEvento imgUrl='/capa-evento/ImagemCapaEvento.png' titulo="Os caras malvados"/>
+            <CardEvento imgUrl='/capa-evento/ImagemCapaEvento.png' titulo="Os caras malvados"/>
+            <CardEvento imgUrl='/capa-evento/ImagemCapaEvento.png' titulo="Os caras malvados"/>
+            <CardEvento imgUrl='/capa-evento/ImagemCapaEvento.png' titulo="Os caras malvados"/>
             <Rodape />
         </div>
     )

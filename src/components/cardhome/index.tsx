@@ -11,14 +11,14 @@ const breakpoints = [
     { width: 1, itemsToShow: 1 },
     { width: 550, itemsToShow: 2 },
     { width: 768, itemsToShow: 3 },
-    { width: 1200, itemsToShow: 4 }
+    { width: 1200, itemsToShow: 3 }
 ];
 
 function CardHome() {
     return (
         <div>
             <div className="menu-netflix">
-                <Carousel breakPoints={breakpoints}>
+                <Carousel breakPoints={breakpoints} loop={true} enableAutoPlay={true} autoPlaySpeed={2000}>
                     <a href="./"><img src="./banner/Eletronica.png" alt="Eletronica" /></a>
                     <a href="./"><img src="./banner/hip hop.png" alt="Hip Hop" /></a>
                     <a href="./"><img src="./banner/Rock.png" alt="Rock" /></a>
