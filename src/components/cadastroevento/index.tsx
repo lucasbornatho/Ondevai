@@ -1,46 +1,76 @@
 function CadastroEvento(){
+
     return(
-        <div className="Container-CadastroEvento">
-        <br />
-       <h1 className="texto-cetralizado">Dados Evento</h1>
-       <h2>Dados Evento</h2> 
-            <div className="PaiNomeEvento-Genero">
+        <>
+            <div className="container-cadastro-evento">
                 
-                <div className="FilhoNomeEvento">Nome Evento </div>
-                <div className="FilhoGeneroEvento">Genero  </div>
+                <h1 className="texto-cetralizado">Cadastro Evento</h1>
+
+                <div className="cadastro-evento-body">
+
+                    <form action="">
+                        <div className="container-dados-evento">
+                            <h2>Dados Evento</h2>
+                            <div className="container-item">
+                                <div className="container-grupo">
+                                    <label>Nome Evento</label>
+                                    <input type="text" />
+                                </div>
+                                <div className="container-grupo">
+                                    <label>Genero</label>
+                                    <input type="text" />
+                                </div>
+                            </div> 
+                        </div> 
+
+                        <div className="container-localizacao">
+                            <h2>Localização</h2>
+                            <div className="container-item">
+                                <div className="container-grupo">
+                                    <label>Endereço</label>
+                                    <input type="text" />
+                                </div>
+
+                                <div className="container-grupo">
+                                    <label htmlFor="">Numero</label>
+                                    <input type="text" />
+                                </div>
+
+                                <div className="container-grupo">
+                                    <label htmlFor="">CEP</label>
+                                    <input type="text" />
+                                </div>
+
+                                <div className="container-grupo">
+                                    <label htmlFor="">Cidade</label>
+                                    <input type="text" />
+                                </div>
+                            </div> 
+                        </div> 
+
+                        <div className="container-descricao-evento">
+                            <h2>Descrição Evento</h2>
+                            <div className="container-item tamanho-input">
+                                <input type="text"/>
+                            </div>
+                        </div>
+
+                        <div className="container-imagem-capa-evento">
+                            <h2>Imagem Capa Evento</h2>
+                            <div className="container-item file">
+                                <input type="file"/>
+                                <p>Imagem maxima 1140px X 813px</p>
+                            </div>
+                    
+                        </div>
+                    </form>
                 </div>
-                <br />
 
-
-                <h2>Localização</h2>
-            <div className="PaiLocalizacao"> 
-                 <div className="LocalizacaoFilho">Endereço </div>
-                 <div className="LocalizacaoFilho">Numero </div>
-                 <div className="LocalizacaoFilho">CEP</div>
-                 <div className="LocalizacaoFilho">Cidade</div>
+                <div className="botao-cadastrar-eventro">
+                    <button>Cadastrar Evento</button>
+                </div>
             </div>
-            <br/>
-            
-          <div className="DescricaoEvento">Descrição Evento
-            <div className="TextoDescrição"></div>
-             </div>
-             <br />
-             <div className="Imagem-Capa-Evento">Imagem Capa Evento
-            <div className="imagemevento"  > 
-              
-            </div>
-            Imagem Maxima 1140px X813px
-             </div>
-             <br />
-
-          <div className="botaocadastro">
-          <h1 className="texto-cetralizado">Cadastre Evento</h1>
-              </div>
-
-
-
-        </div>
-        
+        </>
     )
 }
 

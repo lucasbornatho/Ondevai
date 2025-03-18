@@ -9,7 +9,7 @@ function InfosHome() {
                 <div className="menu-cadastrar-caixa">
                     <h2>Quer Cadastrar seu Evento?</h2>
                     <p>Clique abaixo e preencha as informações</p>
-                    <a href="./cadastroevento"><button>Cadastrar</button></a>
+                    <a className="loginbotaocadastro" href="./cadastroevento"><button>Cadastrar</button></a>
                 </div>
             </div>
         </div>
