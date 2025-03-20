@@ -1,15 +1,12 @@
-type CardEventoProps = {
-    imgUrl: string;
-    titulo: string;
-}
+import { CardEventoType } from "../../types/cardeventotype"
 
-function CardEvento({imgUrl, titulo} : CardEventoProps) {
+function CardEvento({id, title,image, description} : CardEventoType) {
     
     return(
         <div className='card-evento'>
 
             <div className="capa-evento">
-                <img src={imgUrl} alt="Capa Do evento" />
+                <img src={image} alt="Capa Do evento" />
             </div>
 
             <div className="evento-informacoes">
@@ -20,7 +17,7 @@ function CardEvento({imgUrl, titulo} : CardEventoProps) {
                     <img src="/capa-evento-icones/evento curtir.png" alt="Curtir" />
                 </div>
                 
-                <h1>{titulo}</h1>
+                <h1>{title}</h1>
             </div>
 
             <div className="evento-saiba-mais">

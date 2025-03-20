@@ -2,13 +2,27 @@ import Rodape from "../../components/rodape"
 import Cabecalho from "../../components/cabecalho"
 import CardEvento from "../../components/cardevento"
 import Filtro from "../../components/filtro"
+import { CardEventoType } from "../../types/cardeventotype"
+import { useState, useEffect } from "react"
 
 function Eventos () {
 
-    const eventos = [{ id: 1, titulo: "Os caras malvados", imgUrl: "/capa-evento/ImagemCapaEvento.png" },
-    { id: 2, titulo: "Os caras muito malvados", imgUrl: "/capa-evento/ImagemCapaEvento.png" },
-    { id: 3, titulo: "Os caras muito muito malvados", imgUrl: "/capa-evento/ImagemCapaEvento.png" },
-    { id: 4, titulo: "Os caras malvadosssssssssssss", imgUrl: "/capa-evento/ImagemCapaEvento.png" }];
+
+    useEffect(() => { carregarEventos() }, []);
+
+
+    const [eventos, SetEventos] = useState<CardEventoType[]>([]);
+ 
+    const carregarEventos = () => {
+        fetch('https://67db6c491fd9e43fe4747f36.mockapi.io/eventos/v1/Ecventos')
+        .then((response) => {
+            return response.json();
+        })
+ 
+        .then((json) => {
+            SetEventos(json);
+        })
+    }
 
     return (
         <div className='home'>
@@ -19,7 +33,7 @@ function Eventos () {
             </div>
             <ul>
                 {eventos.map(evento => 
-                <li key={evento.id}><CardEvento titulo={evento.titulo} imgUrl={evento.imgUrl} /></li>
+                    <li key={evento.id}><CardEvento title={evento.title} image={evento.image} /></li>
                 )}
             </ul>
             <Rodape />
