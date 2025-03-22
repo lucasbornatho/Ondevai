@@ -1,6 +1,6 @@
 import { CardEventoType } from "../../types/cardeventotype"
 
-function CardEvento({id, title,image, description} : CardEventoType) {
+function CardEvento({id, nome, genero, descricao, localizacao, image} : CardEventoType) {
     
     return(
         <div className='card-evento'>
@@ -17,7 +17,7 @@ function CardEvento({id, title,image, description} : CardEventoType) {
                     <img src="/capa-evento-icones/evento curtir.png" alt="Curtir" />
                 </div>
                 
-                <h1>{title}</h1>
+                <h1>{nome}</h1>
             </div>
 
             <div className="evento-saiba-mais">

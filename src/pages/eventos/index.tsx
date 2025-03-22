@@ -33,7 +33,7 @@ function Eventos () {
             </div>
             <ul>
                 {eventos.map(evento => 
-                    <li key={evento.id}><CardEvento title={evento.title} image={evento.image} /></li>
+                    <li key={evento.id}><CardEvento nome={evento.nome} image={evento.image} /></li>
                 )}
             </ul>
             <Rodape />
