@@ -44,12 +44,15 @@ function CardHome() {
                             removeArrowOnDeviceType={["tablet", "mobile"]}
                             dotListClass="custom-dot-list-style"
                             itemClass="carousel-item-padding-40-px">
-                    <a href="./"><img src="./banner/Eletronica.png" alt="Eletronica" /></a>
-                    <a href="./"><img src="./banner/hip hop.png" alt="Hip Hop" /></a>
-                    <a href="./"><img src="./banner/Rock.png" alt="Rock" /></a>
-                    <a href="./"><img src="./banner/Samba.png" alt="Samba" /></a>
-                    <a href="./"><img src="./banner/Teatro.png" alt="Teatro" /></a>
-                    <a href="./"><img src="./banner/Bares.png" alt="Bares" /></a>
+                    
+                      <a href="./"><img src="./banner/Eletronica.png" alt="Eletronica" /></a>
+                      <a href="./"><img src="./banner/hip hop.png" alt="Hip Hop" /></a>
+                      <a href="./"><img src="./banner/Rock.png" alt="Rock" /></a>
+                      <a href="./"><img src="./banner/Samba.png" alt="Samba" /></a>
+                      <a href="./"><img src="./banner/Teatro.png" alt="Teatro" /></a>
+                      <a href="./"><img src="./banner/Bares.png" alt="Bares" /></a>
+                    
+                    
                 </Carousel>
             </div>
         </div>

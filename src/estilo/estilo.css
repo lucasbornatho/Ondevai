@@ -130,31 +130,16 @@
 
 .menu-netflix{
     background-color: #ec964e;
-    max-width: 100vw;
+    max-width: 99vw;
     overflow: hidden;
     z-index: 1;
 }
 
 .menu-netflix img{
-    width: 20vw;
-    height: 650px;
+    width: 30vw;
+    height: 630px;
     border-radius: 22px;
-}
-
-.netflix-menu-card{
-    max-width: 80vw;
-    margin: 1rem 0;
-    display: flex;
-    justify-content:space-around;
-    gap:1rem;
-    animation: slide 12s linear infinite;
-    animation-direction: alternate;
-}
-
-@keyframes slide {
-    to{
-        translate: calc(-2 * 200px);
-    }    
+    margin: 2rem;
 }
 /* -- Fim Card home Netflix -- */
 
