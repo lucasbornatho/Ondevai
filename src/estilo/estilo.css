@@ -433,9 +433,12 @@
 
 /*precisa pensar em como deixar o texto correto começando na parte
 de cima da caixa*/
-.tamanho-input input{
+.tamanho-input textarea{
+    font-size: 1.4rem;
+    border-radius: 12px;
     height: 300px;
     width: 100%;
+    padding: 1rem;
 }
 
 .container-grupo{
