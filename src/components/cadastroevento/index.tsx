@@ -58,7 +58,7 @@ function CadastroEvento(){
                         <div className="container-imagem-capa-evento">
                             <h2>Imagem Capa Evento</h2>
                             <div className="container-item file">
-                                <input type="file"/>
+                                <input className="input-arquivo" type="file"/>
                                 <p>Imagem maxima 1140px X 813px</p>
                             </div>
                     
