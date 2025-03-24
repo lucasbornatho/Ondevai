@@ -58,10 +58,12 @@ function CadastroEvento(){
                         <div className="container-imagem-capa-evento">
                             <h2>Imagem Capa Evento</h2>
                             <div className="container-item file">
-                                <input className="input-arquivo" type="file"/>
-                                <p>Imagem maxima 1140px X 813px</p>
+                                <label htmlFor="input-arquivo">
+                                    <img src='/carregar-arquivo.png' alt='carregamento' />
+                                </label>
+                                <input id="input-arquivo" className="input-arquivo" type="file" style={{ display: 'none' }} />
+                                <p>Imagem máxima 1140px X 813px</p>
                             </div>
-                    
                         </div>
                     </form>
                 </div>
