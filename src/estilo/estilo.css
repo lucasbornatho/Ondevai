@@ -300,22 +300,33 @@
 }
 
 .filtro-botao {
-    margin: 1.5rem 4rem;
+    margin: 22px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     background-color: #B8621B;
     color: #fff;
     border-radius: 10px;
     height: 60px;
-    width: 250px;
-    font-size: 42px ;
+    width: 280px;
+    font-size: 32px ;
+    text-align: center;
 }
 
 .filtro-botao:hover {
     background-color: #ec964e;
     transition: background-color 0.3s ease-in-out;
 } 
+
+.css-botao{
+    background-color: #262A56;
+}
+
+.css-botao:hover{
+    background-color: #4a4c63;
+    transition: background-color 0.3s ease-in-out;
+}
+
 
 /* -- Fim Componete Filtro Eventos -- */
 
