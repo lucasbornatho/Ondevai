@@ -14,15 +14,20 @@ function Eventos () {
     const [eventos, SetEventos] = useState<CardEventoType[]>([]);
  
     const carregarEventos = () => {
-        fetch('https://67db6c491fd9e43fe4747f36.mockapi.io/eventos/v1/Ecventos')
-        .then((response) => {
-            return response.json();
-        })
- 
-        .then((json) => {
-            SetEventos(json);
-        })
-    }
+        fetch('http://localhost:3000/eventos')
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error(`Erro HTTP! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then((json) => {
+                SetEventos(json);
+            })
+            .catch((error) => {
+                console.error("Erro ao carregar eventos:", error);
+            });
+    };
 
     return (
         <div className='home'>
@@ -33,7 +38,7 @@ function Eventos () {
             </div>
             <ul>
                 {eventos.map(evento => 
-                    <li key={evento.id}><CardEvento nome={evento.nome} image={evento.image} /></li>
+                    <li key={evento.id}><CardEvento nome={evento.nome} image={evento.image} localizacao={evento.localizacao} /></li>
                 )}
             </ul>
             <Rodape />
