@@ -174,7 +174,6 @@
 .menu-cadastrar-caixa h2{
     color: #B8621B;
     font-size: 72px;
-    text-decoration: underline;
     text-align: center;
 }
 
@@ -231,7 +230,6 @@
     text-align: center;
     font-size: 18px;
     color: #fff;
-    text-decoration: underline;
 }
   
 .botaologin-form-div1 {
@@ -282,7 +280,6 @@
     text-align: center;
     font-size: 56px;
     color: #262A56;
-    text-decoration: underline;
 }
 
 /* -- Inicio Componete Filtro Eventos -- */

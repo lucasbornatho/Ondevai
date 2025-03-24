@@ -31,8 +31,8 @@ function BotaoLogin() {
               </form>
 
               <div className = 'recuperacao-cadastro'>
-                <Link to='/senha'>Recuperar Senha</Link>
-                <Link to='/cadastro'>Criar Cadastro</Link>
+                <Link to='/recuperarsenha'>Recuperar Senha</Link>
+                <Link to='/cadastrousuario'>Criar Cadastro</Link>
               </div>
             </div>
           )}
