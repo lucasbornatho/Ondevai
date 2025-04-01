@@ -493,8 +493,38 @@ de cima da caixa*/
 
 /* -- Cadastro Usuario -- */
 
-.CadastroUsuario{
-    display: flex;
+.CadastroUsuario-Container{
+    position: relative;
+    z-index: 10;
     
 
+
+
+}
+.botaocadastrologin-form{
+    position: absolute;
+   
+    right: 0;
+    background-color: #D39643;
+    border-radius: 15px;
+    width: 280px;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+.botaocadastrologin-form-div1 {
+    margin-bottom: 1.4rem;
+}
+
+.botaocadastrologin-form-input {
+    text-align: center;
+    font-style: italic;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 18px;
 }
