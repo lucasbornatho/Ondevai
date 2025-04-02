@@ -15,7 +15,7 @@ function App() {
       <Route path='/' element= {<Home />} />
       <Route path='/eventos' element= {<Eventos />} />
       <Route path='/cadastroevento' element={<Cadastro/>}/>
-      <Route path='/cadastrousuario' element={<CadastroUsuario/>} />
+      <Route path='/cadastrousuario' element={<CadastroUsuario />} />
       <Route path='/recuperarsenha' element={<RecuperaSenha />} />
     </Routes>
   )
