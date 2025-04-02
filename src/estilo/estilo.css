@@ -496,15 +496,11 @@ de cima da caixa*/
 .CadastroUsuario-Container{
     position: relative;
     z-index: 10;
-    
-
-
-
-}
+    left: 800px;
+   
+} 
 .botaocadastrologin-form{
     position: absolute;
-   
-    right: 0;
     background-color: #D39643;
     border-radius: 15px;
     width: 280px;
@@ -527,4 +523,19 @@ de cima da caixa*/
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 18px;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Escurece o fundo */
+    backdrop-filter: blur(8px); /* Efeito de desfoque */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden; /* Esconde por padrão */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s;
 }

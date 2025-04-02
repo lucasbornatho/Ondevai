@@ -13,9 +13,9 @@ function CadastroUsuario() {
   
     return (
     <div>
-    <Cabecalho/>
+    
         <div className="CadastroUsuario">
-        
+        <Cabecalho/>
           <div className="CadastroUsuario-Container">
           {/* <button onClick={abrirCadastroUsuario} className="Criar Cadastro" >
           <img className='imagembotaologin' src="Icone Login.png" alt="" />
@@ -46,14 +46,14 @@ function CadastroUsuario() {
                   <button className="botaologin-submit" type="submit" >Cadastre-se</button>
                 </form>
   
-               
-            
+                 <Rodape/>
+           
                 </div>
-             
+            
             {/* )} */}
           </div>  
-        <Rodape/>   </div> 
-     </div>    )
+        
+        </div></div>    )
      }
   
 

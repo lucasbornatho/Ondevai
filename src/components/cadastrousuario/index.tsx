@@ -9,7 +9,7 @@ function CadastroUsuario() {
     // }
   
     return (<div>
-        <div className="CadastroUsuario">
+        <div className="CadastroUsuario-Container">
         
           <div className="botaologin-container">
           {/* <button onClick={abrirCadastroUsuario} className="Criar Cadastro" >
@@ -17,25 +17,25 @@ function CadastroUsuario() {
           </button>
               
             {LoginVisivel && ( */}
-              <div className="botaologin-form">
+              <div className="botaocadastrologin-form">
                 <h1>Onde vai Cadastro</h1>
                 <img className='fotologin' src="Icone Login.png" alt="login" />
                 <form>
-                  <div className="botaologin-form-div1">
-                    <input className="botaologin-form-input" type="text" placeholder="Nome Completo"/>
+                  <div className="botaocadastrologin-form-div1">
+                    <input className="botaocadastrologin-form-input" type="text" placeholder="Nome Completo"/>
                   </div>
-                  <div className="botaologin-form-div1">
-                    <input className="botaologin-form-input" type="text" placeholder="Email"/>
+                  <div className="botaocadastrologin-form-div1">
+                    <input className="botaocadastrologin-form-input" type="text" placeholder="Email"/>
                   </div>
-                  <div className="botaologin-form-div1">
-                    <input className="botaologin-form-input" type="password" placeholder="Senha"/>
+                  <div className="botaocadastrologin-form-div1">
+                    <input className="botaocadastrologin-form-input" type="password" placeholder="Senha"/>
                   </div>
-                  <div className="botaologin-form-div1">
-                    <input className="botaologin-form-input" type="text" placeholder="Telefone"/>
+                  <div className="botaocadastrologin-form-div1">
+                    <input className="botaocadastrologin-form-input" type="text" placeholder="Telefone"/>
                   </div>
   
-                  <div className="botaologin-form-div1">
-                    <input className="botaologin-form-input" type="text" placeholder="Sexo"/>
+                  <div className="botaocadastrologin-form-div1">
+                    <input className="botaocadastrologin-form-input" type="text" placeholder="Sexo"/>
                   </div>
   
                   <button className="botaologin-submit" type="submit" >Cadastre-se</button>
