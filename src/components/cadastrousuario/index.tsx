@@ -2,21 +2,13 @@ import "../../estilo/estilo.css"
 
 
 function CadastroUsuario() {
-    // const [LoginVisivel, setLoginVisivel] = useState(false);
+   
   
-    // const CadastrarUsuario = () => {
-    //   setLoginVisivel(!LoginVisivel);
-    // }
-  
-    return (<div>
+    return (<div className="overlay">
         <div className="CadastroUsuario-Container">
         
           <div className="botaologin-container">
-          {/* <button onClick={abrirCadastroUsuario} className="Criar Cadastro" >
-          <img className='imagembotaologin' src="Icone Login.png" alt="" />
-          </button>
-              
-            {LoginVisivel && ( */}
+            
               <div className="botaocadastrologin-form">
                 <h1>Onde vai Cadastro</h1>
                 <img className='fotologin' src="Icone Login.png" alt="login" />
@@ -40,6 +32,7 @@ function CadastroUsuario() {
   
                   <button className="botaologin-submit" type="submit" >Cadastre-se</button>
                 </form>
+                
                 </div>
              
             {/* )} */}

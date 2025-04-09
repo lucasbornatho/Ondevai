@@ -494,7 +494,8 @@ de cima da caixa*/
 /* -- Cadastro Usuario -- */
 
 .CadastroUsuario-Container{
-    flex-direction: column;
+
+  flex-direction: column;
     display: flex;
     align-items: center;
     align-self: center;
@@ -529,14 +530,11 @@ de cima da caixa*/
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Escurece o fundo */
-    backdrop-filter: blur(8px); /* Efeito de desfoque */
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6); /* escurece o fundo */
     display: flex;
-    justify-content: center;
     align-items: center;
-    visibility: hidden; /* Esconde por padrão */
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out, visibility 0.3s;
-}
+    justify-content: center;
+    z-index: 999;
+  }
