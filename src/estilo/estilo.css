@@ -504,8 +504,8 @@ de cima da caixa*/
 .botaocadastrologin-form{
     background-color: #D39643;
     border-radius: 15px;
-    width: 500px;
-    height: 800px;
+    width: 450px;
+    height: 650px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -532,9 +532,20 @@ de cima da caixa*/
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.6); /* escurece o fundo */
+    background-color: rgba(0, 0, 0, 0.685); /* escurece o fundo */
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 999;
   }
+
+.fechar-btn{
+    width: 100px;
+    height: 50px;
+    background-color: #262A56;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.6rem;
+
+}
