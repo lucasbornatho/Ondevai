@@ -6,8 +6,15 @@ export const api = {
         return json;
     },
 
+    //func vai filtrar conforme o parametro informado no filto/eventos
+    CarregarEventoUnico: async (param:string) => {
+            let response = await fetch('');
+            let json = await response.json();
+            return json
+    },
+
     AdicionarUsuarios: async (title: string, body: string, userID: number) => {
-        let response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+        let response = await fetch('', {
             method: 'POST',
             body: JSON.stringify({
                 title,
@@ -45,11 +52,25 @@ export const api = {
         return json;
     },
 
-    //func vai filtrar conforme o parametro informado no filto/eventos
-    CarregarEventoUnico: async (param:string) => {
-        let response = await fetch('');
-        let json = await response.json();
-        return json
-    }
+    LoginUsuario: async (email: string, senha: string) => {
+        
+        if (!email || !senha) {
+            throw new Error("Email e senha são obrigatórios");
+        }
+
+        let response = await fetch('', {
+            method: 'POST',
+            body: JSON.stringify({
+                email,
+                senha
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
     
+        let json = await response.json();
+        console.log(json);
+        return json;
+    }
 }
