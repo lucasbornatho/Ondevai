@@ -1,10 +1,17 @@
 import "../../estilo/estilo.css"
+import { useNavigate } from 'react-router-dom';
+
 
 
 function CadastroUsuario() {
+  const navigate = useNavigate();
+
+  const sairDaTela = () => {
+    navigate("/menu");
+  };
    
   
-    return (<div className="overlay">
+    return (<div> 
         <div className="CadastroUsuario-Container">
         
           <div className="botaologin-container">
@@ -32,7 +39,8 @@ function CadastroUsuario() {
   
                   <button className="botaologin-submit" type="submit" >Cadastre-se</button>
                 </form>
-                
+            
+            <button onClick={sairDaTela} className="fechar-btn">Fechar</button>
                 </div>
              
             {/* )} */}
