@@ -543,7 +543,6 @@ de cima da caixa*/
     /* position: fixed; */
     top: 0;
     left: 0;
-<<<<<<< HEAD
     /* width: 100vw;
     height: 100vh; */
     background-color: rgba(0, 0, 0, 0.767); /* escurece o fundo */
@@ -554,24 +553,3 @@ de cima da caixa*/
   }
 
   /* -- Fim Cadastro Usuario -- */
-=======
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.685); /* escurece o fundo */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
-  }
-
-.fechar-btn{
-    width: 100px;
-    height: 50px;
-    background-color: #262A56;
-    color: white;
-    border: none;
-    border-radius: 15px;
-    font-size: 1.6rem;
-
-}
->>>>>>> 7cc59c832bbab9b7b3e249bf89932fb2032483de
