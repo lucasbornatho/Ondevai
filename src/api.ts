@@ -50,5 +50,27 @@ export const api = {
         let json = await response.json();
         console.log(json);
         return json;
+    },
+
+    LoginUsuario: async (email: string, senha: string) => {
+        
+        if (!email || !senha) {
+            throw new Error("Email e senha são obrigatórios");
+        }
+
+        let response = await fetch('', {
+            method: 'POST',
+            body: JSON.stringify({
+                email,
+                senha
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+    
+        let json = await response.json();
+        console.log(json);
+        return json;
     }
 }
