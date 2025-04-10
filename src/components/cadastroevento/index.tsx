@@ -1,4 +1,22 @@
+import { useState } from "react";
+import { api } from "../../api";
+import { CardEventoType } from "../../types/cardeventotype";
+
+const [eventos, setEventos] = useState<CardEventoType[]>([]);
+
 function CadastroEvento(){
+
+    const handleAddClick = async (id: string, nome: string, genero: string, data: string, horario: string, descricao: string, localizacao: string, image: string) => {
+        
+        let json = await api.AdicionarEventos(id, nome, genero, data, horario, descricao, localizacao, image);
+
+        if(json.id){
+            alert('Evento adicionado com sucesso')
+            setEventos((eventos: any) => [...eventos, json]);
+        } else {
+            alert('Falha ao adicionar Evento')
+        }
+    }
 
     return(
         <>

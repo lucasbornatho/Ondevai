@@ -13,13 +13,17 @@ export const api = {
             return json
     },
 
-    AdicionarUsuarios: async (title: string, body: string, userID: number) => {
+    AdicionarUsuarios: async (id: string, nome: string, datanasc: string, sexo: string, email: string, telefone: string, senha: string) => {
         let response = await fetch('', {
             method: 'POST',
             body: JSON.stringify({
-                title,
-                body,
-                userID
+                id,
+                nome,
+                datanasc,
+                sexo,
+                email,
+                telefone,
+                senha
             }),
             headers: {
                 'Content-Type': 'application/json'
@@ -31,13 +35,15 @@ export const api = {
         return json;
     },
 
-    AdicionarEventos: async (id: string, nome: string, genero: string, descricao: string, localizacao: string, image: string) => {
+    AdicionarEventos: async (id: string, nome: string, genero: string, data: string, horario: string, descricao: string, localizacao: string, image: string) => {
         let response = await fetch('', {
             method: 'POST',
             body: JSON.stringify({
                 id,
                 nome,
                 genero,
+                data,
+                horario,
                 descricao,
                 localizacao,
                 image,
@@ -53,7 +59,7 @@ export const api = {
     },
 
     LoginUsuario: async (email: string, senha: string) => {
-        
+
         if (!email || !senha) {
             throw new Error("Email e senha são obrigatórios");
         }
