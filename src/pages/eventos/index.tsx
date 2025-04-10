@@ -4,30 +4,26 @@ import CardEvento from "../../components/cardevento"
 import Filtro from "../../components/filtro"
 import { CardEventoType } from "../../types/cardeventotype"
 import { useState, useEffect } from "react"
+import { api } from "../../api"
 
 function Eventos () {
 
 
-    useEffect(() => { carregarEventos() }, []);
+    useEffect(() => { carregarTodosEventos() }, []);
 
 
-    const [eventos, SetEventos] = useState<CardEventoType[]>([]);
+    const [eventos, setEventos] = useState<CardEventoType[]>([]);
+    const[loading, setLoading] = useState(false);
  
-    const carregarEventos = () => {
-        fetch('http://localhost:3000/eventos')
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error(`Erro HTTP! status: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then((json) => {
-                SetEventos(json);
-            })
-            .catch((error) => {
-                console.error("Erro ao carregar eventos:", error);
-            });
-    };
+    const carregarTodosEventos = async () => {
+        setLoading(true)
+
+        let json = await api.CarregarTodosEventos();
+
+        const dataArray = Array.isArray(json) ? json : [json];
+        setLoading(false);
+        setEventos(dataArray);
+    }
 
     return (
         <div className='home'>
