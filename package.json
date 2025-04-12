@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "node": "^23.8.0",
+    "or": "^0.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-elastic-carousel": "^0.11.5",
     "react-multi-carousel": "^2.8.5",
     "react-router-dom": "^7.1.5",
     "router-dom": "^3.0.1",
