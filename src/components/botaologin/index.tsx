@@ -1,12 +1,12 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useEffect, useRef, useState } from 'react';
 import { Link, Navigate, useNavigate } from "react-router-dom"
 import { api } from '../../api';
 
 
 function BotaoLogin() {
   const [LoginVisivel, setLoginVisivel] = useState(false);
-
   const navigate = useNavigate();
+  const loginRef = useRef<HTMLDivElement>(null); // ref para o form de login
 
   const logar = async (email: string, senha: string) => {
     let json = await api.LoginUsuario(addEmail, addSenha);
@@ -34,15 +34,28 @@ function BotaoLogin() {
     setLoginVisivel(!LoginVisivel);
   }
 
+  useEffect(() => {
+    const handleClickFora = (event: MouseEvent) => {
+      if (LoginVisivel && loginRef.current && !loginRef.current.contains(event.target as Node)) {
+        setLoginVisivel(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickFora);
+    return () => {
+      document.removeEventListener('mousedown', handleClickFora);
+    };
+  }, [LoginVisivel])
+
 
   return (
     <div className="botaologin-container">
-      <button onClick={abrirLogin} className="botaologin" >
+      <button onClick={abrirLogin} className="botaologin">
         <img className='imagembotaologin' src="Icone Login.png" alt="" />
       </button>
 
       {LoginVisivel && (
-        <div className="botaologin-form">
+        <div className="botaologin-form" ref={loginRef}>
           <h1>Bem Vindo ao Onde Vai</h1>
           <img className='fotologin' src="Icone Login.png" alt="login" />
 
