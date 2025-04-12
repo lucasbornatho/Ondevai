@@ -62,11 +62,11 @@ function BotaoLogin() {
 
           <form>
             <div className='botaologin-form-div1'>
-              <input type="text" placeholder="Login" value={addEmail} onChange={handleAddEmailChange}/>
+              <input className='botaologin-form-input' type="text" placeholder="Login" value={addEmail} onChange={handleAddEmailChange}/>
             </div>
 
             <div className='botaologin-form-div1'>
-              <input type="password" placeholder="Senha" value={addSenha} onChange={handleAddSenhaChange}/>
+              <input className='botaologin-form-input' type="password" placeholder="Senha" value={addSenha} onChange={handleAddSenhaChange}/>
             </div>
 
             <button className='botaologin-submit' type="button" onClick={() => logar(addEmail, addSenha)}>Logar</button>

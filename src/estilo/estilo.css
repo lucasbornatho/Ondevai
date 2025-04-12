@@ -271,6 +271,15 @@
     margin: 12px;
 }
 
+.recuperacao-cadastro a {
+    color: white;
+    text-decoration: none;
+}
+
+.recuperacao-cadastro a:hover {
+    text-decoration: underline;
+}
+
 /* -- Fim botao de login do cabeçalho --*/
 
 /* -- Inicio Pagina Eventos -- */
