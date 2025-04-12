@@ -551,5 +551,18 @@ de cima da caixa*/
     justify-content: center;
     /* z-index: 1010; */
   }
+.fechar-btn{ 
+    width: 30%;
+    height: 50px;
+    background-color: #262A56;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+
+
 
   /* -- Fim Cadastro Usuario -- */

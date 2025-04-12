@@ -7,7 +7,7 @@ function CadastroUsuario() {
   const navigate = useNavigate();
 
   const sairDaTela = () => {
-    navigate("/menu");
+    navigate(-1);
   };
    
   
@@ -17,7 +17,7 @@ function CadastroUsuario() {
           <div className="botaologin-container">
             
               <div className="botaocadastrologin-form">
-                <h1>Onde vai Cadastro</h1>
+                <h1 p style={{color:"white"}}>Onde vai Cadastro</h1>
                 <img className='fotologin' src="Icone Login.png" alt="login" />
                 <form>
                   <div className="botaocadastrologin-form-div1">
@@ -40,7 +40,7 @@ function CadastroUsuario() {
                   <button className="botaologin-submit" type="submit" >Cadastre-se</button>
                 </form>
             
-            <button onClick={sairDaTela} className="fechar-btn">Fechar</button>
+            <button onClick={sairDaTela} className="fechar-btn"><img src="sair (3).png" alt="Sair" /></button>
                 </div>
              
             {/* )} */}
