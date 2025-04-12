@@ -1,42 +1,72 @@
-import { useState } from 'react';
-import { Link } from "react-router-dom"
+import { ChangeEvent, useState } from 'react';
+import { Link, Navigate, useNavigate } from "react-router-dom"
+import { api } from '../../api';
+
+
 function BotaoLogin() {
   const [LoginVisivel, setLoginVisivel] = useState(false);
+
+  const navigate = useNavigate();
+
+  const logar = async (email: string, senha: string) => {
+    let json = await api.LoginUsuario(addEmail, addSenha);
+
+    if (json.status) {
+      alert("Bem vindo, " + email);
+      navigate('/eventos')
+    } else {
+      alert(json.message)
+    }
+  }
+
+  const [addEmail, setAddEmail] = useState('');
+  const handleAddEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setAddEmail(e.target.value)
+  }
+
+  const [addSenha, setAddSenha] = useState('');
+  const handleAddSenhaChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setAddSenha(e.target.value)
+  }
+
 
   const abrirLogin = () => {
     setLoginVisivel(!LoginVisivel);
   }
 
+
   return (
-        <div className="botaologin-container">
-          <button onClick={abrirLogin} className="botaologin" >
-          <img className='imagembotaologin' src="Icone Login.png" alt="" />
-          </button>
-            
-          {LoginVisivel && (
-            <div className="botaologin-form">
-              <h1>Bem Vindo ao Onde Vai</h1>
-              <img className='fotologin' src="Icone Login.png" alt="login" />
-              <form>
-                <div className="botaologin-form-div1">
-                  <input className="botaologin-form-input" type="text" placeholder="Login"/>
-                </div>
+    <div className="botaologin-container">
+      <button onClick={abrirLogin} className="botaologin" >
+        <img className='imagembotaologin' src="Icone Login.png" alt="" />
+      </button>
 
-                <div className="botaologin-form-div1">
-                  <input className="botaologin-form-input" type="password" placeholder="Digite sua senha"/>
-                </div>
+      {LoginVisivel && (
+        <div className="botaologin-form">
+          <h1>Bem Vindo ao Onde Vai</h1>
+          <img className='fotologin' src="Icone Login.png" alt="login" />
 
-                <button className="botaologin-submit" type="submit" >Logar</button>
-              </form>
 
-              <div className = 'recuperacao-cadastro'>
-                <Link to='/recuperarsenha'>Recuperar Senha</Link>
-                <Link to='/cadastrousuario'>Criar Cadastro</Link>
-              </div>
+          <form>
+            <div className='botaologin-form-div1'>
+              <input type="text" placeholder="Login" value={addEmail} onChange={handleAddEmailChange}/>
             </div>
-          )}
+
+            <div className='botaologin-form-div1'>
+              <input type="password" placeholder="Senha" value={addSenha} onChange={handleAddSenhaChange}/>
+            </div>
+
+            <button className='botaologin-submit' type="button" onClick={() => logar(addEmail, addSenha)}>Logar</button>
+          </form>
+
+          <div className='recuperacao-cadastro'>
+            <Link to='/recuperarsenha'>Recuperar Senha</Link>
+            <Link to='/cadastrousuario'>Criar Cadastro</Link>
+          </div>
         </div>
-      )
-    }
+      )}
+    </div>
+  )
+}
 
 export default BotaoLogin
