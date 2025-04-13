@@ -13,16 +13,15 @@ export const api = {
             return json
     },
 
-    AdicionarUsuarios: async (id: string, nome: string, datanasc: string, sexo: string, email: string, telefone: string, senha: string) => {
-        let response = await fetch('', {
+    AdicionarUsuarios: async (nome: string, datanasc: string, sexo: string, telefone: string, email: string, senha: string) => {
+        let response = await fetch('http://localhost:3000/usuarios', {
             method: 'POST',
             body: JSON.stringify({
-                id,
                 nome,
                 datanasc,
                 sexo,
-                email,
                 telefone,
+                email,
                 senha
             }),
             headers: {
