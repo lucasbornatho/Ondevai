@@ -417,6 +417,11 @@
     gap: 8px;
 }
 
+.capa-evento-img{
+    width: 95vw;
+    height: 300px;
+}
+
 .container-item{
     background-color: #B8621B ;
     border-radius: 12px;

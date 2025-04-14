@@ -6,7 +6,7 @@ function CardEvento({id, nome, genero, descricao, localizacao, image} : CardEven
         <div className='card-evento'>
 
             <div className="capa-evento">
-                <img src={image} alt="Capa Do evento" />
+                <img className="capa-evento-img" src={image} alt="Capa Do evento" />
             </div>
 
             <div className="evento-informacoes">
