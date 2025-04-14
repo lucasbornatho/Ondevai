@@ -34,17 +34,19 @@ export const api = {
         return json;
     },
 
-    AdicionarEventos: async (id: string, nome: string, genero: string, data: string, horario: string, descricao: string, localizacao: string, image: string) => {
+    AdicionarEventos: async (nome: string, genero: string, data: string, horario: string, descricao: string, endereco: string, numero: string, cep: string, cidade: string, image: string) => {
         let response = await fetch('', {
             method: 'POST',
             body: JSON.stringify({
-                id,
                 nome,
                 genero,
                 data,
                 horario,
                 descricao,
-                localizacao,
+                endereco,
+                numero,
+                cep,
+                cidade,
                 image,
             }),
             headers: {

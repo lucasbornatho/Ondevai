@@ -1,22 +1,79 @@
-// import { useState } from "react";
-// import { api } from "../../api";
-// import { CardEventoType } from "../../types/cardeventotype";
+import { useState, ChangeEvent } from "react";
+import { api } from "../../api";
 
 function CadastroEvento(){
+
+    const [nomeEvento, setNomeEvento] = useState('');
+      const handleAddNomeEvento = (e: ChangeEvent<HTMLInputElement>) => {
+        setNomeEvento(e.target.value)
+    }
+
+    const [generoEvento, setGeneroEvento] = useState('');
+      const handleAddGeneroEvento = (e: ChangeEvent<HTMLSelectElement>) => {
+        setGeneroEvento(e.target.value)
+    }
+
+    const [dataEvento, setDataEvento] = useState('');
+      const handleAddDataEvento = (e: ChangeEvent<HTMLInputElement>) => {
+        setDataEvento(e.target.value)
+    }
+
+    const [horarioEvento, setHorarioEvento] = useState('');
+      const handleAddHorarioEvento = (e: ChangeEvent<HTMLInputElement>) => {
+        setHorarioEvento(e.target.value)
+    }
+
+    const [descricaoEvento, setDescricaoEvento] = useState('');
+      const handleAddDescricaoEvento = (e: ChangeEvent<HTMLTextAreaElement>) => {
+        setDescricaoEvento(e.target.value)
+    }
+
+    const [enderecoEvento, setEnderecoEvento] = useState('');
+      const handleAddEnderecoEvento = (e: ChangeEvent<HTMLInputElement>) => {
+        setEnderecoEvento(e.target.value)
+    }
+
+    const [numeroEvento, setNumeroEvento] = useState('');
+      const handleAddNumeroEvento = (e: ChangeEvent<HTMLInputElement>) => {
+        setNumeroEvento(e.target.value)
+    }
+
+    const [cepEvento, setCepEvento] = useState('');
+      const handleAddCepEvento = (e: ChangeEvent<HTMLInputElement>) => {
+        setCepEvento(e.target.value)
+    }
+
+    const [cidadeEvento, setCidadeEvento] = useState('');
+      const handleAddCidadeEvento = (e: ChangeEvent<HTMLInputElement>) => {
+        setCidadeEvento(e.target.value)
+    }
+
+    const [imagemEvento, setImagemEvento] = useState('');
+      const handleAddImagemEvento = (e: ChangeEvent<HTMLInputElement>) => {
+        setImagemEvento(e.target.value)
+    }
+
+    const handleCadastroEvento = async () => {
+
+        if (!nomeEvento || !generoEvento || !dataEvento || !horarioEvento || !cepEvento) {
+          alert("Preencha os campos obrigatórios.");
+          return;
+        }
     
-    // const [eventos, setEventos] = useState<CardEventoType[]>([]);
-
-    // const handleAddClick = async (id: string, nome: string, genero: string, data: string, horario: string, descricao: string, localizacao: string, image: string) => {
-        
-    //     let json = await api.AdicionarEventos(id, nome, genero, data, horario, descricao, localizacao, image);
-
-    //     if(json.id){
-    //         alert('Evento adicionado com sucesso')
-    //         setEventos((eventos: any) => [...eventos, json]);
-    //     } else {
-    //         alert('Falha ao adicionar Evento')
-    //     }
-    // }
+        try {
+          const response = await api.AdicionarEventos(nomeEvento, generoEvento, dataEvento, horarioEvento, descricaoEvento, enderecoEvento, numeroEvento, cepEvento, cidadeEvento, imagemEvento);
+    
+          if (response.status === "Evento Criado") {
+            alert('Evento cadastrado com sucesso!');
+          } else {
+            alert('Erro ao cadastrar evento.');
+          }
+    
+        } catch (error) {
+          alert('Erro ao cadastrar. Tente novamente.');
+          console.error(error);
+        }
+      };
 
     return(
         <>
@@ -29,11 +86,11 @@ function CadastroEvento(){
                         <div className="container-item">
                             <div className="container-grupo">
                                 <label>Nome Evento</label>
-                                <input type="text" />
+                                <input type="text" onChange={handleAddNomeEvento} />
                             </div>
                             <div className="container-grupo">
                                 <label>Genero</label>
-                                <select className="seletor">
+                                <select className="seletor" onChange={handleAddGeneroEvento}>
                                     <option value="1">Rock</option>
                                     <option value="2">Teatro</option>
                                     <option value="3">Bares</option>
@@ -44,11 +101,11 @@ function CadastroEvento(){
                             </div>
                             <div className="container-grupo">
                                 <label>Data Evento</label>
-                                <input type="date" />
+                                <input type="date" onChange={handleAddDataEvento}/>
                             </div>
                             <div className="container-grupo">
                                 <label>Horário Evento</label>
-                                <input type="time" />
+                                <input type="time" onChange={handleAddHorarioEvento}/>
                             </div>
                         </div>
                     </div>
@@ -58,22 +115,22 @@ function CadastroEvento(){
                         <div className="container-item">
                             <div className="container-grupo">
                                 <label>Endereço</label>
-                                <input type="text" />
+                                <input type="text" onChange={handleAddEnderecoEvento}/>
                             </div>
 
                             <div className="container-grupo">
                                 <label>Numero</label>
-                                <input type="text" />
+                                <input type="text" onChange={handleAddNumeroEvento}/>
                             </div>
 
                             <div className="container-grupo">
                                 <label>CEP</label>
-                                <input type="text" />
+                                <input type="text" onChange={handleAddCepEvento}/>
                             </div>
 
                             <div className="container-grupo">
                                 <label>Cidade</label>
-                                <input type="text" />
+                                <input type="text" onChange={handleAddCidadeEvento}/>
                             </div>
                         </div>
                     </div>
@@ -81,7 +138,7 @@ function CadastroEvento(){
                     <div className="container-descricao-evento">
                         <h2>Descrição Evento</h2>
                         <div className="container-item tamanho-input">
-                            <textarea></textarea>
+                            <textarea onChange={handleAddDescricaoEvento} value={descricaoEvento}></textarea>
                         </div>
                     </div>
 
@@ -96,6 +153,7 @@ function CadastroEvento(){
                                 className="input-arquivo"
                                 type="file"
                                 style={{ display: 'none' }}
+                                onChange={handleAddImagemEvento}
                             />
                             <p>Imagem máxima 1140px X 813px</p>
                         </div>
@@ -103,7 +161,7 @@ function CadastroEvento(){
                 </div>
 
                 <div className="botao-cadastrar-eventro">
-                    <button>Cadastrar Evento</button>
+                    <button onClick={handleCadastroEvento}>Cadastrar Evento</button>
                 </div>
             </div>
     
