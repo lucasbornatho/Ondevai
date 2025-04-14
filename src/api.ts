@@ -1,7 +1,7 @@
 export const api = {
 
     CarregarTodosEventos: async () => {
-        let response = await fetch('')
+        let response = await fetch('http://localhost:3000/eventos')
         let json = await response.json();
         return json;
     },
@@ -35,7 +35,7 @@ export const api = {
     },
 
     AdicionarEventos: async (nome: string, genero: string, data: string, horario: string, descricao: string, endereco: string, numero: string, cep: string, cidade: string, image: string) => {
-        let response = await fetch('', {
+        let response = await fetch('http://localhost:3000/eventos', {
             method: 'POST',
             body: JSON.stringify({
                 nome,
