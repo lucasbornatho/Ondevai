@@ -23,6 +23,11 @@ function CadastroEvento(){
         setHorarioEvento(e.target.value)
     }
 
+    const [classificacaoEvento, setClassificacaoEvento] = useState('');
+      const handleAddClassificacaoEvento = (e: ChangeEvent<HTMLSelectElement>) => {
+        setClassificacaoEvento(e.target.value)
+    }
+
     const [descricaoEvento, setDescricaoEvento] = useState('');
       const handleAddDescricaoEvento = (e: ChangeEvent<HTMLTextAreaElement>) => {
         setDescricaoEvento(e.target.value)
@@ -61,7 +66,7 @@ function CadastroEvento(){
         }
     
         try {
-          const response = await api.AdicionarEventos(nomeEvento, generoEvento, dataEvento, horarioEvento, descricaoEvento, enderecoEvento, numeroEvento, cepEvento, cidadeEvento, imagemEvento);
+          const response = await api.AdicionarEventos(nomeEvento, generoEvento, dataEvento, classificacaoEvento, horarioEvento, descricaoEvento, enderecoEvento, numeroEvento, cepEvento, cidadeEvento, imagemEvento);
     
           if (response.status === "Evento Criado") {
             alert('Evento cadastrado com sucesso!');
@@ -111,7 +116,7 @@ function CadastroEvento(){
 
                             <div className="container-grupo">
                                 <label>Classificação</label>
-                                <select className="seletor">
+                                <select className="seletor" onChange={handleAddClassificacaoEvento}>
                                     <option value="0"></option>
                                     <option value="1">Livre</option>
                                     <option value="2">18+</option>
