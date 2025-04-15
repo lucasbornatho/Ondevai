@@ -9,12 +9,12 @@ interface Evento {
 }
 
 const eventos: Evento[] = [
-  { nome: "Eletrônica", imgUrl: "./banner/Eletronica.png", link: "/eventos" },
-  { nome: "Hip Hop", imgUrl: "./banner/hip hop.png", link: "/eventos" },
-  { nome: "Rock", imgUrl: "./banner/Rock.png", link: "/eventos" },
-  { nome: "Samba", imgUrl: "./banner/Samba.png", link: "/eventos" },
-  { nome: "Teatro", imgUrl: "./banner/Teatro.png", link: "/eventos" },
-  { nome: "Bares", imgUrl: "./banner/Bares.png", link: "/eventos" },
+    { nome: "Shows", imgUrl: "./banner/Show.png", link: "/eventos" },
+    { nome: "Bares", imgUrl: "./banner/Bares Restaurantes.png", link: "/eventos" },
+    { nome: "Festas", imgUrl: "./banner/Festas.png", link: "/eventos" },
+    { nome: "Teatro", imgUrl: "./banner/Teatro.png", link: "/eventos" },
+    { nome: "Passeios", imgUrl: "./banner/Passeios.png", link: "/eventos" },
+    
 ];
 
 const responsive = {

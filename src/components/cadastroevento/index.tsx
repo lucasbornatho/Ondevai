@@ -91,6 +91,7 @@ function CadastroEvento(){
                             <div className="container-grupo">
                                 <label>Genero</label>
                                 <select className="seletor" onChange={handleAddGeneroEvento}>
+                                    <option value="0"></option>
                                     <option value="1">Rock</option>
                                     <option value="2">Teatro</option>
                                     <option value="3">Bares</option>
@@ -106,6 +107,15 @@ function CadastroEvento(){
                             <div className="container-grupo">
                                 <label>Horário Evento</label>
                                 <input type="time" onChange={handleAddHorarioEvento}/>
+                            </div>
+
+                            <div className="container-grupo">
+                                <label>Classificação</label>
+                                <select className="seletor">
+                                    <option value="0"></option>
+                                    <option value="1">Livre</option>
+                                    <option value="2">18+</option>
+                                </select>
                             </div>
                         </div>
                     </div>
