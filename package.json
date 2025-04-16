@@ -10,12 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "bootstrap": "^5.3.5",
     "node": "^23.8.0",
     "or": "^0.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-multi-carousel": "^2.8.5",
     "react-router-dom": "^7.1.5",
+    "reactstrap": "^9.2.3",
     "router-dom": "^3.0.1",
     "styled-components": "^6.1.15",
     "usestate": "^1.1.3"
