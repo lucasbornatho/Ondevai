@@ -4,6 +4,7 @@ export type CardEventoType = {
     genero?: string;
     data?: string;
     horario?: string;
+    classificacao?: string;
     descricao?: string;
     localizacao?: string;
     image?: string

@@ -23,6 +23,11 @@ function CadastroEvento(){
         setHorarioEvento(e.target.value)
     }
 
+    const [classificacaoEvento, setClassificacaoEvento] = useState('');
+      const handleAddClassificacaoEvento = (e: ChangeEvent<HTMLSelectElement>) => {
+        setClassificacaoEvento(e.target.value)
+    }
+
     const [descricaoEvento, setDescricaoEvento] = useState('');
       const handleAddDescricaoEvento = (e: ChangeEvent<HTMLTextAreaElement>) => {
         setDescricaoEvento(e.target.value)
@@ -61,7 +66,7 @@ function CadastroEvento(){
         }
     
         try {
-          const response = await api.AdicionarEventos(nomeEvento, generoEvento, dataEvento, horarioEvento, descricaoEvento, enderecoEvento, numeroEvento, cepEvento, cidadeEvento, imagemEvento);
+          const response = await api.AdicionarEventos(nomeEvento, generoEvento, dataEvento, classificacaoEvento, horarioEvento, descricaoEvento, enderecoEvento, numeroEvento, cepEvento, cidadeEvento, imagemEvento);
     
           if (response.status === "Evento Criado") {
             alert('Evento cadastrado com sucesso!');
@@ -91,6 +96,7 @@ function CadastroEvento(){
                             <div className="container-grupo">
                                 <label>Genero</label>
                                 <select className="seletor" onChange={handleAddGeneroEvento}>
+                                    <option value="0"></option>
                                     <option value="1">Rock</option>
                                     <option value="2">Teatro</option>
                                     <option value="3">Bares</option>
@@ -106,6 +112,15 @@ function CadastroEvento(){
                             <div className="container-grupo">
                                 <label>Horário Evento</label>
                                 <input type="time" onChange={handleAddHorarioEvento}/>
+                            </div>
+
+                            <div className="container-grupo">
+                                <label>Classificação</label>
+                                <select className="seletor" onChange={handleAddClassificacaoEvento}>
+                                    <option value="0"></option>
+                                    <option value="1">Livre</option>
+                                    <option value="2">18+</option>
+                                </select>
                             </div>
                         </div>
                     </div>

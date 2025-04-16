@@ -34,7 +34,7 @@ export const api = {
         return json;
     },
 
-    AdicionarEventos: async (nome: string, genero: string, data: string, horario: string, descricao: string, endereco: string, numero: string, cep: string, cidade: string, image: string) => {
+    AdicionarEventos: async (nome: string, genero: string, data: string, horario: string, classificacao: string, descricao: string, endereco: string, numero: string, cep: string, cidade: string, image: string) => {
         let response = await fetch('http://localhost:3000/eventos', {
             method: 'POST',
             body: JSON.stringify({
@@ -42,6 +42,7 @@ export const api = {
                 genero,
                 data,
                 horario,
+                classificacao,
                 descricao,
                 endereco,
                 numero,
