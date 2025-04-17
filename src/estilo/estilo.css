@@ -153,46 +153,55 @@
     width: 80%
 }
 
-.menu-cadastrar-evento{
+.menu-cadastrar-evento {
     display: flex;
     justify-content: center;
+    padding: 2rem;
 }
 
-.menu-cadastrar-caixa{
-    margin: 2.5rem;
+.menu-cadastrar-caixa {
     background-color: #262A56;
-    border-radius: 22px;
-    width: 70%;
-    height: 460px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 600px;
+    padding: 2.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 2rem;
-}
-
-.menu-cadastrar-caixa h2{
-    color: #B8621B;
-    font-size: 72px;
     text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-.menu-cadastrar-caixa p{
-    margin-top: 2rem;
+.menu-cadastrar-caixa:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.menu-cadastrar-caixa h2 {
+    color: #B8621B;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.menu-cadastrar-caixa p {
     color: white;
-    font-size: 40px;
+    font-size: 1.2rem;
     font-style: italic;
-    margin-bottom: 0;
+    margin-bottom: 2rem;
 }
 
-.menu-cadastrar-caixa button{
-    margin-top: 8px;
-    text-decoration: none;
+.menu-cadastrar-caixa button {
     background-color: #D39643;
     color: white;
-    font-size: 52px;
-    padding: 1rem;
-    border-radius: 14px; 
+    font-size: 1.2rem;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu-cadastrar-caixa button:hover {
+    background-color: #c2823a;
 }
 
 
@@ -392,129 +401,180 @@
 
 /* -- Inicio Pagina Cadastro Eventos -- */
 
-.container-cadastro-evento{
-    background-color: #E3CCAE;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+.container-cadastro-evento {
+  background-color: #E3CCAE;
+  font-family: 'Inter', sans-serif;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.texto-cetralizado{
-    color: black;
-    font-size: 48px;
-    padding: 1.4rem;
-    text-align: center;
+.texto-cetralizado {
+  color: #262A56;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-.cadastro-evento-body{
-    font-style: italic;
-    font-family: Arial, Helvetica, sans-serif;
+h2 {
+  color: #262A56;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-.container-dados-evento, .container-localizacao, 
-.container-descricao-evento, .container-imagem-capa-evento{
-    /* width: 90vw; */
-    display: flex;
-    flex-direction: column;
-    margin: 2rem;
-    gap: 8px;
+.cadastro-evento-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.capa-evento-img{
-    width: 95vw;
-    height: 300px;
+.container-dados-evento, 
+.container-localizacao, 
+.container-descricao-evento, 
+.container-imagem-capa-evento {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
-.container-item{
-    background-color: #B8621B ;
-    border-radius: 12px;
-    padding: 1.6rem;
-    /* width: 90vw; */
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.2rem;
+.container-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
-.container-item input, .seletor{
-    border: 1px solid black;
-    border-radius: 12px;
-    background-color: #D9D9D9;
-    font-size: 2rem;
-    height: 60px;
-    width: 400px;
-    text-align: center;
+.container-grupo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 260px;
 }
 
-.seletor{
-    text-align: center;
+.container-grupo label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
 }
 
-/*Usando o input para remover o icone do type date e time*/
-input[type="date"]::-webkit-calendar-picker-indicator {
-    display: none; /* Esconde o ícone do calendário no Chrome, Edge e Safari */
+.container-item input,
+.seletor,
+textarea {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #F5F5F5;
+  font-size: 1rem;
+  padding: 0.8rem;
+  transition: 0.3s;
 }
 
-input[type="time"]::-webkit-calendar-picker-indicator {
-    display: none; /* Esconde o ícone do calendário no Chrome, Edge e Safari */
+.container-item input:focus,
+.seletor:focus,
+textarea:focus {
+  border-color: #B8621B;
+  outline: none;
+  background-color: #fff;
 }
 
-
-/*precisa pensar em como deixar o texto correto começando na parte
-de cima da caixa*/
-.tamanho-input textarea{
+.tamanho-input textarea {
     background-color: #D9D9D9;
     font-size: 1.4rem;
     border-radius: 12px;
     height: 300px;
+    min-height: 300px;
     width: 100%;
-    padding: 1rem;
+    max-width: 100%;
+    padding: 1.6rem;
+    resize: vertical;
+    box-sizing: border-box;
 }
 
-.container-grupo{
-    display: flex;
+.vertical-localizacao {
     flex-direction: column;
+    gap: 1.5rem;
 }
 
-.container-grupo label{
-    font-size: 19px;    
-}
-
-.file{
+.container-localizacao-row {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
-.file input{
-    
+.full-width input {
     width: 100%;
-    height: 200px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
 }
 
-.file p{
-    color: #fff;
-    font-size: 24px;
+.medium-width input {
+    width: 300px;
 }
 
-.botao-cadastrar-eventro{
-    display: flex;
-    justify-content: center;
+.small-width input {
+    width: 150px;
 }
 
-.botao-cadastrar-eventro button{
-    margin: 1.2rem;
-    background-color: #262A56;
-    color: #fff;
-    font-size: 36px;
-    padding: 1rem;
-    border-radius: 12px;
+.file {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
 }
 
-.botao-cadastrar-eventro button:hover{
-    background-color: #262a56e1;
+.file label {
+  cursor: pointer;
 }
+
+.file img {
+  width: 80px;
+  transition: transform 0.3s ease;
+}
+
+.file img:hover {
+  transform: scale(1.1);
+}
+
+.file p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.botao-cadastrar-eventro {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.botao-cadastrar-eventro button {
+  background-color: #262A56;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.botao-cadastrar-eventro button:hover {
+  background-color: #1e2348;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .container-item {
+    flex-direction: column;
+  }
+}
+
 
 /* -- Fim pagina Cadastro Eventos -- */
 
@@ -528,18 +588,20 @@ de cima da caixa*/
     align-self: center;
    
 } 
-.botaocadastrologin-form{
+.botaocadastrologin-form {
     background-color: #D39643;
     border-radius: 15px;
-    width: 450px;
-    height: 650px;
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 1.2rem;
-    margin: 30px;
-}
+    margin: 30px auto;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+  }
 .botaocadastrologin-form-div1 {
     margin-bottom: 1.4rem;
 }
@@ -576,6 +638,8 @@ de cima da caixa*/
     cursor: pointer;
     font-size: 1.6rem;
 }
+
+
 
   /* -- Fim Cadastro Usuario -- */
 

@@ -5,6 +5,7 @@ import Filtro from "../../components/filtro"
 import { CardEventoType } from "../../types/cardeventotype"
 import { useState, useEffect } from "react"
 import { api } from "../../api"
+import CadastroHome from "../../components/cadastoHome"
 
 function Eventos () {
 
@@ -47,6 +48,7 @@ function Eventos () {
                 ))}
             </ul>
 )}
+            <CadastroHome />
             <Rodape />
         </div>
     )
