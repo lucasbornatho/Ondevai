@@ -1,6 +1,7 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { useNavigate } from "react-router-dom";
 
 interface Evento {
   nome: string;
@@ -9,12 +10,11 @@ interface Evento {
 }
 
 const eventos: Evento[] = [
-    { nome: "Shows", imgUrl: "./banner/Show.png", link: "/eventos" },
-    { nome: "Bares", imgUrl: "./banner/Bares Restaurantes.png", link: "/eventos" },
-    { nome: "Festas", imgUrl: "./banner/Festas.png", link: "/eventos" },
-    { nome: "Teatro", imgUrl: "./banner/Teatro.png", link: "/eventos" },
-    { nome: "Passeios", imgUrl: "./banner/Passeios.png", link: "/eventos" },
-    
+  { nome: "Shows", imgUrl: "./banner/Show.png", link: "/eventos" },
+  { nome: "Bares", imgUrl: "./banner/Bares Restaurantes.png", link: "/eventos" },
+  { nome: "Festas", imgUrl: "./banner/Festas.png", link: "/eventos" },
+  { nome: "Teatro", imgUrl: "./banner/Teatro.png", link: "/eventos" },
+  { nome: "Passeios", imgUrl: "./banner/Passeios.png", link: "/eventos" },
 ];
 
 const responsive = {
@@ -25,6 +25,12 @@ const responsive = {
 };
 
 const CardHome: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleClick = (link: string) => {
+    navigate(link);
+  };
+
   return (
     <div className="menu-netflix">
       <Carousel
@@ -43,13 +49,17 @@ const CardHome: React.FC = () => {
         itemClass="carousel-item-padding-40-px"
       >
         {eventos.map((evento) => (
-          <a key={evento.nome} href={evento.link} target="_blank" rel="noopener noreferrer">
+          <div
+            key={evento.nome}
+            onClick={() => handleClick(evento.link)}
+            style={{ cursor: "pointer" }}
+          >
             <img src={evento.imgUrl} alt={evento.nome} />
-          </a>
+          </div>
         ))}
       </Carousel>
     </div>
   );
 };
 
-export default CardHome
+export default CardHome;
