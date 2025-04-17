@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Collapse, Button, CardBody, Card, CollapseProps } from 'reactstrap';
-import InfosHome from '../infoshome';
 import { JSX } from 'react/jsx-runtime';
+import CadastroHome from '../cadastoHome';
 
 function DropHome(args: JSX.IntrinsicAttributes & JSX.IntrinsicClassAttributes<Collapse> & Readonly<CollapseProps>) {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +28,7 @@ function DropHome(args: JSX.IntrinsicAttributes & JSX.IntrinsicClassAttributes<C
       <Collapse isOpen={isOpen} {...args}>
         <Card>
           <CardBody>
-            <InfosHome/>
+            <CadastroHome/>
           </CardBody>
         </Card>
       </Collapse>
