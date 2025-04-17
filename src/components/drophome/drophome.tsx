@@ -1,0 +1,39 @@
+import React, { useState } from 'react';
+import { Collapse, Button, CardBody, Card, CollapseProps } from 'reactstrap';
+import InfosHome from '../infoshome';
+import { JSX } from 'react/jsx-runtime';
+
+function DropHome(args: JSX.IntrinsicAttributes & JSX.IntrinsicClassAttributes<Collapse> & Readonly<CollapseProps>) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <React.StrictMode>
+      <Button color="" onClick={toggle} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}  style={{ 
+            margin: '1rem',
+            backgroundColor: isHovered ? '#3b3f6b' : '#262A56',
+            color: '#fff',
+            fontSize: '1.7rem',
+            padding: '1rem 2rem',
+            borderRadius: '12px',
+            textAlign: 'center',
+            cursor: 'pointer',
+            display: 'inline-block',
+            textDecoration: 'none',
+            transition: 'background-color 0.3s ease-in-out',}}>
+        <div className='drop-home'>Quer cadastrar o seu evento?</div>
+      </Button>
+      <Collapse isOpen={isOpen} {...args}>
+        <Card>
+          <CardBody>
+            <InfosHome/>
+          </CardBody>
+        </Card>
+      </Collapse>
+    </React.StrictMode>
+  );
+}
+
+export default DropHome;
