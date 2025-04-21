@@ -120,10 +120,53 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: "Abril Fatface", serif;
-    font-weight: 400;
-    font-style: normal;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e1e2f, #2e2f45);
+    color: #f1f1f1;
+    font-family: "Inter", sans-serif;
+    padding: 2rem;
+    text-align: center;
+    gap: 2rem;
 }
+
+.not-found img {
+    max-width: 300px;
+    width: 100%;
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.1));
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.not-found p {
+    font-size: 1.5rem;
+    color: #d1d1e0;
+    margin: 0;
+}
+
+.not-found button {
+    padding: 0.75rem 1.5rem;
+    background-color: #B8621B;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.not-found button:hover {
+    background-color: #c2823a;
+    transform: scale(1.05);
+}
+
 
 /* -- Inicio Home -- */
 
@@ -150,7 +193,7 @@
 }
 
 .texto-menu img{
-    height: 700px;
+    height: 550px;
     width: 80%
 }
 

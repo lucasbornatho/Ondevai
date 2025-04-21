@@ -12,7 +12,6 @@ function NotFound () {
         <div className='not-found'>
             <img src="./404.webp" alt="404-img" />
             <p>Pagina não encontrada!</p>
-
             <button onClick={HandleBack}> Home </button>
         </div>
     )
