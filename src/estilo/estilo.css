@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 * {
     padding: 0;
@@ -205,6 +206,7 @@
 }
 
 
+
 /* -- Inicio botao de login do cabeçalho --*/
 
 .botaologin {
@@ -400,8 +402,6 @@
 /* -- Fim Pagina Eventos -- */
 
 /* -- Inicio Pagina Cadastro Eventos -- */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 .container-cadastro-evento {
   background-color: #E3CCAE;

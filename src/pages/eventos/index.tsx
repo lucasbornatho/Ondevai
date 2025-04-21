@@ -43,7 +43,10 @@ function Eventos () {
             <ul>
                 {eventos.map(evento => (
                 <li key={evento.id}>
-                <CardEvento nome={evento.nome} image={evento.image} localizacao={evento.localizacao} />
+                <CardEvento nome={evento.nome} image={evento.image} endereco={evento.endereco}
+                genero={evento.genero} descricao={evento.descricao} data={evento.data} horario={evento.horario}
+                classificacao={evento.classificacao} numero={evento.numero}
+                cep={evento.cep} cidade={evento.cidade}/>
                 </li>
                 ))}
             </ul>
