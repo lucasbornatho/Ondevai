@@ -187,14 +187,21 @@
 }
 /* -- Fim Card home Netflix -- */
 
-.texto-menu{
+.texto-menu {
     display: flex;
     justify-content: center;
 }
 
-.texto-menu img{
-    height: 550px;
-    width: 80%
+.texto-menu img {
+    height:450px;
+    width: 80%;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+
+.texto-menu:hover img {
+    transform: scale(1.1) translateY(-10px);
+    filter: brightness(1.2);
 }
 
 .menu-cadastrar-evento {
