@@ -4,6 +4,7 @@ import BotaoLogin from '../botaologin'
 import Menu from '../menu'
 import { UsuarioLogadoContext } from '../../contexts/contextAuth';
 import AreaLogin from '../arealogada';
+import { Link } from 'react-router-dom';
 
 function Cabecalho () {
 
@@ -14,9 +15,10 @@ function Cabecalho () {
             <div className='cabecalho'>
 
                 <div className='cabecalho-item'>
+                    <Link to="/">
                     <div className='logo-home'>
                         <img src='./Logonovo.png' alt='Logo' />
-                    </div>
+                    </div></Link>
                     <div>
                         <Menu />
                     </div>
