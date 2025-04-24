@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from "reactstrap";
 import { CardEventoType } from "../../types/cardeventotype";
 
-function CardEvento({ id, nome, genero, descricao, endereco, image }: CardEventoType) {
+function CardEvento({ id, nome, genero, descricao, endereco, numero, image }: CardEventoType) {
   const [modalOpen, setModalOpen] = useState(false);
 
   const toggle = () => setModalOpen(!modalOpen);
@@ -37,6 +37,7 @@ function CardEvento({ id, nome, genero, descricao, endereco, image }: CardEvento
             <p><strong>Gênero:</strong> {genero || 'sem gênero'}</p>
             <p><strong>Descrição:</strong> {descricao || 'sem descrição'}</p>
             <p><strong>Localização:</strong> {endereco || 'sem localização'}</p>
+            <p><strong>Numero:</strong> {numero || 'sem numero'}</p>
         </ModalBody>
         <ModalFooter>
           <Button color="secondary" onClick={toggle}>Fechar</Button>

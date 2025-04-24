@@ -447,6 +447,12 @@
     border-radius: 12px;
 }
 
+.capa-evento-img{
+    border-radius: 12px;
+    width: 90vw;
+    height: 360px;
+}
+
 /* -- Fim Card Evento -- */
 
 /* -- Fim Pagina Eventos -- */
