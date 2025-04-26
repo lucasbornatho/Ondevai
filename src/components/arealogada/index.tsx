@@ -25,7 +25,7 @@ function AreaLogin() {
   return (
     <div>
       <Button color="primary" onClick={toggleOffcanvas}>
-        Perfil
+      <img className='fotologin' src="Icone Login.png" alt="login" />
       </Button>
 
       <Offcanvas isOpen={isOpen} toggle={toggleOffcanvas} direction="end">

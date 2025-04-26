@@ -10,6 +10,11 @@ function Cabecalho () {
 
     const UsuarioLogadoCtx = useContext(UsuarioLogadoContext);
 
+    function alterarContext () {
+        UsuarioLogadoCtx?.setName('teste');
+
+    }
+
     return (
         <div>
             <div className='cabecalho'>
@@ -23,7 +28,11 @@ function Cabecalho () {
                         <Menu />
                     </div>
                     <div className="cabecalho-login">
-                        {UsuarioLogadoCtx?.userLoggedIn ? (<AreaLogin />) : (<BotaoLogin />)}
+                       
+                        {UsuarioLogadoCtx?.name}
+                        {UsuarioLogadoCtx?.name && (<AreaLogin />)}
+                        {!UsuarioLogadoCtx?.name && (<BotaoLogin />)}
+                   
                     </div>
                 </div>
                 

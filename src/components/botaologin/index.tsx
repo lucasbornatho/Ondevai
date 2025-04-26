@@ -1,6 +1,8 @@
-import { ChangeEvent, useEffect, useRef, useState } from 'react';
+import { ChangeEvent, useContext, useEffect, useRef, useState } from 'react';
 import { Link, useNavigate } from "react-router-dom"
 import { api } from '../../api';
+import { UsuarioLogadoContext } from '../../contexts/contextAuth';
+
 
 
 function BotaoLogin() {
@@ -8,11 +10,16 @@ function BotaoLogin() {
   const navigate = useNavigate();
   const loginRef = useRef<HTMLDivElement>(null); // ref para o form de login
 
+
+  const Context = useContext(UsuarioLogadoContext);
+
   const logar = async (email: string, senha: string) => {
+    
     let json = await api.LoginUsuario(addEmail, addSenha);
 
     if (json.status) {
-      alert("Bem vindo, " + email);
+      alert("Bem vindo, " + email);     
+      Context?.setName(email); 
       navigate('/eventos')
     } else {
       alert(json.message)
