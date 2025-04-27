@@ -24,10 +24,23 @@ function AreaLogin() {
 
   return (
     <div>
-      <Button color="primary" onClick={toggleOffcanvas}>
-      <img className='fotologin' src="Icone Login.png" alt="login" />
-      </Button>
-
+      <Button
+        color="primary"
+        onClick={toggleOffcanvas}
+        style={{
+          backgroundImage: "url('/Icone Login.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundColor: "transparent",
+          boxShadow: "none",               
+          border: "none",                  
+          width: "60px",
+          height: "60px",
+          padding: 0,                   
+          minWidth: 0,
+        }}
+      >
+    </Button>
       <Offcanvas isOpen={isOpen} toggle={toggleOffcanvas} direction="end">
         <OffcanvasHeader toggle={toggleOffcanvas}>
           <p>Olá {UsuarioLogadoCtx?.name}</p>
