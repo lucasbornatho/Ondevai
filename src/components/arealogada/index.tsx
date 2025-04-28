@@ -6,14 +6,17 @@ import {
   OffcanvasBody
 } from "reactstrap";
 import { UsuarioLogadoContext } from "../../contexts/contextAuth";
+import { useNavigate } from "react-router-dom";
 
 function AreaLogin() {
 
   const UsuarioLogadoCtx = useContext(UsuarioLogadoContext);
+  const navigate = useNavigate();
 
   function logoff() {
-    if (UsuarioLogadoCtx?.userLoggedIn)
-      UsuarioLogadoCtx.setUserLoggedIn(false)
+    if (UsuarioLogadoCtx?.name)
+      UsuarioLogadoCtx.setName('');
+      navigate('/');
   }
 
   const [isOpen, setIsOpen] = useState(false);
