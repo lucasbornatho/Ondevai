@@ -59,40 +59,45 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 10px;
     width: 100%;
+    gap: 4rem;
 }
 
 .menu-botao a{
     color: #fffffff0;
-    font-size: 1.7rem;
+    font-size: 3em;
 }
 .menu-botao {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #D39643;
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 10px;
-    height: 50px;
-    width: 200px;
-    text-decoration: none;
+    position: relative;
+    padding: 5px 10px;
+    transition: color 0.4s ease;
 }
 
-.menu-botao:hover {
-    background-color: rgb(210, 148, 31);
-    transition: background-color 0.3s ease-in-out;
-    
+.menu-botao::after {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Para ficar em baixo do nome do botão*/
+    width: 100%;
+    height: 4px;
+    background-color: #B8621B;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  
+.menu-botao:hover::after {
+    transform: scaleX(1);
 }
 
 .link-botao-menu {
     text-decoration: none;
-    color: black;
     font-family: "Abril Fatface", serif;
     font-weight: 400;
     font-style: normal;
 }
-
 
 /* rodape */
 
@@ -180,11 +185,22 @@
 }
 
 .menu-netflix img{
-    width: 30vw;
-    height: 630px;
+    width: 32vw;
+    height: 800px;
     border-radius: 22px;
     margin: 2rem;
 }
+
+/*Parte que faz a animação banner no carroseul*/
+.evento-img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+  }
+  
+.evento-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
 /* -- Fim Card home Netflix -- */
 
 .texto-menu {

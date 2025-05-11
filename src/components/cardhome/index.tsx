@@ -54,7 +54,7 @@ const CardHome: React.FC = () => {
             onClick={() => handleClick(evento.link)}
             style={{ cursor: "pointer" }}
           >
-            <img src={evento.imgUrl} alt={evento.nome} />
+            <img className="evento-img" src={evento.imgUrl} alt={evento.nome} />
           </div>
         ))}
       </Carousel>
