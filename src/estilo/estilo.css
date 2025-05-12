@@ -657,7 +657,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     margin-top: 1.4rem;
 }
 
-.botaocadastrologin-form-div1 input, select{
+.botaocadastrologin-form-div1 input{
     width: 400px;
     height: 60px;
     border-radius: 12px;
