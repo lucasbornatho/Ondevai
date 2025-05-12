@@ -60,80 +60,83 @@ function CadastroUsuario() {
 
   return (
     <div className="CadastroUsuario-Container">
+
       <div className="botaologin-container">
         <div className="botaocadastrologin-form">
-          <h1 className="botaocadastrologin-titulo">Onde vai Cadastro</h1>
-          <img className="fotologin" src="Icone Login.png" alt="login" />
+          <h1 className="botaocadastrologin-titulo"><strong>Onde Vai</strong> Cadastre-se</h1>
 
-          <div className="botaocadastrologin-form-div1">
-            <input
-              className="botaocadastrologin-form-input"
-              type="text"
-              placeholder="Nome Completo"
-              value={nome}
-              onChange={handleAddNome}
-            />
+          <div className='container-formulario-cadastro'>
+              <div className="botaocadastrologin-form-div1">
+                <input
+                  type="text"
+                  placeholder="Nome Completo"
+                  value={nome}
+                  onChange={handleAddNome}/>
+              </div>
+
+              <div className="botaocadastrologin-form-div1">
+                <input
+                  type="date"
+                  placeholder="Data de Nascimento"
+                  value={datanasc}
+                  onChange={handleAddDatanasc}/>
+              </div>
+
+              <div className="botaocadastrologin-form-div1">
+                <input
+                  type="text"
+                  placeholder="Sexo"
+                  value={sexo}
+                  onChange={handleAddSexo}/>
+              </div>
+
+              {/* Vamos usar esse seletor para o usuário cadastrar o genero.
+              <div className="botaocadastrologin-form-div1">
+                <select>
+                  <option value="0">Genero</option>
+                  <option value="1">Feminino</option>
+                  <option value="2">Masculino</option>
+                </select>
+              </div> */}
+
+              <div className="botaocadastrologin-form-div1">
+                <input
+                  type="text"
+                  placeholder="Telefone"
+                  value={telefone}
+                  onChange={handleAddTelefone}/>
+              </div>
+
+
+              <div className="botaocadastrologin-form-div1">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  value={email}
+                  onChange={handleAddEmail}/>
+              </div>
+
+              <div className="botaocadastrologin-form-div1">
+                <input
+                  type="password"
+                  placeholder="Senha"
+                  value={senha}
+                  onChange={handleAddSenha}/>
+              </div>
+
+              <div className="botaocadastrologin-form-div1">
+                <button type="submit" 
+                  onClick={handleCadastro}>
+                  Cadastre-se
+                </button>
+                <button onClick={() => navigate("/")}>
+                  <img src="sair (3).png" alt="Sair" />
+                </button>
+              </div>
           </div>
-
-          <div className="botaocadastrologin-form-div1">
-            <input
-              className="botaocadastrologin-form-input"
-              type="date"
-              placeholder="Data de Nascimento"
-              value={datanasc}
-              onChange={handleAddDatanasc}
-            />
-          </div>
-
-          <div className="botaocadastrologin-form-div1">
-            <input
-              className="botaocadastrologin-form-input"
-              type="text"
-              placeholder="Sexo"
-              value={sexo}
-              onChange={handleAddSexo}
-            />
-          </div>
-
-          <div className="botaocadastrologin-form-div1">
-            <input
-              className="botaocadastrologin-form-input"
-              type="text"
-              placeholder="Telefone"
-              value={telefone}
-              onChange={handleAddTelefone}
-            />
-          </div>
-
-
-          <div className="botaocadastrologin-form-div1">
-            <input
-              className="botaocadastrologin-form-input"
-              type="email"
-              placeholder="Email"
-              value={email}
-              onChange={handleAddEmail}
-            />
-          </div>
-
-
-          <div className="botaocadastrologin-form-div1">
-            <input
-              className="botaocadastrologin-form-input"
-              type="password"
-              placeholder="Senha"
-              value={senha}
-              onChange={handleAddSenha}
-            />
-          </div>
-
-          <button className="botaologin-submit" type="submit" onClick={handleCadastro}>Cadastre-se</button>
-
-          <button onClick={() => navigate("/")} className="fechar-btn">
-            <img src="sair (3).png" alt="Sair" />
-          </button>
         </div>
       </div>
+
     </div>
   );
 }
