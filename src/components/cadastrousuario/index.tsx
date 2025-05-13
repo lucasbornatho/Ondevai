@@ -82,22 +82,22 @@ function CadastroUsuario() {
                   onChange={handleAddDatanasc}/>
               </div>
 
-              <div className="botaocadastrologin-form-div1">
+              {/* <div className="botaocadastrologin-form-div1">
                 <input
                   type="text"
                   placeholder="Sexo"
                   value={sexo}
                   onChange={handleAddSexo}/>
-              </div>
+              </div> */}
 
-              {/* Vamos usar esse seletor para o usuário cadastrar o genero.
               <div className="botaocadastrologin-form-div1">
                 <select>
                   <option value="0">Genero</option>
                   <option value="1">Feminino</option>
                   <option value="2">Masculino</option>
+                  <option value="3">Outros</option>
                 </select>
-              </div> */}
+              </div>
 
               <div className="botaocadastrologin-form-div1">
                 <input

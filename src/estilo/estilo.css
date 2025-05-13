@@ -31,7 +31,9 @@
 /* cabecalho */
 
 .cabecalho {
+    max-width: 100vw;
     display: flex;
+    justify-content: center;
     align-items: center;
     background-color: #262A56;
 }
@@ -39,9 +41,9 @@
 .cabecalho-item{
     width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin: 0 2rem;
+    justify-content: space-between;
+    margin: 0 1.2em;
 }
 
 .cabecalho-login img {
@@ -681,6 +683,18 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     align-items: center;
     padding: 2rem;
     margin-top: 1.4rem;
+}
+
+.botaocadastrologin-form-div1 select{
+    width: 400px;
+    height: 60px;
+    border-radius: 12px;
+    padding: 1rem;
+    font-size: 1.4rem;
+    font-style: italic;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    text-align: center;
 }
 /* -- Fim Pagiona Cadastro Usuario -- */
 
