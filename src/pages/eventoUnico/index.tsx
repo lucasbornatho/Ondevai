@@ -13,11 +13,11 @@ function EventoUnico() {
 
     useEffect(() => {
         if (id) {
-            carregarEvento(id);
+            CarregarEventoUnico(id);
         }
     }, [id]);
 
-    const carregarEvento = async (id: string) => {
+    const CarregarEventoUnico = async (id: string) => {
         setLoading(true);
         try {
             const data = await api.CarregarEventoUnico(id);
@@ -34,19 +34,7 @@ function EventoUnico() {
             <div className="nome-pagina-eventos">
                 {loading && <p>Carregando evento...</p>}
                 {!loading && evento && (
-                    <CardEvento 
-                        nome={evento.nome}
-                        image={evento.image}
-                        endereco={evento.endereco}
-                        genero={evento.genero}
-                        descricao={evento.descricao}
-                        data={evento.data}
-                        horario={evento.horario}
-                        classificacao={evento.classificacao}
-                        numero={evento.numero}
-                        cep={evento.cep}
-                        cidade={evento.cidade}
-                    />
+                    <CardEvento />
                 )}
             </div>
             <Rodape />
