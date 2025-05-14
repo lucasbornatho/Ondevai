@@ -8,6 +8,7 @@ import CadastroUsuario from './pages/cadastrousuario'
 import RecuperaSenha from './pages/recuperasenha'
 import Test from './pages/test'
 import { UsuarioLogadoProvider } from './contexts/contextAuth'
+import EventoUnico from './pages/eventoUnico'
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path='*' element= {<NotFound />} />
         <Route path='/' element= {<Home />} />
         <Route path='/eventos' element= {<Eventos />} />
+        <Route path='/eventos/:id' element= {<EventoUnico />} />
         <Route path='/cadastroevento' element={<Cadastro/>}/>
         <Route path='/cadastrousuario' element={<CadastroUsuario />} />
         <Route path='/recuperarsenha' element={<RecuperaSenha />} />

@@ -7,7 +7,7 @@ export const api = {
     },
 
     //func vai filtrar conforme o parametro informado no filto/eventos
-    CarregarEventoUnico: async (param:string) => {
+    CarregarEventoUnico: async (id: string) => {
             let response = await fetch('');
             let json = await response.json();
             return json
