@@ -20,11 +20,11 @@ function Cabecalho () {
             <div className='cabecalho'>
 
                 <div className='cabecalho-item'>
-                    {/* <Link to="/"> */}
+                    <Link to="/">
                     <div className='logo-home'>
                         <img src='./Logonovo.png' alt='Logo' />
                     </div>
-                    {/* </Link> */}
+                    </Link>
                     <div>
                         <Menu />
                     </div>

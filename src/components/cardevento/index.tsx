@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from "reactstrap";
 import { CardEventoType } from "../../types/cardeventotype";
 
+
 function CardEvento({ id, nome, genero, descricao, endereco, numero, image }: CardEventoType) {
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -18,7 +19,6 @@ function CardEvento({ id, nome, genero, descricao, endereco, numero, image }: Ca
           <div className="evento-icones">
             <img src="/capa-evento-icones/classificacao livre.png" alt="Livre" />
             <img src="/capa-evento-icones/compartilhar.png" alt="Compartilhar" />
-            <img src="/capa-evento-icones/favoritar.png" alt="Favoritar" />
             <img src="/capa-evento-icones/evento curtir.png" alt="Curtir" />
           </div>
 
@@ -29,19 +29,32 @@ function CardEvento({ id, nome, genero, descricao, endereco, numero, image }: Ca
           <button onClick={toggle}>Saiba Mais</button>
         </div>
       </div>
-
-      {/* Modal */}
-      <Modal isOpen={modalOpen} toggle={toggle}>
-        <ModalHeader toggle={toggle}>{nome}</ModalHeader>
-        <ModalBody>
-            <p><strong>Gênero:</strong> {genero || 'sem gênero'}</p>
-            <p><strong>Descrição:</strong> {descricao || 'sem descrição'}</p>
-            <p><strong>Localização:</strong> {endereco || 'sem localização'}</p>
-            <p><strong>Numero:</strong> {numero || 'sem numero'}</p>
-        </ModalBody>
-        <ModalFooter>
-          <Button color="secondary" onClick={toggle}>Fechar</Button>
-        </ModalFooter>
+      
+      
+      <Modal isOpen={modalOpen} toggle={toggle} style={{
+        maxWidth:"800px"  ,
+        height: "460px",
+        backgroundColor: "#E3CCAE",
+        padding: "2rem",
+        borderRadius: "12px", 
+        display: "flex"
+      }}>
+        <ModalHeader toggle={toggle} style={{
+          backgroundColor: "#E3CCAE",
+    
+        }}>{nome}</ModalHeader>
+          <ModalBody style={{
+            backgroundColor: "#E3CCAE",
+          
+          }}>
+            <div>
+              <div>
+                <p><strong>Gênero:</strong> {genero || 'sem gênero'}</p>
+                <p><strong>Localização:</strong> {endereco || 'sem localização'} - {numero || 'sem numero'}</p>
+              </div>
+              <p><strong>Descrição:</strong> {descricao || 'sem descrição'}</p>
+            </div>
+          </ModalBody>
       </Modal>
     </>
   );

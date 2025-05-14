@@ -433,7 +433,7 @@
 }
 
 .evento-informacoes h1{
-    width: 60%;
+    width: 70%;
     font-size: 64px;
     display: flex;
     justify-content: center;
@@ -712,3 +712,5 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     justify-content: center;
     z-index: 1010;
 } */
+
+
