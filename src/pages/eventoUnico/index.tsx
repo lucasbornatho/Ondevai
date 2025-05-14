@@ -29,9 +29,9 @@ function EventoUnico() {
     };
 
     return (
-        <div>
+        <div className='home'>
             <Cabecalho />
-            <div className="evento-unico">
+            <div className="nome-pagina-eventos">
                 {loading && <p>Carregando evento...</p>}
                 {!loading && evento && (
                     <CardEvento 
