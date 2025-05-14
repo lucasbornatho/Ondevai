@@ -8,7 +8,7 @@ export const api = {
 
     //func vai filtrar conforme o parametro informado no filto/eventos
     CarregarEventoUnico: async (id: string) => {
-            let response = await fetch('');
+            let response = await fetch('http://localhost:3000/eventos/:id');
             let json = await response.json();
             return json
     },

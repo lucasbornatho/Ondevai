@@ -34,7 +34,7 @@ function EventoUnico() {
             <div className="nome-pagina-eventos">
                 {loading && <p>Carregando evento...</p>}
                 {!loading && evento && (
-                    <CardEvento />
+                    <CardEvento/>
                 )}
             </div>
             <Rodape />
