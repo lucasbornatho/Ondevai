@@ -34,7 +34,19 @@ function EventoUnico() {
             <div className="nome-pagina-eventos">
                 {loading && <p>Carregando evento...</p>}
                 {!loading && evento && (
-                    <CardEvento/>
+                <CardEvento 
+                    nome={evento.nome} 
+                    image={evento.image} 
+                    endereco={evento.endereco}
+                    genero={evento.genero} 
+                    descricao={evento.descricao} 
+                    data={evento.data} 
+                    horario={evento.horario}
+                    classificacao={evento.classificacao} 
+                    numero={evento.numero}
+                    cep={evento.cep} 
+                    cidade={evento.cidade}
+                />
                 )}
             </div>
             <Rodape />

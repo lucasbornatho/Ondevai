@@ -23,7 +23,6 @@ function App() {
         <Route path='/cadastroevento' element={<Cadastro/>}/>
         <Route path='/cadastrousuario' element={<CadastroUsuario />} />
         <Route path='/recuperarsenha' element={<RecuperaSenha />} />
-        <Route path="/test" element= {<Test/>}/>
       </Routes>
     </UsuarioLogadoProvider>
   )
