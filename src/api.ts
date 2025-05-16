@@ -60,6 +60,23 @@ export const api = {
         return json;
     },
 
+    FiltrarEventos: async (data: string, genero: string, cidade: string) => {
+        let response = await fetch('http://localhost:3000/eventos/filtrar', {
+            method: 'POST',
+            body: JSON.stringify({
+                data,
+                genero,
+                cidade
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+    
+        let json = await response.json();
+        return json;
+    },
+
     LoginUsuario: async (email: string, senha: string) => {
 
         if (!email || !senha) {

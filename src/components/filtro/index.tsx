@@ -1,5 +1,35 @@
+import { useState } from "react";
+
 function Filtro() {
+  const [data, setData] = useState('');
+  const [genero, setGenero] = useState('0');
+  const [cidade, setCidade] = useState('0');
+
+  const handleFiltrar = async () => {
+    const filtros = {
+      data,
+      genero,
+      cidade
+    };
+
+    try {
+      const response = await fetch('', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(filtros)
+      });
+
+      const resultado = await response.json();
+      console.log('Resultados:', resultado);
+    } catch (error) {
+      console.error('Erro ao filtrar:', error);
+    }
+  };
+  
     return (
+      
       <div className="container-filtro">
         <div>
           <input className="filtro-botao" type="date"/>
@@ -27,7 +57,7 @@ function Filtro() {
         </div>
         
         <div>
-          <button className="filtro-botao css-botao">Filtrar</button>
+          <button className="filtro-botao css-botao" onClick={handleFiltrar}>Filtrar</button>
                 {/* <Link to='/' className='link-botao-menu'> Home </Link> */}
         </div>
       </div>
