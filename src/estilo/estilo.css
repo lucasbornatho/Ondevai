@@ -377,8 +377,8 @@
 .container-filtro {
     top: 180px;
     width:100%;
-    height: 100px;
-    padding: 20px;
+    height: 120px;
+    padding: 22px;
     background-color: #f9b53770;
     display: flex;
     flex-direction: row;
@@ -391,8 +391,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #f9b537ee;
-    color: #ffffff;
+    /* background-color: #f9b537ee; */
+    color: #1e2348;
     border-radius: 10px;
     height: 60px;
     width: 280px;
@@ -402,17 +402,21 @@
 
 .filtro-botao:hover {
     background-color: #262a56;
+    color: #fff;
     transition: background-color 0.3s ease-in-out;
 } 
 
 .css-botao{
     background-color: #262A56;
+    color: #fff;
 }
 
 .css-botao:hover{
     background-color: #4a4c63;
     transition: background-color 0.3s ease-in-out;
 }
+
+
 /* -- Fim Componete Filtro Eventos -- */
 
 /* -- Inicio Card Evento -- */
@@ -704,20 +708,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 /* -- Fim Pagiona Cadastro Usuario -- */
 
 
-/* Verificar se ainda esta sendo usado isso
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.767); /* escurece o fundo 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1010;
-} */
-
+/* -- Inicio modal saiba mais -- */
 
 .modal-overlay{
     width: 80%;
