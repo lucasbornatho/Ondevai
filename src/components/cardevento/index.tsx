@@ -29,9 +29,31 @@ function CardEvento({ id, nome, genero, descricao, endereco, numero, image }: Ca
           <button onClick={toggle}>Saiba Mais</button>
         </div>
       </div>
+
+      {modalOpen && (
+        <div className="modal-overlay" onClick={toggle}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+
+            <div className="modal-header">
+              <h2>{nome}</h2>
+              <button className="close-button" onClick={toggle}>X</button>
+            </div>
+
+            <div className="modal-body">
+              <p><strong>Gênero:</strong> {genero || 'sem gênero'}</p>
+              <p><strong>Localização:</strong> {endereco || 'sem localização'} - {numero || 'sem numero'}</p>
+            </div>
+            
+            <div className="modal-descricao">
+              <p><strong>Descrição:</strong> {descricao || 'sem descrição'}</p>
+            </div>
+
+          </div>
+        </div>
+      )}
+    
       
-      
-      <Modal isOpen={modalOpen} toggle={toggle} style={{
+      {/* <Modal isOpen={modalOpen} toggle={toggle} style={{
         maxWidth:"800px"  ,
         height: "460px",
         backgroundColor: "#E3CCAE",
@@ -40,11 +62,13 @@ function CardEvento({ id, nome, genero, descricao, endereco, numero, image }: Ca
         display: "flex"
       }}>
         <ModalHeader toggle={toggle} style={{
-          backgroundColor: "#E3CCAE",
+          backgroundColor: "#E3CCAE"        
+
     
         }}>{nome}</ModalHeader>
           <ModalBody style={{
             backgroundColor: "#E3CCAE",
+        
           
           }}>
             <div>
@@ -55,7 +79,7 @@ function CardEvento({ id, nome, genero, descricao, endereco, numero, image }: Ca
               <p><strong>Descrição:</strong> {descricao || 'sem descrição'}</p>
             </div>
           </ModalBody>
-      </Modal>
+      </Modal> */}
     </>
   );
 }

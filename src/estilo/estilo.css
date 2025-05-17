@@ -719,3 +719,54 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 } */
 
 
+.modal-overlay{
+    width: 80%;
+    height: 400px;
+    background-color: #E3CCAE;
+    border: 1px solid #262a56;
+    border-radius: 22px;
+    padding: 1.2rem;
+}
+
+.modal-content{
+    display: flex;
+}
+
+.modal-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2{
+    color: #fff;
+    font-size: 64px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-header button{
+    background-color: #c2823a;
+    color: #fff;
+    width: 60px;
+    border-radius: 12px;
+    font-size: 2rem;
+}
+
+.modal-header button:hover{
+    background-color: #262a56bb;
+}
+
+.modal-body{
+    margin-top: 1.4rem;
+    font-size: 32px;
+}
+
+
+
+
+
