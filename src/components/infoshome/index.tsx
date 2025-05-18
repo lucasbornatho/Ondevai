@@ -3,7 +3,7 @@ import "../../estilo/estilo.css"
 function InfosHome() {
     return (
         <div>
-         <Sobrenos/>
+         {/* <Sobrenos/> */}
         </div>
     );
 }
