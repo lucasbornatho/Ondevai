@@ -1,9 +1,9 @@
+import Sobrenos from "../../pages/sobrenos/sobrenos";
+import "../../estilo/estilo.css"
 function InfosHome() {
     return (
-        <div className="infos-menu">
-            <div className="texto-menu">
-                <img src="./OndeVai Texto4.png" alt="sobre" />
-            </div>
+        <div>
+         <Sobrenos/>
         </div>
     );
 }

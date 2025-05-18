@@ -761,3 +761,184 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 
 
+
+
+/* CSS DO SOBRENÓS */
+/* Estilos gerais da seção */
+.sobre-nos-section {
+  width: 100%;
+  padding: 3rem 0;
+  background-color: white;
+}
+
+@media (min-width: 768px) {
+  .sobre-nos-section {
+    padding: 6rem 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sobre-nos-section {
+    padding: 8rem 0;
+  }
+}
+
+/* Container principal */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+/* Cabeçalho */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.header-content {
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: #262a56;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+
+.subtitle {
+  max-width: 900px;
+  color: #71717a;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+/* Conteúdo principal */
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Seção de missão */
+.mission {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.mission-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #262a56;
+}
+
+.mission-text {
+  color: #71717a;
+}
+
+/* Cards de recursos */
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #e4e4e7;
+  border-radius: 0.5rem;
+  background-color: #f9fafb;
+}
+
+.icon {
+  height: 2rem;
+  width: 2rem;
+  margin-bottom: 0.5rem;
+  color: #f9b537;
+}
+
+.feature-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #262a56;
+}
+
+.feature-text {
+  font-size: 0.875rem;
+  text-align: center;
+  color: #71717a;
+}
+
+/* Container de imagem */
+.image-container {
+  position: relative;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  height: 400px;
+}
+
+@media (min-width: 768px) {
+  .image-container {
+    height: 100%;
+  }
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(38, 42, 86, 0.6), transparent);
+  display: flex;
+  align-items: flex-end;
+}
+
+.overlay-text {
+  padding: 1.5rem;
+  color: white;
+}
+
+.since {
+    text-align: center;
+  font-weight: 500;
+}
