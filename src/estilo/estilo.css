@@ -373,6 +373,10 @@
     color: #262A56;
 }
 
+.nome-pagina-eventos h1{
+    font-size: 5rem;
+}
+
 /* -- Inicio Componete Filtro Eventos -- */
 .container-filtro {
     top: 180px;
@@ -382,7 +386,7 @@
     background-color: #f9b53770;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -708,11 +712,10 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 /* -- Fim Pagiona Cadastro Usuario -- */
 
 
-/* -- Inicio modal saiba mais -- */
+/* -- Inicio modal Saiba Mais -- */
 
 .modal-overlay{
-    width: 80%;
-    height: 400px;
+    width: 60%;
     background-color: #E3CCAE;
     border: 1px solid #262a56;
     border-radius: 22px;
@@ -753,11 +756,21 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 .modal-body{
-    margin-top: 1.4rem;
+    margin-top: 1.8rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    gap: 1.5rem;
     font-size: 32px;
 }
 
+.modal-descricao{
+    margin-top: 24px;
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: #B8621B;
+    font-size: 1.8rem;
+}
 
-
-
-
+/* -- Fim modal Saiba Mais -- */
