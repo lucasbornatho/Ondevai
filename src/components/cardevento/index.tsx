@@ -3,7 +3,7 @@ import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from "reactstrap";
 import { CardEventoType } from "../../types/cardeventotype";
 
 
-function CardEvento({ id, nome, genero, descricao, endereco, numero, image }: CardEventoType) {
+function CardEvento({ id, nome, genero, data, horario, descricao, endereco, numero, image, classificacao }: CardEventoType) {
   const [modalOpen, setModalOpen] = useState(false);
 
   const toggle = () => setModalOpen(!modalOpen);
@@ -41,7 +41,10 @@ function CardEvento({ id, nome, genero, descricao, endereco, numero, image }: Ca
 
             <div className="modal-body">
               <p><strong>Gênero:</strong> {genero || 'sem gênero'}</p>
+              <p><strong>Data:</strong> {data || 'sem gênero'}</p>
+              <p><strong>Horario:</strong> {horario || 'sem gênero'}</p>
               <p><strong>Localização:</strong> {endereco || 'sem localização'} - {numero || 'sem numero'}</p>
+              <p><strong>Classificação:</strong> {classificacao || 'sem gênero'}</p>
             </div>
             
             <div className="modal-descricao">
