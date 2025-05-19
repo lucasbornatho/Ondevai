@@ -1,7 +1,18 @@
 import { useState, ChangeEvent } from "react";
 import { api } from "../../api";
+import { useContext } from "react";
+import { UsuarioLogadoContext } from '../../contexts/contextAuth'
+
 
 function CadastroEvento() {
+
+  const usuarioContext = useContext(UsuarioLogadoContext);
+
+  if (!usuarioContext) {
+    return <p>Carregando dados do usuário...</p>;
+  }
+
+  const usuarioId = usuarioContext.id;
 
   const [nomeEvento, setNomeEvento] = useState('');
   const handleAddNomeEvento = (e: ChangeEvent<HTMLInputElement>) => {
@@ -66,12 +77,23 @@ function CadastroEvento() {
     }
 
     try {
-      const response = await api.AdicionarEventos(nomeEvento, generoEvento, dataEvento, classificacaoEvento, horarioEvento, descricaoEvento, enderecoEvento, numeroEvento, cepEvento, cidadeEvento, imagemEvento);
+      const response = await api.AdicionarEventos(nomeEvento,
+        parseInt(generoEvento),
+        dataEvento,
+        horarioEvento,
+        parseInt(classificacaoEvento),
+        descricaoEvento,
+        enderecoEvento,
+        numeroEvento,
+        cepEvento,
+        cidadeEvento,
+        imagemEvento,
+        usuarioId);
 
-      if (response.status === "Evento Criado") {
+      if (response.id && response.message) {
         alert('Evento cadastrado com sucesso!');
       } else {
-        alert('Erro ao cadastrar evento.');
+        alert('ERROU AQUI EM.');
       }
 
     } catch (error) {

@@ -30,7 +30,6 @@ function Cabecalho () {
                     </div>
                     <div className="cabecalho-login">
                        
-                        {UsuarioLogadoCtx?.name}
                         {UsuarioLogadoCtx?.name && (<AreaLogin />)}
                         {!UsuarioLogadoCtx?.name && (<BotaoLogin />)}
                    

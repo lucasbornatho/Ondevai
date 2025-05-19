@@ -11,7 +11,7 @@ function Home () {
             <CardHome/>
             <DropHome />
             <SobreNos/>
-            <Rodape />
+            <Rodape /> 
         </div>
     )
 }

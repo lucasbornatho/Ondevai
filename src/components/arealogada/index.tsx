@@ -16,7 +16,7 @@ function AreaLogin() {
   function logoff() {
     if (UsuarioLogadoCtx?.name)
       UsuarioLogadoCtx.setName('');
-      navigate('/');
+    navigate('/');
   }
 
   const [isOpen, setIsOpen] = useState(false);
@@ -35,18 +35,19 @@ function AreaLogin() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundColor: "transparent",
-          boxShadow: "none",               
-          border: "none",                  
+          boxShadow: "none",
+          border: "none",
           width: "60px",
           height: "60px",
-          padding: 0,                   
+          padding: 0,
           minWidth: 0,
         }}
       >
-    </Button>
+      </Button>
       <Offcanvas isOpen={isOpen} toggle={toggleOffcanvas} direction="end">
         <OffcanvasHeader toggle={toggleOffcanvas}>
           <p>Olá {UsuarioLogadoCtx?.name}</p>
+          <p>ID {UsuarioLogadoCtx?.id}</p>
         </OffcanvasHeader>
         <OffcanvasBody>
           <a>Conta</a>

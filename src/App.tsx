@@ -6,8 +6,6 @@ import Eventos from './pages/eventos'
 import Cadastro from './pages/cadastro'
 import CadastroUsuario from './pages/cadastrousuario'
 import RecuperaSenha from './pages/recuperasenha'
-import Test from './pages/test'
-import { UsuarioLogadoProvider } from './contexts/contextAuth'
 import EventoUnico from './pages/eventoUnico'
 import Sobre from './pages/sobre'
 
@@ -15,9 +13,8 @@ import Sobre from './pages/sobre'
 function App() {
 
   return (
-    <UsuarioLogadoProvider>
       <Routes>
-        <Route path='*' element= {<NotFound />} />
+        
         <Route path='/' element= {<Home />} />
         <Route path='/eventos' element= {<Eventos />} />
         <Route path='/eventos/:id' element= {<EventoUnico />} />
@@ -25,8 +22,9 @@ function App() {
         <Route path='/cadastrousuario' element={<CadastroUsuario />} />
         <Route path='/recuperarsenha' element={<RecuperaSenha />} />
         <Route path='/sobrenos' element={<Sobre/>}/>
+        <Route path='*' element= {<NotFound />} />
+        
       </Routes>
-    </UsuarioLogadoProvider>
   )
 }
 

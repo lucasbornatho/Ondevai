@@ -14,13 +14,16 @@ function BotaoLogin() {
   const Context = useContext(UsuarioLogadoContext);
 
   const logar = async (email: string, senha: string) => {
-    
+
     let json = await api.LoginUsuario(addEmail, addSenha);
 
+    console.log("Resposta do login:", json);
+
     if (json.status) {
-      alert("Bem vindo, " + email);     
-      Context?.setName(email); 
-      navigate('/eventos')
+      alert("Bem vindo, " + json.usuario.nome);
+      Context?.setName(json.usuario.nome);
+      Context?.setID(json.usuario.id);
+      navigate('/eventos');
     } else {
       alert(json.message)
     }
@@ -69,11 +72,11 @@ function BotaoLogin() {
 
           <form>
             <div className='botaologin-form-div1'>
-              <input className='botaologin-form-input' type="text" placeholder="Login" value={addEmail} onChange={handleAddEmailChange}/>
+              <input className='botaologin-form-input' type="text" placeholder="Login" value={addEmail} onChange={handleAddEmailChange} />
             </div>
 
             <div className='botaologin-form-div1'>
-              <input className='botaologin-form-input' type="password" placeholder="Senha" value={addSenha} onChange={handleAddSenhaChange}/>
+              <input className='botaologin-form-input' type="password" placeholder="Senha" value={addSenha} onChange={handleAddSenhaChange} />
             </div>
 
             <button className='botaologin-submit' type="button" onClick={() => logar(addEmail, addSenha)}>Logar</button>
