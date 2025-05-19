@@ -35,6 +35,7 @@ function EventoUnico() {
                 {loading && <p>Carregando evento...</p>}
                 {!loading && evento && (
                 <CardEvento 
+                    id={evento.id}
                     nome={evento.nome} 
                     image={evento.image} 
                     endereco={evento.endereco}

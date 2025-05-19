@@ -446,7 +446,7 @@
 }
 
 .evento-informacoes h1{
-    width: 70%;
+    width: 80%;
     font-size: 64px;
     display: flex;
     justify-content: center;
@@ -457,25 +457,47 @@
     gap: 1rem;
 }
 
+/* CSS do alerta do link copiado*/
+.alerta-copiado {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #38a169; /* verde */
+  color: white;
+  padding: 1rem 1.3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeInOut 1s ease-in-out;
+  font-size: 2rem;
+  z-index: 9
+}
+
 .evento-saiba-mais{
     width: 100%;
     margin-top: 3rem;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
 }
 
 .evento-saiba-mais button{
     background-color: #B8621B;
     color: #fff;
     font-size: 48px;
-    padding: 1.5rem;
+    padding: 1.2rem 2.5rem;
     border-radius: 12px;
 }
 
+.evento-detalhes{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    font-size: 2rem;
+}
 .capa-evento-img{
     border-radius: 12px;
     width: 90vw;
-    height: 360px;
+    height: 440px;
 }
 
 /* -- Fim Card Evento -- */
@@ -713,17 +735,27 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 
 /* -- Inicio modal Saiba Mais -- */
-
-.modal-overlay{
-    width: 60%;
-    background-color: #E3CCAE;
-    border: 1px solid #262a56;
-    border-radius: 22px;
-    padding: 1.2rem;
+.modal-overlay {
+  position: fixed;
+  top: 150px;
+  left: 360px;
+  right: 360px;
+  bottom: 150px;
+  background-color: #E3CCAE;
+  border: 2px solid #262a56;
+  margin: 1.4rem 2rem;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  z-index: 1000;
+  
 }
 
 .modal-content{
     display: flex;
+    gap: 4rem;
 }
 
 .modal-header{
@@ -756,13 +788,22 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 .modal-body{
-    margin-top: 1.8rem;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; 
     gap: 1.5rem;
     font-size: 32px;
+}
+
+.modal-descricao{
+    height: 100%;
+    color: white;
+    font-size: 1.6rem;
+    border-radius: 12px;
+    background-color: #262A56;
+    padding: 1rem;
+
 }
 
 
@@ -948,5 +989,5 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 .since {
     text-align: center;
-  font-weight: 500;
+    font-weight: 500;
 }

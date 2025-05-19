@@ -122,6 +122,15 @@ function CadastroEvento() {
                   <option value="2">18+</option>
                 </select>
               </div>
+
+              <div className="container-grupo">
+                <label>Vendas</label>
+                <select className="seletor">
+                  <option value="0"></option>
+                  <option value="1">Gratuito</option>
+                  <option value="2">Pago</option>
+                </select>
+              </div>
             </div>
           </div>
 

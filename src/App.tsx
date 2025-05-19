@@ -9,6 +9,7 @@ import RecuperaSenha from './pages/recuperasenha'
 import Test from './pages/test'
 import { UsuarioLogadoProvider } from './contexts/contextAuth'
 import EventoUnico from './pages/eventoUnico'
+import Sobre from './pages/sobre'
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path='/cadastroevento' element={<Cadastro/>}/>
         <Route path='/cadastrousuario' element={<CadastroUsuario />} />
         <Route path='/recuperarsenha' element={<RecuperaSenha />} />
+        <Route path='/sobrenos' element={<Sobre/>}/>
       </Routes>
     </UsuarioLogadoProvider>
   )

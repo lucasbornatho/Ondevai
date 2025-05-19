@@ -1,12 +1,24 @@
 import { useState } from "react";
-import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from "reactstrap";
 import { CardEventoType } from "../../types/cardeventotype";
 
 
 function CardEvento({ id, nome, genero, data, horario, descricao, endereco, numero, image, classificacao }: CardEventoType) {
   const [modalOpen, setModalOpen] = useState(false);
+  const [copied, setCopied] = useState(false); // estado para feedback de cópia
 
   const toggle = () => setModalOpen(!modalOpen);
+
+  // Função para copiar link
+  const handleShare = async () => {
+    const linkDoEvento = `${window.location.origin}/eventos/${id}`;
+    try {
+      await navigator.clipboard.writeText(linkDoEvento);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error("Erro ao copiar link:", err);
+    }
+  };
 
   return (
     <>
@@ -18,14 +30,30 @@ function CardEvento({ id, nome, genero, data, horario, descricao, endereco, nume
         <div className="evento-informacoes">
           <div className="evento-icones">
             <img src="/capa-evento-icones/classificacao livre.png" alt="Livre" />
-            <img src="/capa-evento-icones/compartilhar.png" alt="Compartilhar" />
+            <img src="/capa-evento-icones/compartilhar.png" 
+              alt="Compartilhar" 
+              style={{cursor: "pointer"}} 
+              onClick={handleShare} 
+              title="Compartilhar"/>
             <img src="/capa-evento-icones/evento curtir.png" alt="Curtir" />
+
+            {copied && (
+              <div className="alerta-copiado">
+                Link copiado para a área de transferência!
+              </div>
+            )}
           </div>
 
           <h1>{nome}</h1>
         </div>
 
         <div className="evento-saiba-mais">
+          <div className="evento-detalhes">
+            <p><strong>Data:</strong> {data || 'sem gênero'}</p>
+            <p><strong>Horario:</strong> {horario || 'sem gênero'}</p>
+            <p><strong>Localização:</strong> {endereco || 'sem localização'} - {numero || 'sem numero'}</p>
+          </div>
+
           <button onClick={toggle}>Saiba Mais</button>
         </div>
       </div>
@@ -54,35 +82,6 @@ function CardEvento({ id, nome, genero, data, horario, descricao, endereco, nume
           </div>
         </div>
       )}
-    
-      
-      {/* <Modal isOpen={modalOpen} toggle={toggle} style={{
-        maxWidth:"800px"  ,
-        height: "460px",
-        backgroundColor: "#E3CCAE",
-        padding: "2rem",
-        borderRadius: "12px", 
-        display: "flex"
-      }}>
-        <ModalHeader toggle={toggle} style={{
-          backgroundColor: "#E3CCAE"        
-
-    
-        }}>{nome}</ModalHeader>
-          <ModalBody style={{
-            backgroundColor: "#E3CCAE",
-        
-          
-          }}>
-            <div>
-              <div>
-                <p><strong>Gênero:</strong> {genero || 'sem gênero'}</p>
-                <p><strong>Localização:</strong> {endereco || 'sem localização'} - {numero || 'sem numero'}</p>
-              </div>
-              <p><strong>Descrição:</strong> {descricao || 'sem descrição'}</p>
-            </div>
-          </ModalBody>
-      </Modal> */}
     </>
   );
 }

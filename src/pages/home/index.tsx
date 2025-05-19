@@ -2,7 +2,7 @@ import Rodape from "../../components/rodape"
 import Cabecalho from "../../components/cabecalho"
 import CardHome from "../../components/cardhome"
 import DropHome from "../../components/drophome/drophome"
-import InfosHome from "../../components/infoshome"
+import SobreNos from "../../components/sobrenos/sobrenos"
 
 function Home () {
     return (
@@ -10,7 +10,7 @@ function Home () {
             <Cabecalho />
             <CardHome/>
             <DropHome />
-            <InfosHome/>
+            <SobreNos/>
             <Rodape />
         </div>
     )
