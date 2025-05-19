@@ -81,15 +81,7 @@ function CadastroUsuario() {
                   value={datanasc}
                   onChange={handleAddDatanasc}/>
               </div>
-
-              {/* <div className="botaocadastrologin-form-div1">
-                <input
-                  type="text"
-                  placeholder="Sexo"
-                  value={sexo}
-                  onChange={handleAddSexo}/>
-              </div> */}
-
+              
               <div className="botaocadastrologin-form-div1">
                 <select>
                   <option value="0">Genero</option>

@@ -28,6 +28,11 @@ function CadastroEvento() {
     setClassificacaoEvento(e.target.value)
   }
 
+  const [valorEvento, setValorEvento] = useState('');
+  const handleAddValorEvento = (e: ChangeEvent<HTMLInputElement>) => {
+    setValorEvento(e.target.value)
+  }
+
   const [descricaoEvento, setDescricaoEvento] = useState('');
   const handleAddDescricaoEvento = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setDescricaoEvento(e.target.value)
@@ -124,12 +129,8 @@ function CadastroEvento() {
               </div>
 
               <div className="container-grupo">
-                <label>Vendas</label>
-                <select className="seletor">
-                  <option value="0"></option>
-                  <option value="1">Gratuito</option>
-                  <option value="2">Pago</option>
-                </select>
+                <label>Informe o valor do evento</label>
+                <input type="text" onChange={handleAddValorEvento}></input>
               </div>
             </div>
           </div>
@@ -151,11 +152,6 @@ function CadastroEvento() {
                 <div className="container-grupo small-width">
                   <label>Numero</label>
                   <input type="text" onChange={handleAddNumeroEvento} />
-                </div>
-
-                <div className="container-grupo small-width">
-                  <label>CEP</label>
-                  <input type="text" onChange={handleAddCepEvento} />
                 </div>
               </div>
             </div>
