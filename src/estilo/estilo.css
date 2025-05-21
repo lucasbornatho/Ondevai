@@ -1001,3 +1001,50 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     text-align: center;
     font-weight: 500;
 }
+
+/* Recuperação de senha */
+
+.recsenha{
+   font-family: 'Inter', sans-serif;
+    padding: 2rem;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    border-radius: 16px;
+    background-color:#262a565b;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+}
+
+.email_recsenha{
+   display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 600px;
+}
+.novasenha_recsenha{
+   display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 600px;
+}
+.csenha_recsenha{
+   display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 600px;
+}
+.button_recsenha{
+background-color: #262A56;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;  
+}

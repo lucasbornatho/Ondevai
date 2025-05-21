@@ -95,7 +95,7 @@ function RecuperarSenha() {
                                 onChange={handleConfirmarSenha} 
                             />
                         </div>
-                    </div>
+                    </div><br />
 
                     <button className="button_recsenha" type="submit">Redefinir Senha</button>
 
