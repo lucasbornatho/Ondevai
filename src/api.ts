@@ -42,7 +42,6 @@ export const api = {
   descricao: string,
   endereco: string,
   numero: string,
-  cep: string,
   cidade: string,
   image: string,
   usuarioId: string | undefined
@@ -58,7 +57,6 @@ export const api = {
       descricao,
       endereco,
       numero,
-      cep,
       cidade,
       image,
       usuario: usuarioId
