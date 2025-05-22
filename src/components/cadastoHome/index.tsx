@@ -6,11 +6,11 @@ function CadastroHome() {
 
             <div className="menu-cadastrar-evento">
                 <div className="menu-cadastrar-caixa">
-                    <h2>Quer Cadastrar seu Evento?</h2>
-                    <p>Clique abaixo e preencha as informações</p>
-                    <Link to="/cadastroevento" className="loginbotaocadastro">
-                    <button>Cadastrar</button>
-                    </Link>
+                    <h2>Cadastre seu evento</h2>
+                    <p>Preencha as informações clicando no botão abaixo.</p>
+                    <a className="loginbotaocadastro" href="./cadastroevento">
+                        <button>Começar cadastro</button>
+                    </a>
                 </div>
             </div>
         </div>

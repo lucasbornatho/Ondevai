@@ -44,7 +44,7 @@ function SobreNos() {
           </div>
           <div className="image-container">
             <img
-              src="./galerafullstack.png"
+              src="./sobreondevai.png"
               alt=""
               className="main-image"
             />
