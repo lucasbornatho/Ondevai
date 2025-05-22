@@ -8,8 +8,8 @@ function CadastroHome() {
                 <div className="menu-cadastrar-caixa">
                     <h2>Cadastre seu evento</h2>
                     <p>Preencha as informações clicando no botão abaixo.</p>
-                    <a className="loginbotaocadastro" href="./cadastroevento">
-                        <button>Começar cadastro</button>
+                    <a className="loginbotaocadastro"> 
+                    <Link to="./cadastroevento" ><button>Começar cadastro</button></Link>
                     </a>
                 </div>
             </div>
