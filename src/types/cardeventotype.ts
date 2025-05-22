@@ -1,14 +1,13 @@
 export type CardEventoType = {
     id?: string;
     nome?: string;
-    genero?: string;
-    data?: string;
+    genero?: number;
+    data_evento?: string;
     horario?: string;
-    classificacao?: string;
+    classificacao?: number;
     descricao?: string;
     endereco?: string;
     numero?: string;
-    cep?: string;
-    cidade?: string;
+    cidade?: number;
     image?: string
 }

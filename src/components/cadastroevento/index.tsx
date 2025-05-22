@@ -90,8 +90,7 @@ function CadastroEvento() {
         descricaoEvento,
         enderecoEvento,
         numeroEvento,
-        cepEvento,
-        cidadeEvento,
+        parseInt(cidadeEvento),
         imagemEvento,
         usuarioId);
 

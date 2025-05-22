@@ -42,7 +42,7 @@ export const api = {
   descricao: string,
   endereco: string,
   numero: string,
-  cidade: string,
+  cidade: number,
   image: string,
   usuarioId: string | undefined
 ) => {
