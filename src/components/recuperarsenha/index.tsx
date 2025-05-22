@@ -61,13 +61,14 @@ function RecuperarSenha() {
                 <div className="cabecalho_recsenha">
                     <h1><strong>Onde Vai</strong></h1>
                     <h2>Recuperação de senha</h2>
-                    <p>Informe seu email e crie uma nova senha para acessar</p>
+                    <h5><p>Informe seu email e crie uma nova senha para acessar</p></h5>
                 </div>
 
                 <form onSubmit={handleRedefinirSenha}>
-                    <div className="email_recsenha">
-                        <label>Email</label>
-                        <input 
+                    <div>
+                        <h5><label>Email</label></h5>
+                        <input
+                            className="email_recsenha cor"
                             type="email" 
                             placeholder="seuemail@gmail.com" 
                             value={email} 
@@ -77,7 +78,7 @@ function RecuperarSenha() {
 
                     <div>
                         <div className="novasenha_recsenha">
-                            <label>Nova Senha</label>
+                            <h5><label>Nova Senha</label></h5>
                             <input 
                                 type="password" 
                                 placeholder="Digite sua nova senha" 
@@ -87,7 +88,7 @@ function RecuperarSenha() {
                         </div>
 
                         <div className="csenha_recsenha">
-                            <label>Confirmar Senha</label>
+                            <h5><label>Confirmar Senha</label></h5>
                             <input 
                                 type="password" 
                                 placeholder="Confirme sua nova senha" 

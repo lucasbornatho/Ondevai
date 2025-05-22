@@ -1010,32 +1010,42 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     margin: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     border-radius: 16px;
     border-radius: 16px;
     background-color:#262a565b;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-
 }
 
+.recsenha input{
+  padding: 18px;
+  border-radius: 14px;
+  height: 45px;
+  font-size: 1rem;
+  font-style: italic;
+}
 .email_recsenha{
    display: flex;
     flex-direction: column;
     flex: 1;
     min-width: 600px;
 }
+
+    
 .novasenha_recsenha{
-   display: flex;
-    flex-direction: column;
-    flex: 1;
-    min-width: 600px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  /* min-width: 600px; */
+    
+
 }
 .csenha_recsenha{
    display: flex;
     flex-direction: column;
     flex: 1;
-    min-width: 600px;
+    /* min-width: 600px; */
 }
 .button_recsenha{
 background-color: #262A56;
@@ -1048,3 +1058,4 @@ background-color: #262A56;
   transition: background-color 0.3s ease;
   cursor: pointer;  
 }
+
