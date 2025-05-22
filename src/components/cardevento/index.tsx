@@ -5,6 +5,7 @@ import { CardEventoType } from "../../types/cardeventotype";
 function CardEvento({ id, nome, genero, data, horario, descricao, endereco, numero, image, classificacao }: CardEventoType) {
   const [modalOpen, setModalOpen] = useState(false);
   const [copied, setCopied] = useState(false); // estado para feedback de cópia
+  const [evento, setEvento] = useState<CardEventoType | null>(null);
 
   const toggle = () => setModalOpen(!modalOpen);
 
@@ -24,7 +25,7 @@ function CardEvento({ id, nome, genero, data, horario, descricao, endereco, nume
     <>
       <div className="card-evento">
         <div className="capa-evento">
-          <img className="capa-evento-img" src={image} alt="Capa do evento" />
+          <img className="capa-evento-img" src={evento?.image} alt="Capa do evento" />
         </div>
 
         <div className="evento-informacoes">
@@ -44,14 +45,14 @@ function CardEvento({ id, nome, genero, data, horario, descricao, endereco, nume
             )}
           </div>
 
-          <h1>{nome}</h1>
+          <h1>{evento?.nome}</h1>
         </div>
 
         <div className="evento-saiba-mais">
           <div className="evento-detalhes">
-            <p><strong>Data:</strong> {data || 'sem gênero'}</p>
-            <p><strong>Horario:</strong> {horario || 'sem gênero'}</p>
-            <p><strong>Localização:</strong> {endereco || 'sem localização'} - {numero || 'sem numero'}</p>
+            <p><strong>Data:</strong> {evento?.data || 'sem gênero'}</p>
+            <p><strong>Horario:</strong> {evento?.horario || 'sem gênero'}</p>
+            <p><strong>Localização:</strong> {evento?.endereco || 'sem localização'} - {evento?.numero || 'sem numero'}</p>
           </div>
 
           <button onClick={toggle}>Saiba Mais</button>
@@ -63,20 +64,20 @@ function CardEvento({ id, nome, genero, data, horario, descricao, endereco, nume
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
 
             <div className="modal-header">
-              <h2>{nome}</h2>
+              <h2>{evento?.nome}</h2>
               <button className="close-button" onClick={toggle}>X</button>
             </div>
 
             <div className="modal-body">
-              <p><strong>Gênero:</strong> {genero || 'sem gênero'}</p>
-              <p><strong>Data:</strong> {data || 'sem gênero'}</p>
-              <p><strong>Horario:</strong> {horario || 'sem gênero'}</p>
-              <p><strong>Localização:</strong> {endereco || 'sem localização'} - {numero || 'sem numero'}</p>
-              <p><strong>Classificação:</strong> {classificacao || 'sem gênero'}</p>
+              <p><strong>Gênero:</strong> {evento?.genero || 'sem gênero'}</p>
+              <p><strong>Data:</strong> {evento?.data || 'sem gênero'}</p>
+              <p><strong>Horario:</strong> {evento?.horario || 'sem gênero'}</p>
+              <p><strong>Localização:</strong> {evento?.endereco || 'sem localização'} - {evento?.numero || 'sem numero'}</p>
+              <p><strong>Classificação:</strong> {evento?.classificacao || 'sem gênero'}</p>
             </div>
             
             <div className="modal-descricao">
-              <p><strong>Descrição:</strong> {descricao || 'sem descrição'}</p>
+              <p><strong>Descrição:</strong> {evento?.descricao || 'sem descrição'}</p>
             </div>
 
           </div>
