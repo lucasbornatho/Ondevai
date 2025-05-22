@@ -1004,40 +1004,40 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 /* Recuperação de senha */
 
-.recsenha{
+/* .recsenha{
    font-family: 'Inter', sans-serif;
     padding: 2rem;
     margin: 2rem;
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
-    align-items: center;
+    /* align-items: center;
     border-radius: 16px;
     border-radius: 16px;
     background-color:#262a565b;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
+} */
 
-.recsenha input{
+/* .recsenha input{
   padding: 18px;
   border-radius: 14px;
   height: 45px;
   font-size: 1rem;
   font-style: italic;
-}
-.email_recsenha{
+} */
+/* .email_recsenha{
    display: flex;
     flex-direction: column;
     flex: 1;
     min-width: 600px;
-}
+} */
 
     
-.novasenha_recsenha{
+/* .novasenha_recsenha{
   display: flex;
   flex-direction: column;
   flex: 1;
-  /* min-width: 600px; */
+ 
     
 
 }
@@ -1045,7 +1045,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
    display: flex;
     flex-direction: column;
     flex: 1;
-    /* min-width: 600px; */
+    
 }
 .button_recsenha{
 background-color: #262A56;
@@ -1057,5 +1057,202 @@ background-color: #262A56;
   border-radius: 10px;
   transition: background-color 0.3s ease;
   cursor: pointer;  
+} */ 
+
+/* Variáveis de cores */
+:root {
+  --primary-color: #262a56;
+  --accent-color: #f9b537;
+  --text-light: #ffffff;
+  --text-dark: #333333;
+  --error-color: #e74c3c;
+  --success-color: #2ecc71;
+  --input-bg: rgba(255, 255, 255, 0.9);
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --shadow-color: rgba(0, 0, 0, 0.2);
 }
+
+/* Estilos gerais */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.recovery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--primary-color);
+  background-image: linear-gradient(135deg, var(--primary-color) 0%, #1a1d3b 100%);
+  padding: 20px;
+}
+
+.recovery-card {
+  width: 100%;
+  max-width: 450px;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px var(--shadow-color);
+  padding: 40px;
+  transition: transform 0.3s ease;
+}
+
+.recovery-card:hover {
+  transform: translateY(-5px);
+}
+
+.cabecalho_recsenha {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.brand-title {
+  color: var(--primary-color);
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.recovery-title {
+  color: var(--primary-color);
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.recovery-subtitle {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Estilos do formulário */
+.recovery-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.input-field {
+  padding: 14px 16px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background-color: var(--input-bg);
+  font-size: 16px;
+  transition: all 0.3s ease;
+  color: var(--text-dark);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(249, 181, 55, 0.3);
+}
+
+.input-field::placeholder {
+  color: #aaaaaa;
+}
+
+.password-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.recovery-button {
+  margin-top: 10px;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--accent-color);
+  color: var(--text-dark);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(249, 181, 55, 0.3);
+}
+
+.recovery-button:hover {
+  background-color: #e8a82c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(249, 181, 55, 0.4);
+}
+
+.recovery-button:active {
+  transform: translateY(0);
+}
+
+.recovery-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Mensagens de erro e sucesso */
+.message {
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+  animation: fade-in 0.3s ease;
+}
+
+.error-message {
+  color: var(--error-color);
+  background-color: rgba(231, 76, 60, 0.1);
+}
+
+.success-message {
+  color: var(--success-color);
+  background-color: rgba(46, 204, 113, 0.1);
+}
+
+/* Animações */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+  .recovery-card {
+    padding: 30px 20px;
+  }
+
+  .brand-title {
+    font-size: 28px;
+  }
+
+  .recovery-title {
+    font-size: 20px;
+  }
+
+  .input-field {
+    padding: 12px 14px;
+  }
+}
+
 
