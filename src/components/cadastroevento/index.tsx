@@ -65,6 +65,12 @@ function CadastroEvento() {
     const file = e.target.files?.[0];
     if (!file) return;
 
+    if (file.size > 2 * 1024 * 1024) {
+      alert("Imagem muito grande! O limite é de 2MB.");
+      return;
+    }
+
+
     const formData = new FormData();
     formData.append("file", file);
     formData.append("upload_preset", "ondevai_eventos");
@@ -122,7 +128,7 @@ function CadastroEvento() {
     }
   };
 
-return (
+  return (
     <>
       <div className="container-cadastro-evento">
         <h1 className="texto-cetralizado">Cadastro Evento</h1>
