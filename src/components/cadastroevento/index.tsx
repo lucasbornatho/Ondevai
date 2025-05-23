@@ -39,10 +39,6 @@ function CadastroEvento() {
     setClassificacaoEvento(e.target.value)
   }
 
-  const [valorEvento, setValorEvento] = useState('');
-  const handleAddValorEvento = (e: ChangeEvent<HTMLInputElement>) => {
-    setValorEvento(e.target.value)
-  }
 
   const [descricaoEvento, setDescricaoEvento] = useState('');
   const handleAddDescricaoEvento = (e: ChangeEvent<HTMLTextAreaElement>) => {
@@ -59,13 +55,8 @@ function CadastroEvento() {
     setNumeroEvento(e.target.value)
   }
 
-  const [cepEvento, setCepEvento] = useState('');
-  const handleAddCepEvento = (e: ChangeEvent<HTMLInputElement>) => {
-    setCepEvento(e.target.value)
-  }
-
   const [cidadeEvento, setCidadeEvento] = useState('');
-  const handleAddCidadeEvento = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleAddCidadeEvento = (e: ChangeEvent<HTMLSelectElement>) => {
     setCidadeEvento(e.target.value)
   }
 
@@ -76,7 +67,7 @@ function CadastroEvento() {
 
   const handleCadastroEvento = async () => {
 
-    if (!nomeEvento || !generoEvento || !dataEvento || !horarioEvento || !cepEvento) {
+    if (!nomeEvento || !generoEvento || !dataEvento || !horarioEvento) {
       alert("Preencha os campos obrigatórios.");
       return;
     }
@@ -148,11 +139,6 @@ function CadastroEvento() {
                   <option value="2">18+</option>
                 </select>
               </div>
-
-              <div className="container-grupo">
-                <label>Informe o valor do evento</label>
-                <input type="text" onChange={handleAddValorEvento}></input>
-              </div>
             </div>
           </div>
 
@@ -167,7 +153,13 @@ function CadastroEvento() {
               <div className="container-localizacao-row">
                 <div className="container-grupo medium-width">
                   <label>Cidade</label>
-                  <input type="text" onChange={handleAddCidadeEvento} />
+                  <select className="seletor" onChange={handleAddCidadeEvento}>
+                  <option value="0"></option>
+                  <option value="1">Bauru</option>
+                  <option value="2">Piratininga</option>
+                  <option value="3">Pederneiras</option>
+                  <option value="4">Agudos</option>
+                </select>
                 </div>
 
                 <div className="container-grupo small-width">
