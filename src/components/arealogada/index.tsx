@@ -14,10 +14,12 @@ function AreaLogin() {
   const navigate = useNavigate();
 
   function logoff() {
-    if (UsuarioLogadoCtx?.name)
-      UsuarioLogadoCtx.setName('');
-    navigate('/');
+  if (UsuarioLogadoCtx) {
+    UsuarioLogadoCtx.setName('');
+    UsuarioLogadoCtx.setID('');
   }
+  navigate('/');
+}
 
   const [isOpen, setIsOpen] = useState(false);
 
