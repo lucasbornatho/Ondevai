@@ -41,11 +41,10 @@ function EventoUnico() {
                     endereco={evento.endereco}
                     genero={evento.genero} 
                     descricao={evento.descricao} 
-                    data={evento.data} 
+                    data_evento={evento.data_evento} 
                     horario={evento.horario}
                     classificacao={evento.classificacao} 
                     numero={evento.numero}
-                    cep={evento.cep} 
                     cidade={evento.cidade}
                 />
                 )}

@@ -1,68 +1,56 @@
-import Rodape from "../../components/rodape"
-import Cabecalho from "../../components/cabecalho"
-import CardEvento from "../../components/cardevento"
-import Filtro from "../../components/filtro"
-import { CardEventoType } from "../../types/cardeventotype"
-import { useState, useEffect } from "react"
-import { api } from "../../api"
-import CadastroHome from "../../components/cadastoHome" 
+import { useState, useEffect } from "react";
+import { CardEventoType } from "../../types/cardeventotype";
+import { api } from "../../api";
+import Cabecalho from "../../components/cabecalho";
+import Rodape from "../../components/rodape";
+import Filtro from "../../components/filtro";
+import CardEvento from "../../components/cardevento";
+import CadastroHome from "../../components/cadastoHome";
 
-function Eventos () {
+function Eventos() {
+  const [eventos, setEventos] = useState<CardEventoType[]>([]);
+  const [loading, setLoading] = useState(false);
 
+  useEffect(() => {
+    carregarEventos();
+  }, []);
 
-    useEffect(() => { carregarEventos() }, []);
-
-
-    const [eventos, setEventos] = useState<CardEventoType[]>([]);
-    const[loading, setLoading] = useState(false);
- 
-    const carregarEventos = async () => {
-        setLoading(true);
-    
-        try {
-            let json = await api.CarregarTodosEventos();
-            console.log(json);  // Apenas para verificar se está carregando os eventos
-            
-            const dataArray = Array.isArray(json) ? json : [json];
-            setEventos(dataArray);
-        } catch (error) {
-            console.error("Erro ao carregar os eventos:", error);
-        }
-    
-        setLoading(false);
+  const carregarEventos = async () => {
+    setLoading(true);
+    try {
+      const json = await api.CarregarTodosEventos();
+      const dataArray = Array.isArray(json) ? json : [json];
+      setEventos(dataArray);
+    } catch (error) {
+      console.error("Erro ao carregar os eventos:", error);
     }
+    setLoading(false);
+  };
 
-    return (
-        <div className='home'>
-            <Cabecalho />
-            <Filtro />
-            <div className='nome-pagina-eventos'>
-                <h1>Eventos</h1>
-            </div>
-            {loading ? <p>Carregando...</p> : (
-            <ul>
-                {eventos.map(evento => (
-                <li key={evento.id}>
-                <CardEvento 
-                nome={evento.nome} 
-                image={evento.image} 
-                endereco={evento.endereco}
-                genero={evento.genero} 
-                descricao={evento.descricao} 
-                data={evento.data} 
-                horario={evento.horario}
-                classificacao={evento.classificacao} 
-                numero={evento.numero}
-                cep={evento.cep} 
-                cidade={evento.cidade}/>
-                </li>
-                ))}
-            </ul>
-)}
-            <CadastroHome />
-            <Rodape />
+  return (
+    <div className="home">
+      <Cabecalho />
+      <Filtro />
+      <div className="nome-pagina-eventos">
+        <h1>Eventos</h1>
+      </div>
+
+      {loading ? (
+        <p>Carregando eventos...</p>
+      ) : eventos.length === 0 ? (
+        <p>Nenhum evento encontrado.</p>
+      ) : (
+        <div className="lista-eventos">
+          {eventos.map((evento) => (
+            <CardEvento key={evento.id} {...evento} />
+          ))}
         </div>
-    )
+      )}
+
+      <CadastroHome />
+      <Rodape />
+    </div>
+  );
 }
 
-export default Eventos
+export default Eventos;
