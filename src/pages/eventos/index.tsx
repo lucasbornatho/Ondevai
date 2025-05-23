@@ -19,8 +19,26 @@ function Eventos() {
     setLoading(true);
     try {
       const json = await api.CarregarTodosEventos();
-      const dataArray = Array.isArray(json) ? json : [json];
-      setEventos(dataArray);
+
+      const eventosDoBanco = json.evento;
+
+      const eventosCorrigidos: CardEventoType[] = eventosDoBanco.map((evento: any) => ({
+        id: evento.id,
+        nome: evento.nome || 'sem nome',
+        genero: evento.id_genero || 'sem gênero',
+        data_evento: evento.data_evento || 'sem data',
+        horario: evento.horario || 'sem horário',
+        classificacao: evento.classificacao || 'sem classificação',
+        descricao: evento.descricao || 'sem descrição',
+        endereco: evento.endereco || 'sem endereço',
+        numero: evento.numero || 'sem número',
+        cidade: evento.id_cidade || 'sem cidade',
+        image: evento.image || '',
+
+        
+      }));
+
+      setEventos(eventosCorrigidos);
     } catch (error) {
       console.error("Erro ao carregar os eventos:", error);
     }
