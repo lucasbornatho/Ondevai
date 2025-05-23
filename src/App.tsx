@@ -8,6 +8,7 @@ import CadastroUsuario from './pages/cadastrousuario'
 import RecuperaSenha from './pages/recuperasenha'
 import EventoUnico from './pages/eventoUnico'
 import Sobre from './pages/sobre'
+import FiltroEvento from './pages/filtroEvento'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path='/cadastrousuario' element={<CadastroUsuario />} />
         <Route path='/recuperarsenha' element={<RecuperaSenha />} />
         <Route path='/sobrenos' element={<Sobre/>}/>
+        <Route path="/filtroevento" element={<FiltroEvento />} />
         <Route path='*' element= {<NotFound />} />
         
       </Routes>

@@ -36,6 +36,8 @@ function EventoUnico() {
         numero: eventoData.numero || 'sem número',
         cidade: eventoData.id_cidade || 'sem cidade',
         image: eventoData.image || '',
+        generoNome: "",
+        cidadeNome: ""
       };
 
       setEvento(eventoCorrigido);
