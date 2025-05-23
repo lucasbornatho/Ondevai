@@ -25,14 +25,14 @@ function Eventos() {
       const eventosCorrigidos: CardEventoType[] = eventosDoBanco.map((evento: any) => ({
         id: evento.id,
         nome: evento.nome || 'sem nome',
-        genero: evento.id_genero || 'sem gênero',
+        generoNome: evento.generoNome || 'sem gênero',
         data_evento: evento.data_evento || 'sem data',
         horario: evento.horario || 'sem horário',
         classificacao: evento.classificacao || 'sem classificação',
         descricao: evento.descricao || 'sem descrição',
         endereco: evento.endereco || 'sem endereço',
         numero: evento.numero || 'sem número',
-        cidade: evento.id_cidade || 'sem cidade',
+        cidadeNome: evento.cidadeNome || 'sem cidade',
         image: evento.image || '',
 
         

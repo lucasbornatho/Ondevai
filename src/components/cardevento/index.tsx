@@ -1,7 +1,13 @@
 import { useState } from "react";
 import { CardEventoType } from "../../types/cardeventotype";
 
-function CardEvento({ id, nome, genero, data_evento, horario, descricao, endereco, numero, image, classificacao }: CardEventoType) {
+function CardEvento({ id, nome, generoNome, data_evento, horario, descricao, endereco, numero,cidadeNome, image, classificacao }: CardEventoType) {
+
+  const classificacoes: { [key: number]: string } = {
+  1: "Livre",
+  2: "18+"
+};
+
   const [modalOpen, setModalOpen] = useState(false);
   const [copied, setCopied] = useState(false);
 
@@ -66,11 +72,11 @@ function CardEvento({ id, nome, genero, data_evento, horario, descricao, enderec
             </div>
 
             <div className="modal-body">
-              <p><strong>Gênero:</strong> {genero || 'sem gênero'}</p>
+              <p><strong>Gênero:</strong> {generoNome || 'sem gênero'}</p>
               <p><strong>Data:</strong> {data_evento || 'sem data'}</p>
               <p><strong>Horario:</strong> {horario || 'sem horário'}</p>
               <p><strong>Localização:</strong> {endereco || 'sem localização'} - {numero || 'sem número'}</p>
-              <p><strong>Classificação:</strong> {classificacao || 'sem classificação'}</p>
+              <p><strong>Classificação:</strong> {classificacoes[Number(classificacao)] || 'sem classificação'}</p>
             </div>
             
             <div className="modal-descricao">
