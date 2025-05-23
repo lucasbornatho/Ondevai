@@ -1,6 +1,13 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function CadastroHome() {
+
+    const navigate = useNavigate();
+
+    const cadastroEvento = () => {
+        navigate("/cadastroevento");
+      };
+
     return (
         <div className="infos-menu">
 
@@ -9,7 +16,7 @@ function CadastroHome() {
                     <h2>Cadastre seu evento</h2>
                     <p>Preencha as informações clicando no botão abaixo.</p>
                     <a className="loginbotaocadastro"> 
-                    <Link to="./cadastroevento" ><button>Começar cadastro</button></Link>
+                    <button onClick={cadastroEvento}>Começar cadastro</button>
                     </a>
                 </div>
             </div>
