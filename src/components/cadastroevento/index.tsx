@@ -61,9 +61,34 @@ function CadastroEvento() {
   }
 
   const [imagemEvento, setImagemEvento] = useState('');
-  const handleAddImagemEvento = (e: ChangeEvent<HTMLInputElement>) => {
-    setImagemEvento(e.target.value)
-  }
+  const handleAddImagemEvento = async (e: ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append("upload_preset", "ondevai_eventos");
+
+    try {
+      const response = await fetch("https://api.cloudinary.com/v1_1/dmghhxein/image/upload", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.secure_url) {
+        setImagemEvento(data.secure_url);
+        alert("Imagem enviada com sucesso!");
+      } else {
+        alert("Erro ao enviar imagem");
+      }
+
+    } catch (error) {
+      console.error("Erro ao fazer upload da imagem:", error);
+      alert("Erro ao enviar imagem");
+    }
+  };
 
   const handleCadastroEvento = async () => {
 
@@ -97,7 +122,7 @@ function CadastroEvento() {
     }
   };
 
-  return (
+return (
     <>
       <div className="container-cadastro-evento">
         <h1 className="texto-cetralizado">Cadastro Evento</h1>
@@ -154,12 +179,12 @@ function CadastroEvento() {
                 <div className="container-grupo medium-width">
                   <label>Cidade</label>
                   <select className="seletor" onChange={handleAddCidadeEvento}>
-                  <option value="0"></option>
-                  <option value="1">Bauru</option>
-                  <option value="2">Piratininga</option>
-                  <option value="3">Pederneiras</option>
-                  <option value="4">Agudos</option>
-                </select>
+                    <option value="0"></option>
+                    <option value="1">Bauru</option>
+                    <option value="2">Piratininga</option>
+                    <option value="3">Pederneiras</option>
+                    <option value="4">Agudos</option>
+                  </select>
                 </div>
 
                 <div className="container-grupo small-width">
@@ -191,6 +216,11 @@ function CadastroEvento() {
                 onChange={handleAddImagemEvento}
               />
               <p>Imagem máxima 1140px X 813px</p>
+              {imagemEvento && (
+                <div>
+                  <img src={imagemEvento} alt="Preview" style={{ maxWidth: '200px', marginTop: '10px' }} />
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -199,9 +229,8 @@ function CadastroEvento() {
           <button onClick={handleCadastroEvento}>Cadastrar Evento</button>
         </div>
       </div>
-
     </>
-  )
+  );
 }
 
-export default CadastroEvento
+export default CadastroEvento;
