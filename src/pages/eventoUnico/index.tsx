@@ -27,7 +27,7 @@ function EventoUnico() {
       const eventoCorrigido: CardEventoType = {
         id: eventoData.id,
         nome: eventoData.nome || 'sem nome',
-        genero: eventoData.id_genero || 'sem gênero',
+        generoNome: eventoData.generoNome || 'sem gênero',
         data_evento: eventoData.data_evento || 'sem data',
         horario: eventoData.horario || 'sem horário',
         classificacao: eventoData.classificacao || 'sem classificação',
@@ -36,7 +36,6 @@ function EventoUnico() {
         numero: eventoData.numero || 'sem número',
         cidade: eventoData.id_cidade || 'sem cidade',
         image: eventoData.image || '',
-        generoNome: "",
         cidadeNome: ""
       };
 

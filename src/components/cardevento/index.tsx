@@ -33,13 +33,11 @@ function CardEvento({ id, nome, generoNome, data_evento, horario, descricao, end
 
         <div className="evento-informacoes">
           <div className="evento-icones">
-            <img src="/capa-evento-icones/classificacao livre.png" alt="Livre" />
             <img src="/capa-evento-icones/compartilhar.png" 
               alt="Compartilhar" 
               style={{cursor: "pointer"}} 
               onClick={handleShare} 
               title="Compartilhar"/>
-            <img src="/capa-evento-icones/evento curtir.png" alt="Curtir" />
 
             {copied && (
               <div className="alerta-copiado">
