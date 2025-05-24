@@ -25,7 +25,7 @@ function BotaoLogin() {
       Context?.setID(json.usuario.id);
       navigate('/eventos');
     } else {
-      alert(json.message)
+      alert("Usuario ou Senha incorretos.")
     }
   }
 
