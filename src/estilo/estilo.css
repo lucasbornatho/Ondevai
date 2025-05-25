@@ -773,14 +773,14 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 .formularioCadastro-subdiv2 input{
-  width: 382px;
+  width: 286px;
 }
 
-select{
+.formularioCadastro-subdiv2 select{
   border: 1px solid black;
   height: 100%;
-  width: 382px;
-}
+  width: 286px;
+} 
 
 .formularioCadastro-subdiv2{
   width: 100%;
