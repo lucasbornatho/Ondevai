@@ -60,74 +60,99 @@ function CadastroUsuario() {
   };
 
   return (
-    <div className="CadastroUsuario-Container">
+    <div className="container-cadastroUsuario">
 
-      <div className="botaologin-container">
-        <div className="botaocadastrologin-form">
-          <h1 className="botaocadastrologin-titulo"><strong>Onde Vai</strong> Cadastre-se</h1>
+      <div className="container-cadastroUsuario-flex">
 
-          <div className='container-formulario-cadastro'>
-            <div className="botaocadastrologin-form-div1">
-              <input
-                type="text"
-                placeholder="Nome Completo"
-                value={nome}
-                onChange={handleAddNome} />
-            </div>
-
-            <div className="botaocadastrologin-form-div1">
-              <input
-                type="date"
-                placeholder="Data de Nascimento"
-                value={datanasc}
-                onChange={handleAddDatanasc} />
-            </div>
-
-            <div className="botaocadastrologin-form-div1">
-              <select onChange={handleAddSexo}>
-                <option value="0">Genero</option>
-                <option value="1">Feminino</option>
-                <option value="2">Masculino</option>
-                <option value="3">Outros</option>
-              </select>
-            </div>
-
-            <div className="botaocadastrologin-form-div1">
-              <input
-                type="text"
-                placeholder="Telefone"
-                value={telefone}
-                onChange={handleAddTelefone} />
-            </div>
-
-
-            <div className="botaocadastrologin-form-div1">
-              <input
-                type="email"
-                placeholder="Email"
-                value={email}
-                onChange={handleAddEmail} />
-            </div>
-
-            <div className="botaocadastrologin-form-div1">
-              <input
-                type="password"
-                placeholder="Senha"
-                value={senha}
-                onChange={handleAddSenha} />
-            </div>
-
-            <div className="botaocadastrologin-form-div1">
-              <button type="submit"
-                onClick={handleCadastro}>
-                Cadastre-se
-              </button>
-              <button onClick={() => navigate("/")}>
-                <img src="sair (3).png" alt="Sair" />
-              </button>
-            </div>
+        <div className="container-ladoEsquerdo">
+          <div>
+            <img src="/public/icone OndeVai.png" alt="Icone Onde Vai" />
+            <h1 className="botaocadastrologin-titulo"><strong>Onde Vai</strong></h1>
           </div>
+          <p>Conectando pessoas a eventos.</p>
         </div>
+
+        <div className='container-ladoDireito'>
+
+          <div className='ladoDireito-Cabecario'>
+            <h1>Crie sua Conta</h1>
+            <p>Junte-se à nossa comunidade e comece a buscar os eventos na sua cidade.</p>
+          </div>
+
+          <div className='formularioCadastro'>
+
+            <div className='formularioCadastro-subdiv'>
+              <div className='formularioCadastro-item'>
+                <label>Nome Completo</label>
+                <input
+                  type="text"
+                  placeholder="Nome Completo"
+                  value={nome}
+                  onChange={handleAddNome} />
+              </div>
+
+              <div className='formularioCadastro-item'>
+                <label>Email</label>
+                <input
+                  type="email"
+                  placeholder="Email"
+                  value={email}
+                  onChange={handleAddEmail} />
+              </div>
+            </div>
+            
+            <div className='formularioCadastro-subdiv2'>
+              <div className='formularioCadastro-item'>
+                <label>Data Nascimento</label>
+                <input
+                  type="date"
+                  placeholder="Data de Nascimento"
+                  value={datanasc}
+                  onChange={handleAddDatanasc} />
+              </div>
+
+              <div className='formularioCadastro-item'>
+                <label>Genero</label>
+                <select onChange={handleAddSexo}>
+                  <option value="0">Genero</option>
+                  <option value="1">Feminino</option>
+                  <option value="2">Masculino</option>
+                  <option value="3">Outros</option>
+                </select>
+              </div>
+
+              <div className='formularioCadastro-item'>
+                <label>Telefone</label>
+                <input
+                  type="text"
+                  placeholder="Telefone"
+                  value={telefone}
+                  onChange={handleAddTelefone} />
+              </div>
+            </div>
+
+            <div className='formularioCadastro-subdiv'>
+              <div className='formularioCadastro-item'>
+                <label>Senha</label>
+                <input
+                  type="password"
+                  placeholder="Senha"
+                  value={senha}
+                  onChange={handleAddSenha} />
+              </div>
+
+              <div className='formularioCadastro-item'>
+                <button type="submit"
+                  onClick={handleCadastro}>
+                  Criar Conta
+                </button>
+              </div>
+            </div>
+            
+          </div>
+          
+        </div>
+
       </div>
 
     </div>

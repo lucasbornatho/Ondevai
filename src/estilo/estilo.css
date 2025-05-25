@@ -2,13 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box; 
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; 
 }
 
 /* home */
-
 .home {
     display: flex;
     flex-wrap: wrap;
@@ -56,7 +55,6 @@
 }
 
 /* menu principal */
-
 .menu-principal {
     display: flex;
     flex-direction: row;
@@ -103,7 +101,6 @@
 }
 
 /* rodape */
-
 .container-rodape {
     display: flex;
     flex-direction: column;
@@ -124,7 +121,6 @@
 }
 
 /* notfound */
-
 .not-found {
     display: flex;
     flex-direction: column;
@@ -185,16 +181,14 @@
     max-width: 99vw;
     overflow: hidden;
     z-index: 1;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.4), 0 4px 6px rgba(0, 0, 0, 0.4);
-    
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.4), 0 4px 6px rgba(0, 0, 0, 0.4); 
 }
 
 .menu-netflix img{
     width: 32vw;
     height: 800px;
     border-radius: 22px;
-    margin: 2rem;
-    
+    margin: 2rem; 
 }
 
 /*Parte que faz a animação banner no carroseul*/
@@ -208,7 +202,6 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   }
 /* -- Fim Card home Netflix -- */
-
 
 .texto-menu {
     display: flex;
@@ -325,9 +318,9 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 18px;
-  }
+}
   
-  .botaologin-submit {
+.botaologin-submit {
     background-color: #262A56;
     color: white;
     width: 100%;
@@ -340,7 +333,7 @@
     cursor: pointer;
     padding: 10px;
     font-size: 1.6rem;
-  }
+}
   
   .botaologin-submit:hover {
     background-color: #4a4c63;
@@ -430,8 +423,6 @@
   justify-content: center;
   align-items: center;
 }
-
-
 /* -- Fim Componete Filtro Eventos -- */
 
 /* -- Inicio Card Evento -- */
@@ -498,7 +489,6 @@
     border-radius: 12px;
     width: 20%;
     height: 100px;
-
 }
 
 .evento-detalhes{
@@ -514,10 +504,8 @@
     width: 90vw;
     height: 440px;
 }
-
 /* -- Fim Card Evento -- */
 /* -- Fim Pagina Eventos -- */
-
 
 /* -- Inicio Pagina Cadastro Eventos -- */
 .container-cadastro-evento {
@@ -683,68 +671,123 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 
 /* -- Inicio Pagina Cadastro Usuario -- */
-.CadastroUsuario-Container{
-    margin: 2rem;
-    position: relative;
-    z-index: 1;
-} 
-
-.CadastroUsuario-Container h1{
-    margin-top: 2rem;
-    color: #F5F5F5;
-    font-size: 4rem;
+.container-cadastroUsuario{
+  margin: 3rem 5rem;
 }
 
-.botaocadastrologin-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1.6rem;
-    gap: 1.4rem;
-    background-color: #D39643;
-    border-radius: 22px;
-}
-.botaocadastrologin-form-div1 {
-    margin-top: 1.4rem;
+.container-cadastroUsuario-flex{
+  margin: 1rem;
+  border: 1px solid black;
+  display: flex;
+  border-radius: 12px;
 }
 
-.botaocadastrologin-form-div1 input{
-    width: 400px;
-    height: 60px;
-    border-radius: 12px;
-    padding: 1rem;
-    font-size: 1.4rem;
-    font-style: italic;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-    text-align: center;
+.container-ladoEsquerdo{
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem;
+  background-color: #D39643;
 }
 
-.botaocadastrologin-form-div1 button{
-    font-size: 2rem;
-    width: 400px;
-    height: 60px;
-    border-radius: 12px;
-    background-color: #262A56;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    margin-top: 1.4rem;
+.container-ladoEsquerdo div{
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 14px;
 }
 
-.botaocadastrologin-form-div1 select{
-    width: 400px;
-    height: 60px;
-    border-radius: 12px;
-    padding: 1rem;
-    font-size: 1.4rem;
-    font-style: italic;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-    text-align: center;
+.container-ladoEsquerdo h1{
+  color: whitesmoke;
+  font-size: 3.2rem;
+}
+
+.container-ladoEsquerdo p{
+  color: #1A1F50;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.container-ladoDireito{
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 1.2rem;
+  background-color: #D9D9D9;
+}
+
+.formularioCadastro button{
+  margin-top: 1.2rem;
+  color: white;
+  background-color: #262a56;
+  border-radius: 14px;
+  font-size: 2rem;
+  padding: 0.6rem 2rem;
+}
+
+.formularioCadastro button:hover{
+  background-color: #1a1f50d2;
+}
+
+.container-ladoDireito h1{
+  font-weight: 400;
+}
+
+.container-ladoDireito p{
+  color: #000;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.formularioCadastro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap: 1.4rem;
+}
+
+.formularioCadastro-subdiv{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formularioCadastro-item{
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.formularioCadastro-item input, select{
+  background-color: #E3CCAE;
+  border-radius: 14px;
+  font-size: 1.6rem;
+  padding: 1rem;
+}
+
+.formularioCadastro-subdiv2 input{
+  width: 382px;
+}
+
+select{
+  border: 1px solid black;
+  height: 100%;
+  width: 382px;
+}
+
+.formularioCadastro-subdiv2{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 /* -- Fim Pagiona Cadastro Usuario -- */
 
@@ -827,12 +870,6 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   font-size: 24px;
 }
 
-
-
-
-
-
-
 /* CSS DO SOBRENÓS */
 /* Estilos gerais da seção */
 .sobre-nos-section {
@@ -841,30 +878,12 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   background-color: white;
 }
 
-@media (min-width: 768px) {
-  .sobre-nos-section {
-    padding: 6rem 0;
-  }
-}
-
-@media (min-width: 1024px) {
-  .sobre-nos-section {
-    padding: 8rem 0;
-  }
-}
-
 /* Container principal */
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
-}
-
-@media (min-width: 768px) {
-  .container {
-    padding: 0 1.5rem;
-  }
 }
 
 /* Cabeçalho */
@@ -900,11 +919,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   font-size: 1rem;
 }
 
-@media (min-width: 768px) {
-  .subtitle {
-    font-size: 1.25rem;
-  }
-}
+
 
 /* Conteúdo principal */
 .content {
@@ -983,11 +998,6 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   height: 400px;
 }
 
-@media (min-width: 768px) {
-  .image-container {
-    height: 100%;
-  }
-}
 
 .main-image {
   width: 100%;
@@ -1013,66 +1023,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     font-weight: 500;
 }
 
-/* Recuperação de senha */
-
-/* .recsenha{
-   font-family: 'Inter', sans-serif;
-    padding: 2rem;
-    margin: 2rem;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center;
-    border-radius: 16px;
-    border-radius: 16px;
-    background-color:#262a565b;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-} */
-
-/* .recsenha input{
-  padding: 18px;
-  border-radius: 14px;
-  height: 45px;
-  font-size: 1rem;
-  font-style: italic;
-} */
-/* .email_recsenha{
-   display: flex;
-    flex-direction: column;
-    flex: 1;
-    min-width: 600px;
-} */
-
-    
-/* .novasenha_recsenha{
-  display: flex;
-  flex-direction: column;
-  flex: 1;
- 
-    
-
-}
-.csenha_recsenha{
-   display: flex;
-    flex-direction: column;
-    flex: 1;
-    
-}
-.button_recsenha{
-background-color: #262A56;
-  color: #fff;
-  font-size: 1.25rem;
-  font-weight: 600;
-  padding: 0.8rem 2rem;
-  border: none;
-  border-radius: 10px;
-  transition: background-color 0.3s ease;
-  cursor: pointer;  
-} */ 
-
 /* Variáveis de cores */
 :root {
-  --primary-color: #262a56;
   --accent-color: #f9b537;
   --text-light: #ffffff;
   --text-dark: #333333;
@@ -1096,14 +1048,13 @@ background-color: #262A56;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: var(--primary-color);
-  background-image: linear-gradient(135deg, var(--primary-color) 0%, #1a1d3b 100%);
   padding: 20px;
+  background-color: #4a4c63;
 }
 
 .recovery-card {
-  width: 100%;
-  max-width: 450px;
+  width: 120%;
+  max-width: 500px;
   background-color: var(--card-bg);
   border-radius: 12px;
   box-shadow: 0 8px 20px var(--shadow-color);
@@ -1234,36 +1185,3 @@ background-color: #262A56;
   color: var(--success-color);
   background-color: rgba(46, 204, 113, 0.1);
 }
-
-/* Animações */
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsividade */
-@media (max-width: 500px) {
-  .recovery-card {
-    padding: 30px 20px;
-  }
-
-  .brand-title {
-    font-size: 28px;
-  }
-
-  .recovery-title {
-    font-size: 20px;
-  }
-
-  .input-field {
-    padding: 12px 14px;
-  }
-}
-
-
