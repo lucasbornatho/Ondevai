@@ -57,6 +57,7 @@ function FiltroEvento() {
           <div key={evento.id} className="card-evento">
             <div className="card-evento">
               <div className="capa-evento">
+                <p className="classificacaoDestaque">{classificacoes[Number(evento.classificacao)] || 'sem classificação'}</p>
                 <img className="capa-evento-img" src={evento.image} alt="Capa do evento" />
               </div>
 

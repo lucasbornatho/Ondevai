@@ -66,7 +66,7 @@ function CadastroUsuario() {
 
         <div className="container-ladoEsquerdo">
           <div>
-            <img src="./public/Icone OndeVai.png" alt="Icone Onde Vai" />
+            <img src="./Icone OndeVai.png" alt="Icone Onde Vai" />
             <h1 className="botaocadastrologin-titulo"><strong>Onde Vai</strong></h1>
           </div>
           <p>Conectando pessoas a eventos.</p>

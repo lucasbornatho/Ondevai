@@ -446,8 +446,16 @@
     align-items: center;
 }
 
+.classificacaoDestaque{
+  font-size: 2.2rem;
+  background-color: #c2823a;
+  border-radius: 14px;
+  width: 200px;
+  padding: 8px;
+}
+
 .evento-informacoes h1{
-    width: 80%;
+    width: 100%;
     font-size: 64px;
     display: flex;
     justify-content: center;
@@ -498,10 +506,28 @@
     gap: 3rem;
     font-size: 2rem;
 }
+
+.capa-evento {
+  position: relative; /* Torna o container um contexto para o posicionamento absoluto */
+  display: inline-block; /* Garante que ele se ajuste ao tamanho da imagem */
+}
+
 .capa-evento-img{
     border-radius: 12px;
     width: 90vw;
     height: 440px;
+}
+
+.classificacaoDestaque {
+  position: absolute;
+  top: 14px; 
+  left: 14px;
+  background-color: #c2823a;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 28px;
+  z-index: 2; /* Garante que fique acima da imagem */
 }
 /* -- Fim Card Evento -- */
 /* -- Fim Pagina Eventos -- */

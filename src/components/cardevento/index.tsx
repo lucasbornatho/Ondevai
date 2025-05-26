@@ -28,11 +28,13 @@ function CardEvento({ id, nome, generoNome, data_evento, horario, descricao, end
     <>
       <div className="card-evento">
         <div className="capa-evento">
+          <p className="classificacaoDestaque">{classificacoes[Number(classificacao)] || 'sem classificação'}</p>
           <img className="capa-evento-img" src={image} alt="Capa do evento" />
         </div>
 
         <div className="evento-informacoes">
           <div className="evento-icones">
+            
             <img src="/capa-evento-icones/compartilhar.png" 
               alt="Compartilhar" 
               style={{cursor: "pointer"}} 

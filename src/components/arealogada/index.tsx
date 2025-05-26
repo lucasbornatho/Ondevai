@@ -46,17 +46,35 @@ function AreaLogin() {
         }}
       >
       </Button>
-      <Offcanvas isOpen={isOpen} toggle={toggleOffcanvas} direction="end">
-        <OffcanvasHeader toggle={toggleOffcanvas}>
-          <p>Olá {UsuarioLogadoCtx?.name}</p>
-          <p>ID {UsuarioLogadoCtx?.id}</p>
+      <Offcanvas isOpen={isOpen} toggle={toggleOffcanvas} direction="end" style={{backgroundColor: "#D39643"}}>
+        <OffcanvasHeader toggle={toggleOffcanvas} style={{marginTop: "1rem",
+          color: "white"}}>
+          <p style={{fontSize: "1.5rem"}}>Olá {UsuarioLogadoCtx?.name}</p>
         </OffcanvasHeader>
-        <OffcanvasBody>
-          <a>Conta</a>
-          <br />
-          <a>Eventos</a>
-          <br />
-          <button onClick={logoff}>Sair</button>
+        <OffcanvasBody style={{
+          padding: "1rem",
+          fontSize: "1.6rem"
+        }}>
+          <div style={{
+            height: "70vh"
+          }}>
+            <h3 style={{color:"whitesmoke"}}>Meus Eventos Criados</h3>
+          </div>
+
+          <div style={{
+            display: "flex",
+            alignItems: "flex-end",
+            justifyContent: "center",
+            padding: "1rem",
+            gap: "2rem"
+          }}>
+            <button onClick={logoff} style={{
+              width: "140px",
+              borderRadius: "14px",
+              color: "white",
+              backgroundColor: "#3B4077",
+            }}>Sair</button>
+          </div>
         </OffcanvasBody>
       </Offcanvas>
     </div>
