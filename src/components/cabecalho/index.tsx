@@ -10,11 +10,6 @@ function Cabecalho () {
 
     const UsuarioLogadoCtx = useContext(UsuarioLogadoContext);
 
-    function alterarContext () {
-        UsuarioLogadoCtx?.setName('teste');
-
-    }
-
     return (
         <div>
             <div className='cabecalho'>

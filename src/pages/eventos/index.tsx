@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { CardEventoType } from "../../types/cardeventotype";
 import { api } from "../../api";
 import Cabecalho from "../../components/cabecalho";
@@ -6,10 +6,13 @@ import Rodape from "../../components/rodape";
 import Filtro from "../../components/filtro";
 import CardEvento from "../../components/cardevento";
 import CadastroHome from "../../components/cadastoHome";
+import { UsuarioLogadoContext } from "../../contexts/contextAuth";
 
 function Eventos() {
   const [eventos, setEventos] = useState<CardEventoType[]>([]);
   const [loading, setLoading] = useState(false);
+
+  const UsuarioLogadoCtx = useContext(UsuarioLogadoContext);
 
   useEffect(() => {
     carregarEventos();
@@ -64,8 +67,8 @@ function Eventos() {
           ))}
         </div>
       )}
-
-      <CadastroHome />
+      {UsuarioLogadoCtx?.name && (<CadastroHome />)}
+      {!UsuarioLogadoCtx?.name && (<></>)}
       <Rodape />
     </div>
   );

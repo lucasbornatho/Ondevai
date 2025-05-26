@@ -1,15 +1,24 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Collapse, Button, CardBody, Card, CollapseProps } from 'reactstrap';
 import { JSX } from 'react/jsx-runtime';
 import CadastroHome from '../cadastoHome';
+import { UsuarioLogadoContext } from '../../contexts/contextAuth';
 
 
 function DropHome(args: JSX.IntrinsicAttributes & JSX.IntrinsicClassAttributes<Collapse> & Readonly<CollapseProps>) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggle = () => setIsOpen(!isOpen);
   const [isHovered, setIsHovered] = useState(false);
 
+  const UsuarioLogadoCtx = useContext(UsuarioLogadoContext);
+  
+  const toggle = () => {
+    if (!UsuarioLogadoCtx?.name) {
+      window.alert("Você precisa estar logado para criar um evento!");
+      return;
+    }
+    setIsOpen(!isOpen);
+  };
   return (
     <React.StrictMode>
       <Button color="" onClick={toggle} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}  style={{ 
