@@ -1,19 +1,19 @@
 export const api = {
 
     CarregarTodosEventos: async () => {
-        let response = await fetch('http://localhost:3000/eventos')
+        let response = await fetch('https://api-ondevai.onrender.com/eventos')
         let json = await response.json();
         return json;
     },
 
     CarregarEventoUnico: async (id: string) => {
-            let response = await fetch(`http://localhost:3000/eventos/${id}`);
+            let response = await fetch(`https://api-ondevai.onrender.com/eventos/${id}`);
             let json = await response.json();
             return json
     },
 
     AdicionarUsuarios: async (nome: string, datanasc: string, sexo: number, telefone: string, email: string, senha: string) => {
-        let response = await fetch('http://localhost:3000/usuarios', {
+        let response = await fetch('https://api-ondevai.onrender.com/usuarios', {
             method: 'POST',
             body: JSON.stringify({
                 nome,
@@ -46,7 +46,7 @@ export const api = {
   image: string,
   usuarioId: string | undefined
 ) => {
-  let response = await fetch('http://localhost:3000/eventos', {
+  let response = await fetch('https://api-ondevai.onrender.com/eventos', {
     method: 'POST',
     body: JSON.stringify({
       nome,
@@ -72,7 +72,7 @@ export const api = {
 },
 
     FiltrarEventos: async (data: string, genero: string, cidade: string) => {
-        let response = await fetch('http://localhost:3000/eventos/filtrar', {
+        let response = await fetch('https://api-ondevai.onrender.com/eventos/filtrar', {
             method: 'POST',
             body: JSON.stringify({
                 data,
@@ -94,7 +94,7 @@ export const api = {
             throw new Error("Email e senha são obrigatórios");
         }
 
-        let response = await fetch('http://localhost:3000/usuarios/login', {
+        let response = await fetch('https://api-ondevai.onrender.com/usuarios/login', {
             method: 'POST',
             body: JSON.stringify({
                 email,
@@ -116,7 +116,7 @@ export const api = {
             throw new Error("Email e senha são obrigatórios");
         }
 
-        let response = await fetch('http://localhost:3000/usuarios/alterarsenha', {
+        let response = await fetch('https://api-ondevai.onrender.com/usuarios/alterarsenha', {
             method: 'POST',
             body: JSON.stringify({
                 email,
