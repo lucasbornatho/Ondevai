@@ -817,82 +817,106 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 /* -- Fim Pagiona Cadastro Usuario -- */
 
 
-/* -- Inicio modal Saiba Mais -- */
+/* -- Inicio modal Saiba Mais --
+/* === Modal Overlay === */
 .modal-overlay {
   position: fixed;
-  top: 100px;
-  left: 200px;
-  right: 200px;
-  bottom: 100px;
-  background-color: #E3CCAE;
-  border: 2px solid #262a56;
-  margin: 1.4rem 2rem;
+  top: 120px;
+  bottom: 120px;
+  left: 250px;
+  right: 250px;
+  background-color: #E3CCAE; 
   border-radius: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
   z-index: 1000;
 }
 
-.modal-content{
+/* === Modal Content === */
+.modal-content {
+  background-color: #fff;
+  border: 2px solid #262a56;
+  border-radius: 20px;
   width: 100%;
-  height: 100%;
-  display: flex;
-  gap: 1rem;
-}
-
-.modal-header{
-  width: 100%;
+  overflow-y: auto;
+  padding: 1.5rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
-.modal-header h2{
-  color: #fff;
-  font-size: 64px;
-  width: 100%;
-  text-align: center;
+/* === Modal Header === */
+.modal-header {
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
-.modal-header button{
+.modal-header h2 {
+  color: #262A56;
+  font-weight: 1000;
+  font-size: 2.4rem;
+  text-align: center;
+  flex: 1;
+}
+
+.close-button {
   background-color: #c2823a;
   color: #fff;
-  width: 60px;
-  border-radius: 12px;
-  font-size: 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
 }
 
-.modal-header button:hover{
-  background-color: #262a56bb;
+.close-button:hover {
+  background-color: #262a56;
 }
 
-.modal-body{
-  width: 100%;
+/* === Modal Body === */
+.modal-body {
+  margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; 
-  gap: 1.4rem;
-  font-size: 32px;
+  gap: 1.5rem;
+  color: #262a56;
+  font-size: 1.6rem;
 }
 
-.modal-descricao{
-  width: 100%;
-  height: 100%;
-  color: white;
-  background-color: #262A56;
+.modal-body p {
+  margin: 0;
+}
+
+/* === Modal Descrição === */
+.modal-descricao {
+  margin-top: 2rem;
+  background-color: #262a56;
+  color: #fff;
   border-radius: 12px;
+  padding: 1rem;
+  font-size: 1rem;
 }
 
-.modal-descricao p{
-  margin: 18px;
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 24px;
+/* === Responsividade === */
+@media (max-width: 480px) {
+  .modal-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .close-button {
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+  }
+
+  .modal-body {
+    font-size: 0.9rem;
+  }
+
+  .modal-descricao {
+    font-size: 0.85rem;
+  }
 }
 
 /* CSS DO SOBRENÓS */
@@ -1071,7 +1095,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   align-items: center;
   min-height: 100vh;
   padding: 20px;
-  background-color: #4a4c63;
+  background-color: #262a56a2
 }
 
 .recovery-card {
@@ -1079,6 +1103,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   max-width: 500px;
   background-color: var(--card-bg);
   border-radius: 12px;
+  border: 1px solid black;
   box-shadow: 0 8px 20px var(--shadow-color);
   padding: 40px;
   transition: transform 0.3s ease;
@@ -1134,6 +1159,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   padding: 14px 16px;
   border: 2px solid transparent;
   border-radius: 8px;
+  border: 1px solid black;
   background-color: var(--input-bg);
   font-size: 16px;
   transition: all 0.3s ease;
