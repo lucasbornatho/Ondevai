@@ -33,7 +33,7 @@ function FiltroEvento() {
     const toggle = () => setModalOpen(!modalOpen);
   
     const handleShare = async () => {
-      const linkDoEvento = `${window.location.origin}/eventos/}`;
+      const linkDoEvento = `${window.location.origin}/eventos/`;
       try {
         await navigator.clipboard.writeText(linkDoEvento);
         setCopied(true);
