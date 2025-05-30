@@ -717,10 +717,6 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   background-color:#f9b537c9;
 }
 
-.container-ladoEsquerdo h1{}
-
-
-
 .container-ladoEsquerdo div{
   display: flex;
   align-items: center;

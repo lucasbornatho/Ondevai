@@ -204,7 +204,7 @@ function CadastroEvento() {
           <div className="container-descricao-evento">
             <h2>Descrição Evento</h2>
             <div className="container-item tamanho-input">
-              <textarea onChange={handleAddDescricaoEvento} value={descricaoEvento} maxLength={600}></textarea>
+              <textarea onChange={handleAddDescricaoEvento} value={descricaoEvento} maxLength={600} placeholder="Descrição com no maximo 600 caracteres"></textarea>
             </div>
           </div>
 
