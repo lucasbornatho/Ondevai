@@ -75,7 +75,7 @@ function CardEvento({ id, nome, generoNome, data_evento, horario, descricao, end
               <p><strong>Gênero:</strong> {generoNome || 'sem gênero'}</p>
               <p><strong>Data:</strong> {data_evento || 'sem data'}</p>
               <p><strong>Horario:</strong> {horario || 'sem horário'}</p>
-              <p><strong>Localização:</strong> {endereco || 'sem localização'} - {numero || 'sem número'}</p>
+              <p><strong>Localização:</strong> {endereco || 'sem localização'} : {numero || 'sem número'} - {cidadeNome || 'sem cidade'}</p>
               <p><strong>Classificação:</strong> {classificacoes[Number(classificacao)] || 'sem classificação'}</p>
             </div>
             

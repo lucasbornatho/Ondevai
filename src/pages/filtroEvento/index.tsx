@@ -103,7 +103,7 @@ function FiltroEvento() {
                     <p><strong>Gênero:</strong> {evento.genero.nome || 'sem gênero'}</p>
                     <p><strong>Data:</strong> {evento.data_evento || 'sem data'}</p>
                     <p><strong>Horario:</strong> {evento.horario || 'sem horário'}</p>
-                    <p><strong>Localização:</strong> {evento.endereco || 'sem localização'} - {evento.numero || 'sem número'}</p>
+                    <p><strong>Localização:</strong> {evento.endereco || 'sem localização'} : {evento.numero || 'sem número'} - {evento.cidade.nome || 'sem cidade'}</p>
                     <p><strong>Classificação:</strong> {classificacoes[Number(evento.classificacao)] || 'sem classificação'}</p>
                   </div>
 

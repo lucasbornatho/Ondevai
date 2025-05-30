@@ -34,9 +34,9 @@ function EventoUnico() {
         descricao: eventoData.descricao || 'sem descrição',
         endereco: eventoData.endereco || 'sem endereço',
         numero: eventoData.numero || 'sem número',
-        cidade: eventoData.id_cidade || 'sem cidade',
+        cidade: eventoData.id_cidade || 'sem cidade', 
         image: eventoData.image || '',
-        cidadeNome: ""
+        cidadeNome: ''
       };
 
       setEvento(eventoCorrigido);
