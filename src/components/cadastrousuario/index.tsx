@@ -63,6 +63,7 @@ function CadastroUsuario() {
     <div className="container-cadastroUsuario">
 
       <div className="container-cadastroUsuario-flex">
+        
 
         <div className="container-ladoEsquerdo">
           <div>
@@ -71,6 +72,7 @@ function CadastroUsuario() {
           </div>
           <p>Conectando pessoas a eventos.</p>
         </div>
+       
 
         <div className='container-ladoDireito'>
 
