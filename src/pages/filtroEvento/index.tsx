@@ -32,8 +32,8 @@ function FiltroEvento() {
   
     const toggle = () => setModalOpen(!modalOpen);
   
-    const handleShare = async () => {
-      const linkDoEvento = `${window.location.origin}/eventos/`;
+    const handleShare = async (idEvento: string) => {      
+      const linkDoEvento = `${window.location.origin}/eventos/${idEvento}`;
       try {
         await navigator.clipboard.writeText(linkDoEvento);
         setCopied(true);
@@ -66,7 +66,7 @@ function FiltroEvento() {
                   <img src="/capa-evento-icones/compartilhar.png"
                     alt="Compartilhar"
                     style={{ cursor: "pointer" }}
-                    onClick={handleShare}
+                    onClick={() => handleShare(evento.id)}
                     title="Compartilhar" />
 
                   {copied && (
@@ -80,7 +80,7 @@ function FiltroEvento() {
               </div>
 
               <div className="evento-saiba-mais">
-                <div className="evento-detalhes">
+                <div className="evento-detalhes">                
                   <p><strong>Data:</strong> {evento.data_evento || 'sem data'}</p>
                   <p><strong>Horario:</strong> {evento.horario || 'sem horário'}</p>
                   <p><strong>Localização:</strong> {evento.endereco || 'sem localização'} - {evento.numero || 'sem número'}</p>

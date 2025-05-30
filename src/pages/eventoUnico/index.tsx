@@ -47,13 +47,15 @@ function EventoUnico() {
   };
 
   return (
-    <div className='home'>
-      <Cabecalho />
+    <div >
+      <Cabecalho/>
+      <div className='home'>
       <div className="nome-pagina-eventos">
         {loading && <p>Carregando evento...</p>}
         {!loading && evento && (
           <CardEvento {...evento} />
         )}
+      </div>
       </div>
       <Rodape />
     </div>

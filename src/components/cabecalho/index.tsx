@@ -17,8 +17,9 @@ function Cabecalho () {
                 <div className='cabecalho-item'>
                     <Link to="/">
                     <div className='logo-home'>
-                        <img src='./Logonovo.png' alt='Logo' />
+                        <img src='../Logonovo.png' alt='Logo' />
                     </div>
+                    
                     </Link>
                     <div>
                         <Menu />

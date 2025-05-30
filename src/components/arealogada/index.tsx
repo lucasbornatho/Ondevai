@@ -6,9 +6,33 @@ import {
   OffcanvasBody
 } from "reactstrap";
 import { UsuarioLogadoContext } from "../../contexts/contextAuth";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { CardEventoType } from "../../types/cardeventotype";
+import { api } from "../../api";
 
 function AreaLogin() {
+
+  const carregarEventoUnico = async (id: string) => {
+    
+      const data = await api.CarregarEventoUnico(id);
+
+      const eventoData = data.evento || data;
+
+      const eventoCorrigido: CardEventoType = {
+        id: eventoData.id,
+        nome: eventoData.nome || 'sem nome',
+        generoNome: eventoData.generoNome || 'sem gênero',
+        data_evento: eventoData.data_evento || 'sem data',
+        horario: eventoData.horario || 'sem horário',
+        classificacao: eventoData.classificacao || 'sem classificação',
+        descricao: eventoData.descricao || 'sem descrição',
+        endereco: eventoData.endereco || 'sem endereço',
+        numero: eventoData.numero || 'sem número',
+        cidade: eventoData.id_cidade || 'sem cidade',
+        image: eventoData.image || '',
+        cidadeNome: ""
+      };
+  };
 
   const UsuarioLogadoCtx = useContext(UsuarioLogadoContext);
   const navigate = useNavigate();
